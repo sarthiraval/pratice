@@ -276,6 +276,12 @@ for(const fru of fruitt){
     console.log(fru[0]);        // B K D P B A as first letter of word
 }
 
+for (let index = 0; index < fruitt[0].length; index++) {
+    const element = fruitt[index];
+    console.log(element);
+    
+}
+
 
 
 const frt = ["Banana", "Kiwi", "dragon Fruit", "Pineapple", "Berry", "Avocado"]

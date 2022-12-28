@@ -1,6 +1,0 @@
-console.log("jk")
-console.log("ss")
-console.log("jk")
-console.log("ss")
-console.log("jk")
-console.log("ss")
