@@ -1,0 +1,955 @@
+JavaScipt:-
+In this step by step JavaScript challenge, you will learn JavaScript, the most popular programming language in the history of mankind. JavaScript is used to add interactivity to websites, to develop mobile apps, desktop applications, games and nowadays JavaScript can be used for machine learning and AI. JavaScript (JS) has increased in popularity in recent years and has been the leading programming language for six consecutive years and is the most used programming language on Github.
+
+Requirements:-No prior knowledge of programming is required to follow this challenge. You need only:
+
+    Motivation
+    A computer
+    Internet
+    A browser
+    A code editor
+
+Setup
+
+I believe you have the motivation and a strong desire to be a developer, a computer and Internet. If you have those, then you have everything to get started.
+Install Node.js
+
+What is Node.js?
+
+    Node.js is an open source server environment
+    Node.js is free
+    Node.js runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)
+    Node.js uses JavaScript on the server
+
+Browser
+
+There are many browsers out there. However, I strongly recommend Google Chrome.
+Menu-->moretools-->Developer Option-->
+
+     Element-->html and css code found
+     Console-->you can write js code here and you see js output here
+     Sources-->you can create snippt code
+     Network-->http Request Response cycle found here and anything relted to network 
+     Application--->Browser applications(Storage,cache)
+   
+Console.log
+
+To write our first JavaScript code, we used a built-in function console.log(). 
+We passed an argument as input data, and the function displays the output. 
+We passed 'Hello, World' as input data or argument in the console.log() function.
+
+console.log('Hello, World!')
+
+Console.log with Multiple Arguments:-
+The console.log() function can take multiple parameters separated by commas. The syntax looks like as follows:console.log(param1, param2, param3)
+
+Comments
+
+We can add comments to our code. Comments are very important to make code more readable and to leave remarks in our code. JavaScript does not execute the comment part of our code. In JavaScript, any text line starting with // in JavaScript is a comment, and anything enclosed like this // is also a comment.
+
+Example: Single Line Comment
+
+// This is the first comment  
+// This is the second comment  
+// I am a single line comment
+
+Example: Multiline Comment
+
+/*
+This is a multiline comment  
+ Multiline comments can take multiple lines  
+ JavaScript is the language of the web  
+ */
+
+
+Syntax
+
+Programming languages are similar to human languages. English or many other language uses words, phrases, sentences, compound sentences and other more to convey a meaningful message. The English meaning of syntax is the arrangement of words and phrases to create well-formed sentences in a language. The technical definition of syntax is the structure of statements in a computer language. Programming languages have syntax. JavaScript is a programming language and like other programming languages it has its own syntax. If we do not write a syntax that JavaScript understands, it will raise different types of errors. We will explore different kinds of JavaScript errors later. For now, let us see syntax errors.
+
+console.log('Hello, World!')
+console.log("Hello, World!")
+console.log(`Hello, World!`)
+
+Arithmetics
+
+Now, let us practice more writing JavaScript codes using console.log() on Google Chrome console for number data types. In addition to the text, we can also do mathematical calculations using JavaScript. Let us do the following simple calculations. It is possible to write JavaScript code on Google Chrome console can directly without the console.log() function. However, it is included in this introduction because most of this challenge would be taking place in a text editor where the usage of the function would be mandatory. You can play around directly with instructions on the console
+
+console.log(2 + 3) // Addition
+console.log(3 - 2) // Subtraction
+console.log(2 * 3) // Multiplication
+console.log(3 / 2) // Division
+console.log(3 % 2) // Modulus - finding remainder
+console.log(3 ** 2) // Exponentiation 3 ** 2 == 3 * 3
+
+Code Editor
+
+We can write our codes on the browser console, but it won't be for bigger projects. In a real working environment, developers use different code editors to write their codes. 
+
+
+Installing Visual Studio Code
+
+Visual Studio Code is a very popular open-source text editor.
+vs file structer:-
+create folder
+create file
+toggle to see files and directories in the projects
+to install packages
+right click here to close the project
+
+live server:-Launch a development local Server with live reload feature for static & dynamic pages
+
+
+Adding JavaScript to a Web Page
+
+JavaScript can be added to a web page in three different ways:
+
+    Inline script
+    Internal script
+    External script
+    Multiple External scripts
+
+
+Inline Script
+
+Create a project folder on your desktop or in any location, name it 30DaysOfJS and create an index.html file in the project folder. Then paste the following code and open it in a browser, for example Chrome.
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>30DaysOfScript:Inline Script</title>
+  </head>
+  <body>
+    <button onclick="alert('Welcome to 30DaysOfJavaScript!')">Click Me</button>
+  </body>
+</html>
+
+Now, you just wrote your first inline script. We can create a pop up alert message using the alert() built-in function.
+Internal Script
+
+Internal
+The internal script can be written in the head or the body, but it is preferred to put it on the body of the HTML document. First, let us write on the head part of the page.
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>30DaysOfScript:Internal Script</title>
+    <script>
+      console.log('Welcome to 30DaysOfJavaScript')
+    </script>
+  </head>
+  <body></body>
+</html>
+
+External Script
+
+Similar to the internal script, the external script link can be on the header or body, but it is preferred to put it in the body. First, we should create an external JavaScript file with .js extension. All files ending with .js extension are JavaScript files. Create a file named introduction.js inside your project directory and write the following code and link this .js file at the bottom of the body.
+
+console.log('Welcome to 30DaysOfJavaScript')
+
+External scripts in the head:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>30DaysOfJavaScript:External script</title>
+    <script src="introduction.js"></script>
+  </head>
+  <body></body>
+</html>
+
+External scripts in the body:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>30DaysOfJavaScript:External script</title>
+  </head>
+  <body>
+    <!-- JavaScript external link could be in the header or in the body --> 
+    <!-- Before the closing tag of the body is the recommended place to put the external JavaScript script -->
+    <script src="introduction.js"></script>
+  </body>
+</html>
+
+Open the browser console to see the output of the console.log().
+Multiple External Scripts
+
+We can also link multiple external JavaScript files to a web page. Create a helloworld.js file inside the 30DaysOfJS folder and write the following code.
+
+console.log('Hello, World!')
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Multiple External Scripts</title>
+  </head>
+  <body>
+    <script src="./helloworld.js"></script>
+    <script src="./introduction.js"></script>
+  </body>
+</html>
+
+introduction to Data types:- primitive,non-primitive
+
+In JavaScript and also other programming languages, there are different types of data types. The following are JavaScript primitive data types: String, Number, Boolean, undefined, Null, and Symbol.
+
+Immutabale:-immutable means something that cannot be changed or added
+        String,null,boolean,numbers,symbol,undefined 
+ 
+Mutable:-Mutable can be changed or added to where 
+         object,array
+
+Primitive Data Type:-
+
+Numbers:-
+    Integers: Integer (negative, zero and positive) numbers Example: ... -3, -2, -1, 0, 1, 2, 3 ...
+    Float-point numbers: Decimal number Example ... -3.5, -2.25, -1.0, 0.0, 1.1, 2.2, 3.5 ...
+
+
+Math object:-In JavaScript the Math Object provides a lots of methods to work with numbers.
+
+const PI = Math.PI
+
+console.log(PI)                            // 3.141592653589793
+
+// Rounding to the closest number
+// if above .5 up if less 0.5 down rounding
+
+console.log(Math.round(PI))                // 3 to round values to the nearest number
+
+console.log(Math.round(9.81))              // 10
+
+console.log(Math.floor(PI))                // 3 rounding down
+
+console.log(Math.ceil(PI))                 // 4 rounding up
+
+console.log(Math.min(-5, 3, 20, 4, 5, 10)) // -5, returns the minimum value
+
+console.log(Math.max(-5, 3, 20, 4, 5, 10)) // 20, returns the maximum value
+
+const randNum = Math.random() // creates random number between 0 to 0.999999
+console.log(randNum)
+
+// Let us  create random number between 0 to 10
+
+const num = Math.floor(Math.random () * 11) // creates random number between 0 and 10
+console.log(num)
+
+//Absolute value
+console.log(Math.abs(-10))      // 10
+
+//Square root
+console.log(Math.sqrt(100))     // 10
+
+console.log(Math.sqrt(2))       // 1.4142135623730951
+
+// Power
+console.log(Math.pow(3, 2))     // 9
+
+console.log(Math.E)             // 2.718
+
+// Logarithm
+// Returns the natural logarithm with base E of x, Math.log(x)
+console.log(Math.log(2))        // 0.6931471805599453
+console.log(Math.log(10))       // 2.302585092994046
+
+// Returns the natural logarithm of 2 and 10 respectively
+console.log(Math.LN2)           // 0.6931471805599453
+console.log(Math.LN10)          // 2.302585092994046
+
+// Trigonometry
+Math.sin(0)
+Math.sin(60)
+
+Math.cos(0)
+Math.cos(60)
+
+Random Number Generator:-
+
+The JavaScript Math Object has a random() method number generator which generates number from 0 to 0.999999999...
+
+let randomNum = Math.random() // generates 0 to 0.999...
+
+Now, let us see how we can use random() method to generate a random number between 0 and 10:
+
+let randomNum = Math.random()         // generates 0 to 0.999
+let numBtnZeroAndTen = randomNum * 11
+
+console.log(numBtnZeroAndTen)         // this gives: min 0 and max 10.99
+
+let randomNumRoundToFloor = Math.floor(numBtnZeroAndTen)
+console.log(randomNumRoundToFloor)
+
+Strings:-
+
+A collection of one or more characters between two single quotes, double quotes, or backticks.
+
+1.Concatenating Using Addition Operator
+
+Concatenating using the addition operator is an old way. This way of concatenating is tedious and error-prone.
+
+// Declaring different variables of different data types
+let space = ' '
+let firstName = 'Asabeneh'
+let lastName = 'Yetayeh'
+let country = 'Finland'
+let city = 'Helsinki'
+let language = 'JavaScript'
+let job = 'teacher'
+let age = 250
+
+let fullName =firstName + space + lastName
+let personInfoOne = fullName + '. I am ' + age + '. I live in ' + country; // ES5 string addition
+
+console.log(personInfoOne)
+
+2.Long Literal Strings:-A string could be a single character or paragraph or a page. If the string length is too big it does not fit in one line. We can use the backslash character (\) at the end of each line to indicate that the string will continue on the next line. Example:
+
+const paragraph = "My name is Asabeneh Yetayeh. I live in Finland, Helsinki.\
+I am a teacher and I love teaching. I teach HTML, CSS, JavaScript, React, Redux, \
+Node.js, Python, Data Analysis and D3.js for anyone who is interested to learn. \
+In the end of 2019, I was thinking to expand my teaching and to reach \
+to global audience and I started a Python challenge from November 20 - December 19.\
+It was one of the most rewarding and inspiring experience.\
+Now, we are in 2020. I am enjoying preparing the 30DaysOfJavaScript challenge and \
+I hope you are enjoying too."
+
+console.log(paragraph)
+
+
+3.Escape Sequences in Strings
+
+In JavaScript and other programming languages \ followed by some characters is an escape sequence. Let's see the most common escape characters:
+
+    \n: new line
+    \t: Tab, means 8 spaces
+    \\: Back slash
+    \': Single quote (')
+    \": Double quote (")
+
+console.log('I hope everyone is enjoying the 30 Days Of JavaScript challenge.\nDo you ?') // line break
+console.log('Days\tTopics\tExercises')
+console.log('Day 1\t3\t5')
+console.log('Day 2\t3\t5')
+console.log('Day 3\t3\t5')
+console.log('Day 4\t3\t5')
+console.log('This is a backslash  symbol (\\)') // To write a backslash
+console.log('In every programming language it starts with \"Hello, World!\"')
+console.log("In every programming language it starts with \'Hello, World!\'")
+console.log('The saying \'Seeing is Believing\' isn\'t correct in 2020')
+
+Output in console:
+I hope everyone is enjoying the 30 Days Of JavaScript challenge.
+Do you ?
+Days  Topics  Exercises
+Day 1 3 5
+Day 2 3 5
+Day 3 3 5
+Day 4 3 5
+This is a backslash  symbol (\)
+In every programming language it starts with "Hello, World!"
+In every programming language it starts with 'Hello, World!'
+The saying 'Seeing is Believing' isn't correct in 2020
+
+
+4.Template Literals (Template Strings)
+
+To create a template strings, we use two back-ticks. We can inject data as expressions inside a template string. To inject data, we enclose the expression with a curly bracket({}) preceded by a $ sign. See the syntax below.
+
+//Syntax
+`String literal text`
+`String literal text ${expression}`
+
+Example: 1
+
+console.log(`The sum of 2 and 3 is 5`)              // statically writing the data
+let a = 2
+let b = 3
+console.log(`The sum of ${a} and ${b} is ${a + b}`) // injecting the data dynamically
+
+Example:2
+
+let firstName = 'Asabeneh'
+let lastName = 'Yetayeh'
+let country = 'Finland'
+let city = 'Helsinki'
+let language = 'JavaScript'
+let job = 'teacher'
+let age = 250
+let fullName = firstName + ' ' + lastName
+
+let personInfoTwo = `I am ${fullName}. I am ${age}. I live in ${country}.` //ES6 - String interpolation method
+let personInfoThree = `I am ${fullName}. I live in ${city}, ${country}. I am a ${job}. I teach ${language}.`
+console.log(personInfoTwo)
+console.log(personInfoThree)
+
+I am Asabeneh Yetayeh. I am 250. I live in Finland.
+I am Asabeneh Yetayeh. I live in Helsinki, Finland. I am a teacher. I teach JavaScript.
+
+Using a string template or string interpolation method, we can add expressions, which could be a value, or some operations (comparison, arithmetic operations, ternary operation).
+
+let a = 2
+let b = 3
+console.log(`${a} is greater than ${b}: ${a > b}`)
+
+2 is greater than 3: false
+
+String Methdos:-
+1.length():-let firstName = 'Asabeneh'console.log(firstName.length) 
+2.Accessing characters in a string
+3.to Uppercase() = let country = 'Finland'console.log(country.toUpperCase()) 
+4.toLowerCase()=let country = 'Finland'console.log(country.toLowerCase())      
+5.subStr():-
+6.subString()
+7.split()
+8.trim()
+9.includes()
+10.replace()
+11.chartAt()
+12.chartCodeAt()
+13.indexOf()
+14.lastIndexof()
+15.concat()
+16.startsWith()
+17.endsWith()
+18.search()
+19.match()
+20.repeat():let string = 'love' console.log(string.repeat(10))
+
+length,uppercase,lowercase,
+
+2.Accessing characters in a string
+let string = 'JavaScript'
+let firstLetter = string[0]
+
+console.log(firstLetter)           // J
+
+let secondLetter = string[1]       // a
+let thirdLetter = string[2]
+let lastLetter = string[9]
+
+console.log(lastLetter)            // t
+
+let lastIndex = string.length - 1
+
+console.log(lastIndex)  // 9
+console.log(string[lastIndex])  
+
+5.substr():-
+ It takes two arguments, the starting index and number of characters to slice.
+
+let string = 'JavaScript'
+console.log(string.substr(4,6))    // Script
+
+let country = 'Finland'
+console.log(country.substr(3, 4))  //land
+
+6.substring(): 
+It takes two arguments, the starting index and the stopping index but it doesn't include the character at the stopping index.
+
+let string = 'JavaScript'
+
+console.log(string.substring(0,4))     // Java
+console.log(string.substring(4,10))    // Script
+console.log(string.substring(4))       // Scrip
+
+
+7.split(): The split method splits a string at a specified place.
+let string = '30 Days Of JavaScript'
+
+console.log(string.split())     // Changes to an array -> ["30 Days Of JavaScript"]
+console.log(string.split(' '))  // Split to an array at space -> ["30", "Days", "Of", "JavaScript"]
+
+let firstName = 'Asabeneh'
+
+console.log(firstName.split())    // Change to an array - > ["Asabeneh"]
+console.log(firstName.split(''))  // Split to an array at each letter ->  ["A", "s", "a", "b", "e", "n", "e", "h"]
+
+let countries = 'Finland, Sweden, Norway, Denmark, and Iceland'
+
+console.log(countries.split(','))  // split to any array at comma -> ["Finland", " Sweden", " Norway", " Denmark", " and Iceland"]
+console.log(countries.split(', ')) //  ["Finland", "Sweden", "Norway", "Denmark", "and Iceland"]
+
+
+
+8.trim(): Removes trailing space in the beginning or the end of a string.
+
+let string = '   30 Days Of JavaScript   '
+
+console.log(string)
+console.log(string.trim(' '))
+
+9.includes(): It takes a substring argument and it checks if substring argument exists in the string. includes() returns a boolean. If a substring exist in a string, it returns true, otherwise it returns false.
+
+let string = '30 Days Of JavaScript'
+
+console.log(string.includes('Days'))     // true
+console.log(string.includes('days'))     // false - it is case sensitive!
+console.log(string.includes('Script'))   // true
+console.log(string.includes('script'))   // false
+console.log(string.includes('java'))     // false
+console.log(string.includes('Java'))     // true
+
+let country = 'Finland'
+
+console.log(country.includes('fin'))     // false
+console.log(country.includes('Fin'))     // true
+console.log(country.includes('land'))    // true
+console.log(country.includes('Land'))    // false
+
+10.replace(): takes as a parameter the old substring and a new substring.
+
+string.replace(oldsubstring, newsubstring)
+
+let string = '30 Days Of JavaScript'
+console.log(string.replace('JavaScript', 'Python')) // 30 Days Of Python
+
+let country = 'Finland'
+console.log(country.replace('Fin', 'Noman'))  
+
+
+11.charAt(): Takes index and it returns the value at that index
+syntax:-string.charAt(index)
+let string = '30 Days Of JavaScript'
+console.log(string.charAt(0))        // 3
+
+let lastIndex = string.length - 1
+console.log(string.charAt(lastIndex)) // t
+
+12.charCodeAt(): Takes index and it returns char code (ASCII number) of the value at that index
+syntax:-string.charCodeAt(index)
+let string = '30 Days Of JavaScript'
+console.log(string.charCodeAt(3))        // D ASCII number is 68
+
+let lastIndex = string.length - 1
+console.log(string.charCodeAt(lastIndex)) // t ASCII is 116
+
+
+13.indexOf(): Takes a substring and if the substring exists in a string it returns the first position of the substring if does not exist it returns -1
+
+string.indexOf(substring)
+
+let string = '30 Days Of JavaScript'
+
+console.log(string.indexOf('D'))          // 3
+console.log(string.indexOf('Days'))       // 3
+console.log(string.indexOf('days'))       // -1
+console.log(string.indexOf('a'))          // 4
+console.log(string.indexOf('JavaScript')) // 11
+console.log(string.indexOf('Script'))     //15
+console.log(string.indexOf('script'))     // -1
+
+14.lastIndexOf(): Takes a substring and if the substring exists in a string it returns the last position of the substring if it does not exist it returns -1
+
+//syntax
+string.lastIndexOf(substring)
+
+let string = 'I love JavaScript. If you do not love JavaScript what else can you love.'
+
+console.log(string.lastIndexOf('love'))       // 67
+console.log(string.lastIndexOf('you'))        // 63
+console.log(string.lastIndexOf('JavaScript')) // 38
+
+15.concat(): it takes many substrings and joins them.
+
+string.concat(substring, substring, substring)
+
+let string = '30'
+console.log(string.concat("Days", "Of", "JavaScript")) // 30DaysOfJavaScript
+
+let country = 'Fin'
+console.log(country.concat("land")) // Finland
+
+16.startsWith: it takes a substring as an argument and it checks if the string starts with that specified substring. It returns a boolean(true or false).
+
+//syntax
+string.startsWith(substring)
+
+let string = 'Love is the best to in this world'
+
+console.log(string.startsWith('Love'))   // true
+console.log(string.startsWith('love'))   // false
+console.log(string.startsWith('world'))  // false
+
+let country = 'Finland'
+
+console.log(country.startsWith('Fin'))   // true
+console.log(country.startsWith('fin'))   // false
+console.log(country.startsWith('land'))  //  false
+
+17.endsWith: it takes a substring as an argument and it checks if the string ends with that specified substring. It returns a boolean(true or false).
+
+string.endsWith(substring)
+
+let string = 'Love is the most powerful feeling in the world'
+
+console.log(string.endsWith('world'))         // true
+console.log(string.endsWith('love'))          // false
+console.log(string.endsWith('in the world')) // true
+
+let country = 'Finland'
+
+console.log(country.endsWith('land'))         // true
+console.log(country.endsWith('fin'))          // false
+console.log(country.endsWith('Fin'))          //  false
+
+18.search: it takes a substring as an argument and it returns the index of the first match. The search value can be a string or a regular expression pattern.
+
+string.search(substring)
+
+let string = 'I love JavaScript. If you do not love JavaScript what else can you love.'
+console.log(string.search('love'))          // 2
+console.log(string.search(/javascript/gi))  // 7
+
+19.match: it takes a substring or regular expression pattern as an argument and it returns an array if there is match if not it returns null. Let us see how a regular expression pattern looks like. It starts with / sign and ends with / sign.
+
+let string = 'I love JavaScript. If you do not love JavaScript what else can you love.'
+console.log(string.match('love'))
+
+["love", index: 2, input: "I love JavaScript. If you do not love JavaScript what else can you love.", groups: undefined]
+
+let pattern = /love/gi
+console.log(string.match(pattern))   // ["love", "love", "love"]
+
+Let us extract numbers from text using a regular expression. This is not the regular expression section, do not panic! We will cover regular expressions later on.
+let txt = 'In 2019, I ran 30 Days of Python. Now, in 2020 I am super exited to start this challenge'
+let regEx = /\d+/
+
+// d with escape character means d not a normal d instead acts a digit
+// + means one or more digit numbers,
+// if there is g after that it means global, search everywhere.
+
+console.log(txt.match(regEx))  // ["2", "0", "1", "9", "3", "0", "2", "0", "2", "0"]
+console.log(txt.match(/\d+/g)) // ["2019", "30", "2020"]
+
+
+4.Booleans:-
+A boolean data type represents one of the two values:true or false. Boolean value is either true or false. The use of these data types will be clear when you start the comparison operator. Any comparisons return a boolean value which is either true or false.
+
+Example: Boolean Values
+
+let isLightOn = true
+let isRaining = false
+let isHungry = false
+let isMarried = true
+let truValue = 4 > 3    // true
+let falseValue = 4 < 3  // false
+
+We agreed that boolean values are either true or false.
+Truthy values
+
+    All numbers(positive and negative) are truthy except zero
+    All strings are truthy except an empty string ('')
+    The boolean true
+
+Falsy values
+
+    0
+    0n
+    null
+    undefined
+    NaN
+    the boolean false
+    '', "", ``, empty string
+
+It is good to remember those truthy values and falsy values. In later section, we will use them with conditions to make decisions.
+
+5.Undefined:-
+In JavaScript, if we don't assign a value to a variable, the value is undefined. In addition to that, if a function is not returning anything, it returns undefined.
+
+let firstName
+console.log(firstName) // undefined, because it is not assigned to a value yet
+
+6.Null
+Null in JavaScript means an empty value.
+let emptyValue = null
+
+Checking Data Types:-
+To check the data type of a certain variable, we use the typeof operator. See the following example.
+
+console.log(typeof 'Asabeneh') // string
+console.log(typeof 5) // number
+console.log(typeof true) // boolean
+console.log(typeof null) // object type
+console.log(typeof undefined) // undefined
+
+Checking Data Types:-
+To check the data type of a certain variable we use the typeof method.
+
+Example:
+
+// Different javascript data types
+// Let's declare different data types
+
+let firstName = 'Asabeneh'      // string
+let lastName = 'Yetayeh'        // string
+let country = 'Finland'         // string
+let city = 'Helsinki'           // string
+let age = 250                // number, it is not my real age, do not worry about it
+let job                         // undefined, because a value was not assigned
+
+console.log(typeof 'Asabeneh')  // string
+console.log(typeof firstName)   // string
+console.log(typeof 10)          // number
+console.log(typeof 3.14)        // number
+console.log(typeof true)        // boolean
+console.log(typeof false)       // boolean
+console.log(typeof NaN)         // number
+console.log(typeof job)         // undefined
+console.log(typeof undefined)   // undefined
+console.log(typeof null)        // object
+
+Non-Primitive Data Types:-
+Non-primitive data types are modifiable or mutable.
+We can modify the value of non-primitive data types after it gets create.
+Non-primitive data types cannot be compared by value.
+Even if two non-primitive data types have the same properties and values, they are not strictly equal.
+
+JavaScript Values:-
+
+The JavaScript syntax defines two types of values:
+
+    Fixed values:- numbers , Strings
+    Variable values:- var, let const
+
+Fixed values are called Literals.
+
+Variable values are called Variables.
+
+
+Variables
+
+Variables are containers of data. Variables are used to store data in a memory location. When a variable is declared, a memory location is reserved. When a variable is assigned to a value (data), the memory space will be filled with that data. To declare a variable, we use var, let, or const keywords
+
+A valid JavaScript variable name must follow the following rules:
+
+    A JavaScript variable name should not begin with a number.
+    A JavaScript variable name does not allow special characters except dollar sign and underscore.
+    A JavaScript variable name follows a camelCase convention.
+    A JavaScript variable name should not have space between words.
+
+
+Example of invalid variables:
+
+  first-name
+  1_num
+  num_#_1
+
+// Syntax
+let nameOfVariable = value
+
+
+// Declaring different variables of different data types
+let firstName = 'Asabeneh' // first name of a person
+let lastName = 'Yetayeh' // last name of a person
+let country = 'Finland' // country
+let city = 'Helsinki' // capital city
+let age = 100 // age in years
+let isMarried = true
+
+console.log(firstName, lastName, country, city, age, isMarried)
+
+// Declaring variables with number values
+let age = 100 // age in years
+const gravity = 9.81 // earth gravity  in m/s2
+const boilingPoint = 100 // water boiling point, temperature in °C
+const PI = 3.14 // geometrical constant
+console.log(gravity, boilingPoint, PI)
+
+
+// Variables can also be declaring in one line separated by comma, however I recommend to use a seperate line to make code more readble
+let name = 'Asabeneh', job = 'teacher', live = 'Finland'
+console.log(name, job, live)
+
+
+let:-
+The let keyword was introduced in ES6 (2015).
+Variables defined with let cannot be Redeclared.
+Variables defined with let must be Declared before use.
+Variables defined with let have Block Scope
+cannot contain a space or hyphen(-)
+are case-sentitive
+
+const:-
+The const keyword was introduced in ES6 (2015).
+Variables defined with const cannot be Redeclared.
+Variables defined with const cannot be Reassigned.
+Variables defined with const have Block Scop
+
+const cars = ["Saab", "Volvo", "BMW"];
+
+// You can change an element:
+cars[0] = "Toyota";const cars = ["Saab", "Volvo", "BMW"];
+
+// You can change an element:
+cars[0] = "Toyota";
+
+slice= indexing value nhi rakhatu
+         postion ni value counting left side
+         second paremater in negtive
+
+splice = indexing value rakhe 6 
+         postion ni value counting right side
+         second paremater in positive
+          
+JavaScript Identifiers / Names:-
+Identifiers are JavaScript names.
+Identifiers are used to name variables and keywords, and functions.
+The rules for legal names are the same in most programming languages.
+A JavaScript name must begin with:
+    A letter (A-Z or a-z)
+    A dollar sign ($)
+    Or an underscore (_)
+
+
+Variable JavaScript and Camel Case:-
+
+Historically, programmers have used different ways of joining multiple words into one variable name:
+
+Hyphens:
+first-name, last-name, master-card, inter-city.
+Hyphens are not allowed in JavaScript. They are reserved for subtractions.
+
+Underscore:
+first_name, last_name, master_card, inter_city.
+
+Upper Camel Case (Pascal Case):
+FirstName, LastName, MasterCard, InterCity.
+
+Lower Camel Case:
+JavaScript programmers tend to use camel case that starts with a lowercase letter:
+firstName, lastName, masterCard, interCity.
+
+JavaScript Character Set:-
+JavaScript uses the Unicode character set.
+Unicode covers (almost) all the characters, punctuations, and symbols in the world.
+
+
+
+
+Changing Data Type (Casting)
+
+    Casting: Converting one data type to another data type. We use parseInt(), parseFloat(), Number(), + sign, str() When we do arithmetic operations string numbers should be first converted to integer or float if not it returns an error.
+
+1.String to Int
+2.String to Float
+3.Float to Int
+
+
+1.String to Int:-We can convert string number to a number. Any number inside a quote is a string number. An example of a string number: '10', '5', etc. We can convert string to number using the following methods:
+
+
+  1.  parseInt()
+  2.  Number()
+  3.  Plus sign(+)
+
+let num = '10'
+let numInt = parseInt(num)
+console.log(numInt) // 10
+
+let num = '10'
+let numInt = Number(num)
+
+console.log(numInt) // 10
+
+let num = '10'
+let numInt = +num
+
+console.log(numInt) // 10
+
+
+2.String to Float
+
+We can convert string float number to a float number. Any float number inside a quote is a string float number. An example of a string float number: '9.81', '3.14', '1.44', etc. We can convert string float to number using the following methods:
+
+    parseFloat()
+    Number()
+    Plus sign(+)
+
+let num = '9.81'
+let numFloat = parseFloat(num)
+
+console.log(numFloat) // 9.81
+
+let num = '9.81'
+let numFloat = Number(num)
+
+console.log(numFloat) // 9.81
+
+let num = '9.81'
+let numFloat = +num
+
+console.log(numFloat) // 9.81
+
+3.Float to Int
+
+We can convert float numbers to integers. We use the following method to convert float to int:
+
+    parseInt()
+
+let num = 9.81
+let numInt = parseInt(num)
+
+console.log(numInt) // 9
+
+
+
+global scope and all the other functions and variables are contained in this global scope.
+
+Another is the Local Scope, variables declared inside the functions are considered to be of the local scope and it is futher divided into function scoped and block scoped.
+
+Function Scope: When a variable is declared inside a function, it is only accessible within that function and cannot be used outside that function.
+
+Block Scope: A variable when declared inside the if or switch conditions or inside for or while loops, are accessible within that particular condition or loop. To be consise the variables declared inside the curly braces are called as within block scope.
+
+function hello()
+{
+if(true)
+{
+
+var a = 'Javascript';
+let b = 'C++';
+const c = 'Python';
+console.log(a);
+console.log(b);
+console.log(c);
+console.log("Outside If Statement")
+console.log(a);
+console.log(b);
+console.log(c);
+}
+}
+hello();
+
+output:-
+javaScript
+c++
+python
+outside if statement
+JavaScript
+
+let,cons and var different:-
+1.global scope decalration  kariye tayre let,cons,value access thase but cons incremenet and decremenet nhi thaya let and var nu -- ++ thase
+2.global scope decalare karu 6 tene blocak decalration access  kariye tayre let,cons,value access thase but cons,let incremenet and decremenet nhi thaya and var nu -- ++ thase 
+3.block scope decalration let,cons,var nu access  kariye tayre let,cons,value access thase but cons,let incremenet and decremenet nhi thaya and var nu -- ++ thase 
+4.block scope decalartion let,cons,var bolck scope nu bahar var j print thase incremenr and decrement nhi thay
+
+
+console.log() = it is developer tool .it is use value print and check karvamate thau
+
+document.write() = document tab /screen ni under print thase
+                    document.write apde js ma top,bottom,middle game taya declare kariye to to bootom ma j print thase
+
+window.alert:- dialog,pop-up,alert
+
+window.print():- screen ne print karvamate(printer)
+
+html ni under id levani kai pan tage ma <p id="i">
+js ma document.getElementId("i").innerHtml = ""
+jo apde inputtype no use karyo hou to apde js ma innerhtml na badle value aave
+
+
+
+Js :- verfication button ni under ,pehale validation thase pachi verfication thase
+      validation form ni under input type ma value ni validation thase,pehale validation thase pachi verfication thase
+

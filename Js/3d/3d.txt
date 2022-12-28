@@ -1,0 +1,153 @@
+new  :
+New keyword in JavaScript is used to create an instance of an object that has a constructor function.
+asossiated array supprt nhi karto etle te new no use thau
+A new empty object is created.
+The new object’s internal ‘Prototype’ property (__proto__) is set the same as the prototype of the constructing function.
+The ‘this’ variable is made to point to the newly created object. It binds the property which is declared with ‘this’ keyword to the new object.
+About the returned value, there are three situations below. 
+If the constructor function returns a non-primitive value (Object, array, etc), the constructor function still returns that value. Which means the new operator won’t change the returned value.
+If the constructor function returns nothing, ‘this’ is return;
+If the constructor function returns a primitive value,  it will be ignored, and ‘this’ is returned.
+
+jayre koi application ma login sysytem 1 st login api vade karu to te kaya time date hours and second dekhadse 
+
+console.log output  sivay :-
+dir()
+log()
+alert()
+table()
+error()
+warn()
+time()
+timeEnd()
+count()
+info()
+assert()
+group()
+groupEnd()
+
+
+dir():-The console.dir() method output the list of object properties of a specified object in the console to the user.
+
+      //dir
+var sk = [10, 20, 30];
+console.dir(sk)
+console.log("geek2 (dir) = ", sk);
+
+Testing:-html ma je tag nahau hase te dekhadase
+let p = document.querySelector('p')
+console.log(p)
+
+    log():-Mainly used to log(print) the output to the console. We can put any type inside the log(), 
+            be it a string, array, object, boolean etc.
+            The console.log() method prints out a toString representation of the object in the console to the user.
+          console.log('This is a simple error');
+    error():-This method is used to log error message to the console. Useful in testing of code. By default the error message will be highlighted with red color. 
+           console.error('This is a simple error');
+    warn():-Used to log warning message to the console. By default the warning message will be highlighted with yellow color.
+            console.warn('This is a warning.');
+    clear():-
+           The console will be cleared, in case of Chrome a simple overlayed text will be printed like : ‘Console was cleared’ while in Firefox no message is returned. 
+           console.clear()
+    time() and timeEnd():-
+                Whenever we want to know the amount of time spend by a block or a function, we can make use of the time() and timeEnd() methods provided by the JavaScript console object.
+                They take a label which must be same, and the code inside can be anything( function, object, simple console). 
+                    console.time('abc');
+                    let fun = function(){
+                        console.log('fun is running');
+                    }
+                    let fun2 = function(){
+                        console.log('fun2 is running..');
+                    }
+                    fun(); // calling fun();
+                    fun2(); // calling fun2();
+                    console.timeEnd('abc');
+    table():-
+    This method allows us to generate a table inside a console. The input must be an array or an object which will be shown as a table. 
+    console.table({a:1,b:2,c:3})
+
+    count():- This method is used to count the number that the function hit by this counting method. 
+             for(let i=0;i<5;i++){
+                console.count(i);
+            }
+
+    info:- console.info("Sarthi")
+    assert :- console.asser(100>12,"Hello")
+
+    group() and groupEnd():-
+    group() and groupEnd() methods of the console object allows us to group contents in a separate block, which will be indented.
+    Just like the time() and the timeEnd() they also accepts label, again of same value. 
+  
+        // console.group() and console.groupEnd() method
+            console.group('simple');
+            console.warn('warning!');
+            console.error('error here');
+            console.log('vivi vini vici');
+            console.groupEnd('simple');
+            console.log('new section');
+//Grouping
+car.forEach(car => {
+  console.group(`${car.Firstname}`);
+  console.log(`This is ${car.Firstname}`);
+  console.log(`${car.Firstname} is ${car.age} years old`);
+  console.log(`${car.Firstname}  ${car.Lastname} ${car.Middlename} `);
+  console.groupEnd(`${car.Firstname}`);
+});
+  
+    custom console logs:-
+        User can add Styling to the console logs in order to make logs Custom.
+        The Syntax for it is to add the CSS styling as a parameter to the logs which will replace %c in the logs as shown in the example below
+             // Custom Console log example
+                const spacing = '10px';
+                const styles =
+                        `padding: ${spacing}; background-color: white; color: green; font-style:
+                        italic; border: 1px solid black; font-size: 2em;`;
+                console.log('%cGeeks for Geeks', styles);
+
+
+
+trim na 2 =  type starttrim() and endtrim()
+
+different log and dir
+console.log() returns the object in its string representation .
+console.dir() recognizes the object just as an object and outputs its properties. 
+Both log() and dir() returns the string just as a string
+
+
+Array of objects: It stores multiple values in a single variable
+Array:  An Array is a collection of data and a data structure that is stored in a sequence of memory locations. 
+
+Difference between an Array and an Array of objects:
+1.Arrays are best to use when the elements are numbers.
+  objects are best to use when the elements strings (text).
+2.The data inside an array is known as Elements.	
+  The data inside objects are known as Properties that consist of a key and a value.
+3.The elements can be manipulated using []. 
+  The properties can be manipulated using both .DOT notation and [].
+4.The elements can be popped out of an array using the pop() function.	
+  The keys or properties can be deleted by using the delete keyword.
+5.Iterating through an array is possible using For loop, For..in, For..of, and ForEach().	
+  Iterating through an array of objects is possible using For..in, For..of, and ForEach().
+
+boolean:-
+Truthy values
+
+    All numbers(positive and negative) are truthy except zero
+    All strings are truthy except an empty string ('')
+    The boolean true
+
+Falsy values
+
+    0
+    0n
+    null
+    undefined
+    NaN
+    the boolean false
+    '', "", ``, empty string
+
+different substr ans substring
+1.The two parameters of substr() are start and length , while for substring() , they are start and end 
+2.The difference is in the second argument.
+  The second argument to substring is the index to stop at (but not include),
+  but the second argument to substr is the maximum length to return. 
