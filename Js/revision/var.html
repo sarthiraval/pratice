@@ -103,8 +103,31 @@
     <li>    Float-point numbers: Decimal number Example ... -3.5, -2.25, -1.0, 0.0, 1.1, 2.2, 3.5 ...
     </li>
     <li>
-        Math Object
+        Math Object :-
     </li>
+    <ol>
+        <li>PI</li>
+        <li>Round</li>
+        <li>Floor</li>
+        <li>Ceil</li>
+        <li>Min</li>
+        <li>Max</li>
+        <li>Sqrt</li>
+        <li>Random</li>
+        <ul>
+            <li>Math.floor(Math.random() * 11</li>
+            <li>,Math.ceil(Math.random() * 11</li>
+        </ul>
+        <li>Absoult =  abs</li>
+        <li>logarithm = Log</li>
+        <li>Power = pow</li>
+        <ul>
+        <li>LN2</li>
+        <li>LN10</li>
+        </ul>
+        <li>Sin</li>
+        <li>Cos</li>
+        </ol>
 </ul>
 <li>Strings:-</li>
 <ul>
@@ -112,12 +135,62 @@
     A collection of one or more characters between two single quotes, double quotes, or backticks.
     </li>
 </ul>
+<li>String concatenation :-</li>
+<ul>
+<li>Declaring different variables of different data types :-</li>
+<ol>
+    <li>Concatenating Using Addition Operator :- +</li>
+    <li>Long Literal Strings :- / </li>
+    <li>Template Literals (Template Strings):- ${}</li>
+    <li>Escape Sequences in Strings</li>
+        <ul><li>/n</li><li>/t</li><li>/</li><li>/' /'</li><li>/" /"</li></ul>
+    </li>
+</ol>
+</ul>
+<li>String Methods</li>
+<ol>
+        <li>Length</li>
+        <li>Accesing ch in a String</li>
+        <li>Uppercasee</li>
+        <li>Lowercase</li>
+        <li>Match</li>
+        <li>Substr</li>
+        <li>Substring</li>
+        <li>Split</li>
+        <li>trim</li>
+        <li>replace</li>
+        <li>CharAt</li>
+        <li>ChartcodeAt</li>
+        <li>Include</li>
+        <li>Indexof</li>
+        <li>LastIndexOf</li>
+        <li>Concat</li>
+        <li>startwith</li>
+        <li>endwith</li>
+        <li>Search</li>
+        <li>Repeat</li>
+</ol>
 <li>Booleans:-</li>
 <ul>
     <li>
     A boolean value is either True or False. 
     </li>
-        </li>
+        <li>Truthy values</li>
+
+   <ol> <li>All numbers(positive and negative) are truthy except zero</li>
+  <li>  All strings are truthy except an empty string ('')</li>
+ <li>   The boolean true</li>
+</ol>
+<li>Falsy values</li>
+<ol>
+    <li>0</li>
+    <li>0n</li>
+    <li>null</li>
+    <li>undefined</li>
+    <li>NaN</li>
+    <li>the boolean false</li>
+    <li>'', "", ``, empty string</li>
+</ol>
 </ul>
 
 <li>undefined:-</li>
@@ -205,6 +278,133 @@ Another is the Local Scope, variables declared inside the functions are consider
 </ul> 
 
 <br>
+<li>new :-</li>
+<ul>
+    <li>New keyword in JavaScript is used to create an instance of an object that has a constructor function.</li>
+    <li>asossiated array supprt nhi karto etle te new no use thau</li>
+    <li>A new empty object is created.</li>
+</ul>
+<br>
+
+<li>console.log output  sivay :-</li>
+<ol>
+    <li>dir()</li>
+    <li>log()</li>
+    <li>alert()</li>
+    <li>table()</li>
+    <li>error()</li>
+    <li>warn()</li>
+    <li>time()</li>
+    <li>timeEnd()</li>
+    <li>info()</li>
+    <li>assert()</li>
+    <li>groupEnd()</li>
+    <li>group()</li>
+</ol>
+<br>
+
+<li>dir():-The console.dir() method output the list of object properties of a specified object in the console to the user.</li>
+<br>
+<li>Testing:-html ma je tag nahau hase te dekhadase</li>
+<br>
+<li>log():-</li>
+   <ol><li>Mainly used to log(print) the output to the console. We can put any type inside the log(),be it a string, array, object, boolean etc.
+</li>
+<li> The console.log() method prints out a toString representation of the object in the console to the user.
+</li>
+</ol>
+<br>
+
+   <li>error():-This method is used to log error message to the console. Useful in testing of code. By default the error message will be highlighted with red color.</li>
+        <br>
+  <li>warn():-Used to log warning message to the console. By default the warning message will be highlighted with yellow color.</li>  
+       <br>    
+    <li>clear():- The console will be cleared, in case of Chrome a simple overlayed text will be printed like : Console was cleared while in Firefox no message is returned.
+</li> 
+<br>   
+<li>time() and timeEnd():-</li>
+               <ul> 
+                <li>Whenever we want to know the amount of time spend by a block or a function, we can make use of the time() and timeEnd() methods provided by the JavaScript console object.</li>
+                <li>They take a label which must be same, and the code inside can be anything( function, object, simple console).</li>
+                </ul>
+   <li> table():-</li>
+    <ul><li>This method allows us to generate a table inside a console. The input must be an array or an object which will be shown as a table.
+</li>
+</ul>
+<br>
+      <li>    count():- This method is used to count the number that the function hit by this counting method.</li>
+ <br>
+   <li>  info:- console.info("Sarthi")</li>
+   <br>
+</li> assert :- console.asser(100>12,"Hello")</li>
+
+   <li> group() and groupEnd():-</li>
+   <ul><li>group() and groupEnd() methods of the console object allows us to group contents in a separate block, which will be indented.
+</li>
+<li>    Just like the time() and the timeEnd() they also accepts label, again of same value.
+</li>
+</ul>
+   <li> custom console logs:-</li>
+   <ul><li>User can add Styling to the console logs in order to make logs Custom.
+</li>
+<li>          
+     The Syntax for it is to add the CSS styling as a parameter to the logs which will replace %c in the logs as shown in the example below
+
+</li>
+</ul>
+
+      
+<br>
+            
+
+
+<li>trim is Two Type</li> <ol><li>starttrim()</li><li>endtrim()</li></ol> 
+<br>
+<li>different log and dir</li>
+<li>
+console.log() returns the object in its string representation .
+console.dir() recognizes the object just as an object and outputs its properties. </li>
+<li>Both log() and dir() returns the string just as a string</li>
+</li>
+<br>
+<li>Array of objects: It stores multiple values in a single variable</li>
+<li>Array:  An Array is a collection of data and a data structure that is stored in a sequence of memory locations. </li>
+<br>
+<li>Difference between an Array and an Array of objects:</li>
+<ol>
+    <ul>
+    <li>Arrays are best to use when the elements are numbers.</li>
+    <li> objects are best to use when the elements strings (text).</li>
+    </ul>
+     <ul>
+    <li>The data inside an array is known as Elements</li>
+    <li>The data inside objects are known as Properties that consist of a key and a value.</li>
+    </ul>
+     <ul>
+    <li>The elements can be manipulated using [].</li>
+    <li> The properties can be manipulated using both .DOT notation and [].</li>
+    </ul>
+     <ul>
+    <li>The elements can be popped out of an array using the pop() function.</li>
+    <li>The keys or properties can be deleted by using the delete keyword.</li>
+    </ul>
+    <ul>
+    <li>Iterating through an array is possible using For loop, For..in, For..of, and ForEach().	</li>
+    <li> Iterating through an array of objects is possible using For..in, For..of, and ForEach().</li>
+    </ul>
+</ol>
+	
+  
+
+<li>different substr ans substring</li>
+<ol><li>The two parameters of substr() are start and length , while for substring() , they are start and end </li>
+<li>
+  The difference is in the second argument.
+  The second argument to substring is the index to stop at (but not include),but the second argument to substr is the maximum length to return. 
+</li></ol>
+
+
+
 
 <li>document.write() =document tab /screen ni under print thase
     document.write apde js ma top,bottom,middle game taya declare kariye to to bootom ma j print thase</li>

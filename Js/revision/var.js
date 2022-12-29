@@ -1,9 +1,9 @@
     //global , fuction,block
     {
-        var s = 's';
+        var sqq = 's';
         let ss = 'ss';
         const sss = 'sss';
-        console.log(s);
+        console.log(sqq);
         console.log(ss);
         console.log(sss);
     }
@@ -16,7 +16,7 @@
         console.log(a);
         console.log(b);
         console.log(c);
-        console.log(s);
+        console.log(sqq);
         // console.log(ss);
         // console.log(sss);
         }
@@ -24,7 +24,7 @@
         console.log(a);
         //console.log(b);
         //console.log(c);
-        console.log(s);
+        console.log(sqq);
        //console.log(ss);
         //console.log(sss);
     }
@@ -119,11 +119,9 @@ console.log(ins)
 
 console.log("Var declaration")
 var s_s = "s"
-var Ss= "s"
 var ss= "s"
 var Ss= "s"
 console.log(s_s)
-console.log(Ss)
 console.log(Ss)
 console.log(ss)
 
@@ -346,7 +344,7 @@ let fullName = hiss + are + you; // concatenation, merging two string together.
 console.log("string",fullName);
 
 // Declaring different variables of different data types
-console.log("// Declaring different variables of different data types");
+console.log("Declaring different variables of different data types");
 // 1.Concatenating Using Addition Operator
 console.log("1.Concatenating Using Addition Operator")
 let space = ' '
@@ -422,20 +420,20 @@ console.log(len.length)
 
 console.log("Accesing ch in a String");
 //Accesing ch in a String
-let s = "I AM DON"
-console.log("accesnding",s[0])
-console.log("accesnding",s[5])
-console.log("accesnding",s.length -1)
-console.log("accesnding",s[s.length -1])
+let sb = "I AM DON"
+console.log("accesnding",sb[0])
+console.log("accesnding",sb[5])
+console.log("accesnding",sb.length -1)
+console.log("accesnding",sb[sb.length -1])
 
 console.log("uppecase");
 //uppecase
-console.log("uppercase",s.toUpperCase())
+console.log("uppercase",sb.toUpperCase())
 
 
 console.log("lowercase");
 //lowercase
-console.log("lowercase",s.toLowerCase())
+console.log("lowercase",sb.toLowerCase())
 
 console.log("substr");
 //substr()
@@ -461,6 +459,14 @@ console.log("split",'I, am ,Racer ,and ,I ,Love, Racing ,more ,than ,Study'.spli
 console.log("trim");
 //trim
 console.log("   I am Racer and I Love Racing more than Study  ".trim())
+let oa = "      Sa     ss      "
+console.log(oa)
+console.log(oa.trimStart())
+console.log(oa.trimStart().length)
+let q  = oa.trimStart()
+console.log(q.trimEnd())
+console.log(oa.trimEnd())
+console.log(oa.trim())
 
 console.log("Include");
 //include
@@ -545,3 +551,705 @@ console.log("match",txt.match(/\d+/))  // ["2", "0", "1", "9", "3", "0", "2", "0
 console.log("Repeat");
 //repeat
 console.log("repeat","love".repeat(5))
+
+console.log("Boolean");
+//boolean
+let isLightOn = true
+let isRaining = false
+let isHungry = false
+let isMarried = true
+let truValue = 4 > 3    // true
+let falseValue = 4 < 3  // false
+console.log(isLightOn,isRaining,isHungry,isMarried,truValue,falseValue)
+
+console.log("Undefind");
+//undefind
+let fis = undefined
+console.log(fis)
+let fisrstName
+console.log(fisrstName)
+
+console.log("nul");
+//null
+let empty = null
+console.log(empty) 
+
+
+console.log("Array of Objects");
+
+let casr = [
+    {
+        "Firstname" : "Sathi",
+        "Middlename":"Shaileshkumar",
+        "Lastname" : "Raval",
+        "age" : 14,
+        "register" : new Date(),
+        "hoobies" : "Racer",
+        "phone" : {
+            "phonenumber" :{
+                 "VI":9726760701,
+                 "Airtal": 6351141350,
+                 "JIO" : 9913072322
+            }
+        },
+        "Address": [
+         {
+            "city": {
+                    "City_name": "Ahmedabad",
+                        "Area": {
+                        "Area_name": "Naranpura",
+                        "Pincode" : 380012,
+                        "Socity_name":"Surya house",
+                        "Block_Number" : 164/1958
+                     }
+                }
+        }
+     ]
+    }
+ ,  {
+        "Firstname" : "Janik",
+        "Middlename":"Nileshbhai",
+        "Lastname" : "Kanariya",
+        "age" : 22,
+        "register" : new Date(),
+        "hoobies" : "PhotoGraphey",
+         "phone" : {
+            "phonenumber" :{
+                 "":9726760701,
+                 "Airtal": 6351141350,
+                 "JIO" : 9913072322
+            }
+        },
+        "Address": [
+         {
+            "city": {
+                    "City_name": "Ahmedabad",
+                    "Area": {
+                    "Area_name": "Naranpura",
+                    "Pincode" : 380012,
+                    "Socity_name":"Surya house",
+                    "Block_Number" : 164/1958
+                     }
+                }
+        }
+     ]
+    }
+,
+    {
+        "Firstname" : "yash",
+        "Middlename":"Dineshbhai",
+        "Lastname" : "Rabari",
+        "age" : 22,
+        "register" : new Date(),
+        "hoobies" : "Developing",
+        "phone" : {
+            "phonenumber" :{
+                 "VI":9726760701,
+                 "Airtal": 6351141350,
+                 "JIO" : 9913072322
+            }
+        },
+        "Address": [
+         {
+            "city": {
+                    "City_name": "Ahmedabad",
+                    "Area": {
+                    "Area_name": "Naranpura",
+                    "Pincode" : 380012,
+                    "Socity_name":"Surya house",
+                    "Block_Number" : 164/1958
+                     }
+                }
+        }
+     ]
+    }
+]
+
+console.log(casr);
+console.table(casr);
+
+//Grouping
+casr.forEach(casr => {
+  console.group(`${casr.Address}`);
+  console.groupEnd(`${casr.Address}`);
+});
+
+console.dir(casr)
+
+
+//dir
+var ska = [10, 20, 30];
+console.dir(ska)
+console.log("geek2 (dir) = ", ska);
+
+
+//error
+console.error("Bye Bye")
+
+//warning
+console.warn("Bye Bye")
+
+//clear
+//console.clear()
+
+
+//time and timeend() same hovu joiye
+console.time('abc')
+let fun = function(){
+    console.log("Bike speed is only 250")
+}
+let fun2 = function(){
+    console.log("Your speed is very slow")
+}
+fun()
+fun2()
+console.timeEnd('abc')
+
+//count
+console.count("Sarthi")
+console.count("Raval")
+console.count("Sarthi")
+console.count("Raval")
+console.count("Sarthi")
+console.count("Raval")
+console.count("Sarthi")
+console.count("Raval")
+console.count("ShaileshKumar")
+
+for(let i = 0;i<5;i++){
+    console.count(i)
+}
+
+//info
+console.info("Info ni jankari")
+
+//assert
+console.assert(100<12,"HI Baby")
+
+//group and groupend
+console.group('simple');
+console.warn('warning!');
+console.error('error here');
+console.log('HI');
+console.groupEnd('simple');
+
+//Grouping
+car.forEach(car => {
+  console.group(`${car.Firstname}`);
+  console.log(`This is ${car.Firstname}`);
+  console.log(`${car.Firstname} is ${car.age} years old`);
+  console.log(`${car.Firstname}  ${car.Lastname} ${car.Middlename} `);
+  console.groupEnd(`${car.Firstname}`);
+});
+console.log('new section');
+
+
+//testing
+const ap = document.querySelector("h1");     //from html tag printing elements
+console.log(ap)
+
+//custom console log
+//style
+let spacing = '10px'
+let margins = "15px"
+let styles  = `padding : ${spacing};
+               margintop :${margins};
+               marginbottom :${margins};
+               background-color : Yellow;
+               color: Red;
+               font-styels: italic;
+               border: 2px solid powderblue;
+               font-size:12px`
+console.log('%cI am Racer', styles);           
+            
+
+//operators
+//Assignment operators
+console.log("operators");
+console.log("Assignment operators");
+// = y is store x value
+let  x = 10
+let y = "s"
+console.log("1:",x=y) //s
+let  xw = "s"
+let yw = 10
+console.log("2:",xw=yw) //10
+let  swa = "s"
+let w = "a"
+console.log("3:",swa=w) //a
+let  sx = 10
+let sy = 5
+console.log("4:",sx =sy) //5
+
+//x + y result is stored in x
+//console.log("1:",sx += sy) //15
+//console.log("2:",x += y)  //10s
+//console.log("3:",xw += yw) //s10
+//console.log("4:",swa += w) //sa
+//console.log(sx =+ sy) //5
+
+
+//x * y result is stored in x
+//console.log("1:",sx *= sy) //50
+//console.log("1:",sx =* sy) //error
+//console.log("2:",x *= y) // nan
+//console.log("3:",xw *= yw) // nan
+//console.log("4:",swa *= w) // nan
+
+//x - y result is stored in x
+//console.log("1:",sx -= sy) //5
+//console.log(sx =- sy) //-5
+//console.log("2:",x -= y)  // nan
+//console.log("3:",xw -= yw)  //nan
+//console.log("4:",swa -= w) //nan
+
+//x  / y result is stored in x
+//console.log("1:",sx /= sy) //2
+//console.log(s =/ y) //error
+//console.log("2:",x /= y)  // nan
+//console.log("3:",xw /= yw) //nan
+//console.log("4:",swa  /= w) //nan
+
+//x % y result is stored in x
+//console.log("1:",sx %= sy) //0
+//console.log(s =% y) //err
+//console.log("2:",x %= y)  //nan
+//console.log("3:",xw %= yw) //nan
+//console.log("4:",swa %= w) //nan
+
+//x ** y result is stored in x
+// console.log("1:",sx **= sy) //100000
+// console.log("2:",x **= y) // nan
+// console.log("3:",xw  **= yw) // nan
+// console.log("4:",swa **= w) //nan
+
+
+console.log("comparison opertor");
+console.log(" == , != ,> , < , <= , =>,===");
+//comparison opertor
+// == , != ,> , < , <= , =>,===
+
+console.log(">:",10 > 15) //false
+console.log(">",10 > 10) //false
+console.log(">:",15 > 10) //True
+console.log(">:","As" > "A") // true
+console.log(">:",undefined > undefined) //false
+console.log(">:",undefined > null) //false
+console.log(">:",null > null) //false
+console.log(">:",null > undefined) //false
+console.log(">:",Number > null) //false
+console.log(">:",Number > undefined) //false
+console.log(">:",Number > NaN) //false
+
+
+console.log(">=",10 >= 15) //false
+console.log(">=",10 >= 10) //true
+console.log(">=",15 >= 10) //True
+console.log("<=","A" <= "A") // true
+console.log(">=","As" >= "A") // true
+console.log(">=",undefined >= undefined) //false
+console.log(">=",undefined >= null) //false
+console.log(">=",null >= null) //true
+console.log(">=",null >= undefined) //false
+console.log(">=",Number >= null) //false
+console.log(">=",Number >= undefined) //false
+console.log(">=",Number >= NaN) //false
+
+console.log("<",10 < 15) //false
+console.log("<",10 > 10) //false
+console.log("<",15 > 10) //True
+console.log("<","As" > "A") // true
+console.log("<",undefined > undefined) //false
+console.log("<",undefined > null) //false
+console.log("<",null > null) //false
+console.log("<",null > undefined) //false
+console.log("<",Number > null) //false
+console.log("<",Number > undefined) //false
+console.log("<",Number > NaN) //false
+
+
+console.log("<=",10 <= 15) //true
+console.log("<=",10 <= 10) //true
+console.log("<=",15 <= 10) //false
+console.log("<=","A" <= "a") // true
+console.log("<=","As" <= "A") // false
+console.log("<=",undefined <= undefined) //false
+console.log("<=",undefined <= null) //false
+console.log("<=",null <= null) //true
+console.log("<=",null <= undefined) //false
+console.log("<=",Number <= null) //false
+console.log("<=",Number <= undefined) //false
+console.log("<=",Number <= NaN) //false
+
+console.log("!=",3!="")       //tr
+console.log("!=",3!="3")     //tr
+console.log("!=",10 != 15) //true
+console.log("!=",10 != 10) //false
+console.log("!=",15 != 10) //true
+console.log("!=","A" != "A") // false
+console.log("!=","A" != "a") // true
+console.log("!=","As" != "A") // true
+console.log("!=",undefined != undefined) //false
+console.log("!=",undefined != null) //false
+console.log("!=",null != null) //false
+console.log("!=",null != undefined) //false
+console.log("!=",Number != null) //true
+console.log("!=",Number != undefined) //true
+console.log("!=",Number != NaN) //true
+console.log("!=",Number != Number) //false
+console.log("!=",NaN != NaN) //true
+
+console.log("==",10 == 15) //false
+console.log("==",10 == 10) //true
+console.log("==",15 == 10) //false
+console.log("==","A" == "A") // true
+console.log("==","A" == "a") // false
+console.log("==","As" == "A") // false
+console.log("==",undefined == undefined) //true
+console.log("==",undefined == null) //true
+console.log("==",null == null) //false
+console.log("==",null == undefined) //true
+console.log("==",Number == null) //false
+console.log("==",Number == undefined) //false
+console.log("==",Number == NaN) //false
+console.log("==",Number == Number) //false
+console.log("==",NaN == NaN) //false
+console.log("==","ab" == "")    //fa
+console.log("==",1==" ")     //fa
+console.log("==",1=="")     //fa
+console.log("==",0=="")     //tr
+console.log("==",0==" ")     //tr
+console.log("==",1==true)    //tr
+console.log("==",0==false)   //tr 
+console.log("==",0==true)   //fa  
+
+console.log("===",1===true)   //fa
+console.log("===",0===true)   //fa
+console.log("===",0==="")     //fa
+console.log("===",1==="")     //fa
+console.log("===","ab" === "")    //fa
+console.log("===",10 === 15) //false
+console.log("===",10 === 10) //true
+console.log("===",15 === 10) //false
+console.log("===","A" === "A") // true
+console.log("===","A" === "a") // false
+console.log("===","As" === "A") // false
+console.log("===",undefined === undefined) //true
+console.log("===",undefined === null) //true
+console.log("===",null === null) //false
+console.log("===",null === undefined) //false
+console.log("===",Number === null) //false
+console.log("===",Number === undefined) //false
+console.log("===",Number === NaN) //false
+console.log("===",Number === Number) //true
+console.log("===",NaN === NaN) //false
+
+console.log('mango'.length == 'avoca'.length)       //tr
+console.log('mango'.length == 'avocado'.length)     //fa
+console.log('mango'.length === 'avoca'.length)       //tr
+console.log('mango'.length === 'avocado'.length)     //fa
+console.log('mango'.length != 'avocado'.length)     //tr
+console.log('mango'.length != 'avoca'.length)       //fa
+console.log('mango'.length > 'avocado'.length)      //fa
+console.log('mango'.length > 'avocao'.length)      //fa
+console.log('mango'.length < 'avoca'.length)        //fa
+console.log('mango'.length < 'avocado'.length)      //tr
+console.log('mango'.length <= 'avoca'.length)       //tr
+console.log('mango'.length >= 'avoca'.length)       //tr
+console.log('mango'.length >= 'avocado'.length)     //fa
+console.log('mango'.length <= 'avocado'.length)     //tr
+
+
+//Arithmetic Operators
+console.log("Arithmetic Operators");
+let sm = 10,assas=20,ds ="ss",sd="gf";
+console.log(sm+assas) //30
+console.log(sm+ds) //10ss
+console.log(ds+sd) //ssgf
+
+
+console.log(sm-assas) //-10
+console.log(sm-ds) //nan
+console.log(ds-sd) //nan
+
+console.log(sm*assas) //200
+console.log(sm*ds) //nan
+console.log(ds*sd) //nan
+
+console.log(sm/assas) //0.5
+console.log(sm/ds) //nan
+console.log(ds/sd) //nan
+
+
+console.log(sm%assas) //10
+console.log(sm%ds) //nan
+console.log(ds%sd) //anan
+
+console.log(sm**assas) //100000000000000000000
+console.log(sm**ds) //nan
+console.log(ds**sd) //nan
+
+
+//circle radius
+let Pi = 3.14
+console.log("raduis",Pi * 100 *100)
+console.log("weihgt",9.81*72)
+
+const boilingPoint = 100  
+const gravity =9.81
+const bodyTemp = 37 
+console.log(
+  `The boiling point of water is ${boilingPoint} oC.\nHuman body temperature is ${bodyTemp} oC.\nThe gravity of earth is ${gravity} m / s2.`
+)
+
+console.log("Logical :")
+console.log("&& ||  !");
+//logical 
+//&& ||  !
+
+//&& ampersand 
+console.log("&& ampersand");
+const check = "5" > 4 && 14 > 5       //t & t = t
+console.log(check)
+
+const checkk =  "5" < "4" && 14 < "15"      //f & t = f
+console.log(checkk)
+
+
+const checskk =  "abc" < "ae" && 13 < "15"      //f & t = 
+console.log(checskk)
+
+const checkkk =  "5" < "4" && 14 < "12"     //f & f = f
+console.log(checkkk)
+
+console.log("|| pipe or operator");
+// || pipe or operator
+
+const chec = "5" > 4 || 14 > 5       //t & t = t
+console.log(chec)
+
+
+const sasa =  "aa" < "ab" && 13 < "15"      //t & t = t
+console.log(sasa)
+
+const checc =  "5" < "4" || 14 < "15"      //f & t = t
+console.log(checc)
+
+const checcc =  "5" < "4" || 14 < "12"     //f & f = f
+console.log(checcc)
+
+//  ! Negation
+console.log("! Negation");
+let ch = 3 >= 3     //tr
+console.log(ch)
+
+let chh = !(2 >= 3)     //tr
+console.log(chh)
+
+let chs = 3 <= 3     //tr
+console.log(chs)
+
+let chhs = !(2 <= 3)     //fa
+console.log(chhs)
+
+let abcde = true
+let abcdee = !abcde      //fa
+console.log(abcdee)
+
+let qwerr = !true
+console.log(qwerr)      //fa
+
+let qwer = !false
+console.log(qwer)       //tr
+
+let qwers = !1
+console.log(qwers)       //f
+
+
+//  Increment
+//Pre -increment
+console.log("Increment : ");
+console.log("Pre - Increment :");
+let count = 1
+console.log("preincrement",++count)        // 2
+console.log("preincrement",count)          //2
+
+//Post-increment
+console.log("Post-increment:");
+let countt = 1
+console.log("postincrement",countt++)        //1
+console.log("postincrement",countt)          //2
+
+//  Decrement
+//Pre - Decrement
+console.log("Decrement :")
+console.log("Pre-Drecrement");
+let coun = 0
+console.log("Pre - Decrement",--coun)        // -1
+console.log("Pre - Decrement",coun)          // -1
+
+//Post - Decrement
+console.log("Post-Drecrement");
+let counn = 0
+console.log("Post - Decrement",coun--)        // -1
+console.log("Post - Decrement",coun)          // -2
+
+
+//console.log(alert('ss'))
+//console.log(prompt("s", "s"))
+//console.log(prompt("s"))
+//console.log(confirm("Are you sure you like his"))
+
+//ternay opertors
+console.log("ternay opertors");
+let race = true
+race 
+ ?console.log("sure")
+ :console.log("no sure")
+race = false
+race 
+  ?console.log("sure")
+  :console.log("no sure")
+
+  let races = 10 
+  races > 100
+   ?console.log("yes") 
+   :console.log("no")
+
+   races > 8
+     ?console.log("yes")
+     :console.log("no")
+
+
+     console.log("Date Methods");
+console.log(Date())
+
+console.log(new Date())
+
+console.log("fullyear :",new Date().getFullYear()) //yyyy
+console.log("Month :",new Date().getMonth())  //0-11
+console.log("Date :",new Date().getDate())  //1-31
+console.log("Hourse",new Date().getHours())  //0-23
+console.log("Minutes",new Date().getMinutes()) //0-59
+console.log("Second",new Date().getSeconds()) //0-59
+console.log("milliSecond",new Date().getMilliseconds()) //0-999
+console.log("Time",new Date().getTime()) 
+console.log("Time",Date.now())
+console.log("Day",new Date().getDay()) //0-6
+
+
+console.log("IF anf else IF and If -Else Examples");
+//if
+if(2<3){
+    console.log("true")
+}
+
+let sad = true
+if (sad){
+    console.log("false")
+}
+
+
+//if-else 
+
+if(12<3)
+{
+    console.log("true")
+}
+else{console.log("false")}
+
+let sds = false
+if (sds){
+    console.log("true")
+}
+else{console.log("false")}
+
+//if-elseif-else
+let am =10
+if(am>=12){
+    console.log(am+">=false")
+}
+else if(a>=12){
+    console.log(am+">=false")
+}
+else if(a>=12){
+    console.log(am+"==true")
+}
+else if(a!=10){
+    console.log(am+"===true")
+}
+else{
+    console.log(am)
+}
+
+
+let sa = "Red"
+if(sa==""){
+    console.log(sa+"==false")
+}
+else if(sa=="Green"){
+    console.log(sa+"==false")
+}
+else if(sa=="Blue"){
+    console.log(sa+"==false")
+}
+else if(sa=="White"){
+    console.log(sa+"==false")
+}
+else{
+    console.log("print pls sa value =",sa)
+}
+
+// let num1 = parseFloat(prompt("num1"))
+// let num2 = parseFloat(prompt("num2"))
+// let cals = prompt("+,/,-,*,**")
+// let res
+// if(cals == "+" )  {
+//     res = num1 + num2
+// }
+// else if(cals == "-"){
+//     res = num1 - num2
+// }
+// else if (cals == "*"){
+//     res = num1 * num2
+// }
+// else if (cals == "/"){
+//     res = num1 / num2
+// }
+// else{
+//     res = num1 ** num2
+// }
+// console.log(`${num1} ${cals} ${num2} = ${res}`);
+
+console.log("Switch case");
+//switch
+const nu1 = parseFloat(prompt("Num").trim())
+const cal = prompt(`+,-,*,/,**`)
+const nu2 = parseFloat(prompt("Num").trim())
+let result 
+switch(cal){
+    case  "+" :
+       result = nu1 + nu2
+       console.log(`${nu1} + ${nu2} = ${result}` )
+       break
+
+    case  "-" :
+       result = nu1 - nu2
+       console.log(`${nu1} - ${nu2} = ${result}` )
+       break
+    case  "*" :
+       result = nu1 * nu2
+       console.log(`${nu1} * ${nu2} =  ${result}` )
+       break
+    case  "/" :
+       result = nu1 / nu2
+       console.log(`${nu1} / ${nu2} = ${result}` )
+       break
+    case  "**" :
+       result = nu1 ** nu2
+       console.log(`${nu1} ** ${nu2}  = ${result}` )
+       break
+    default:
+          console.log("Invalid any ")
+          break
+}
