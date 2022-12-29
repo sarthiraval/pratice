@@ -118,85 +118,85 @@
 //  }
 //  console.log(text)
 
-function ssd() {
-    let s = prompt("Enter a String");
-    if(s != ""){
+// function ssd() {
+//     let s = prompt("Enter a String");
+//     if(s != ""){
     // const o = 'AEIOUaeiou'
     // let c =   ss => Array.from(ss).filter(letter => o.includes(letter));
     // let cs =   ss => Array.from(ss).filter(letter => o.includes(letter)).length;
     // console.log(c(s)); 
     // console.log(cs(s)); 
 
-    let dict1 ={}
-    let dic1 = 0
+//     let dict1 ={}
+//     let dic1 = 0
 
-        let cha = s.toUpperCase().split("").toString();
-        console.log(cha) 
-        for(let i = 0; i <= cha.length - 1; i++) {
-        let ch = cha[i];
-        let n = cha[i + 1]   
-        console.log(ch,i)   
-        if(nss(ch)){
-          if(dict1[ch] != 1)
-        {
-            dict1[ch] = 1
-        }
-        else{
-            dict1[ch] = dict1[ch] + 1
-        }
-          dic1 =  dic1 + 1
-          console.log("VOVEL")
+//         let cha = s.toUpperCase().split("").toString();
+//         console.log(cha) 
+//         for(let i = 0; i <= cha.length - 1; i++) {
+//         let ch = cha[i];
+//         let n = cha[i + 1]   
+//         console.log(ch,i)   
+//         if(nss(ch)){
+//           if(dict1[ch] != 1)
+//         {
+//             dict1[ch] = 1
+//         }
+//         else{
+//             dict1[ch] = dict1[ch] + 1
+//         }
+//           dic1 =  dic1 + 1
+//           console.log("VOVEL")
         
-        }
-        else{
-          console.log("NONVEl")
-        }
+//         }
+//         else{
+//           console.log("NONVEl")
+//         }
         
-         console.log(ch,i,n)   
-        if(nss(ch) || nss(n)){
-          console.log("VOVEL")
-        }
-        else{
-          console.log("NONVEl")
-         }
+//          console.log(ch,i,n)   
+//         if(nss(ch) || nss(n)){
+//           console.log("VOVEL")
+//         }
+//         else{
+//           console.log("NONVEl")
+//          }
 
-          console.log(ch,i,n)   
-        if(nss(ch) && nss(n)){
-          console.log("VOVEL")
-        }
-        else{
-          console.log("NONVEl")
-        }
-         }   
+//           console.log(ch,i,n)   
+//         if(nss(ch) && nss(n)){
+//           console.log("VOVEL")
+//         }
+//         else{
+//           console.log("NONVEl")
+//         }
+//          }   
         
-  console.log("why",dict1)
-     console.log("count",dic1)
-      }
+//   console.log("why",dict1)
+//      console.log("count",dic1)
+//       }
     
-  else{
-    console.log("Please enter a string")
-  }
-}
+//   else{
+//     console.log("Please enter a string")
+//   }
+// }
 
   
-  function nss(w) {
-    switch (w) {
-      case 'A':
-      case 'E':
-      case 'I':
-      case 'O':
-      case 'U':
-        //bane mathi 1volves and 1 volves nto etle bane print thatu tu
-       // console.log("vowel is here")
-        return true 
+//   function nss(w) {
+//     switch (w) {
+//       case 'A':
+//       case 'E':
+//       case 'I':
+//       case 'O':
+//       case 'U':
+//         //bane mathi 1volves and 1 volves nto etle bane print thatu tu
+//        // console.log("vowel is here")
+//         return true 
        
-      default:
-      //  console.log("vowel is not here")
-        return false
-    }
-  }
+//       default:
+//       //  console.log("vowel is not here")
+//         return false
+//     }
+//   }
   
-ssd();
+// ssd();
 
 
 // and all condition must be true
