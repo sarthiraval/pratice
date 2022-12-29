@@ -68,6 +68,13 @@ console.log(person.name)
 console.log(person.ln)
 console.log(person.age)
 
+let n_s = 0.3;
+let Ns = 0.3;
+let ns = 0.3;
+console.log(n_s)
+console.log(Ins)
+console.log(ins)
+
 const i_ns = 0.3;
 const Ins = 0.3;
 const ins = 0.3;

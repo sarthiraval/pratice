@@ -894,62 +894,9 @@ console.log(numInt) // 9
 
 
 
-global scope and all the other functions and variables are contained in this global scope.
-
-Another is the Local Scope, variables declared inside the functions are considered to be of the local scope and it is futher divided into function scoped and block scoped.
-
-Function Scope: When a variable is declared inside a function, it is only accessible within that function and cannot be used outside that function.
-
-Block Scope: A variable when declared inside the if or switch conditions or inside for or while loops, are accessible within that particular condition or loop. To be consise the variables declared inside the curly braces are called as within block scope.
-
-function hello()
-{
-if(true)
-{
-
-var a = 'Javascript';
-let b = 'C++';
-const c = 'Python';
-console.log(a);
-console.log(b);
-console.log(c);
-console.log("Outside If Statement")
-console.log(a);
-console.log(b);
-console.log(c);
-}
-}
-hello();
-
-output:-
-javaScript
-c++
-python
-outside if statement
-JavaScript
-
-let,cons and var different:-
-1.global scope decalration  kariye tayre let,cons,value access thase but cons incremenet and decremenet nhi thaya let and var nu -- ++ thase
-2.global scope decalare karu 6 tene blocak decalration access  kariye tayre let,cons,value access thase but cons,let incremenet and decremenet nhi thaya and var nu -- ++ thase 
-3.block scope decalration let,cons,var nu access  kariye tayre let,cons,value access thase but cons,let incremenet and decremenet nhi thaya and var nu -- ++ thase 
-4.block scope decalartion let,cons,var bolck scope nu bahar var j print thase incremenr and decrement nhi thay
-
-
-console.log() = it is developer tool .it is use value print and check karvamate thau
-
-document.write() = document tab /screen ni under print thase
-                    document.write apde js ma top,bottom,middle game taya declare kariye to to bootom ma j print thase
-
-window.alert:- dialog,pop-up,alert
-
-window.print():- screen ne print karvamate(printer)
 
 html ni under id levani kai pan tage ma <p id="i">
 js ma document.getElementId("i").innerHtml = ""
 jo apde inputtype no use karyo hou to apde js ma innerhtml na badle value aave
 
-
-
-Js :- verfication button ni under ,pehale validation thase pachi verfication thase
-      validation form ni under input type ma value ni validation thase,pehale validation thase pachi verfication thase
 
