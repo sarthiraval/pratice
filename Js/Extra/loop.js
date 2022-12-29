@@ -1,5 +1,5 @@
 let j =1
-for(;j<=10;j +=2){
+for(;j<=11;j +=2){
     console.log(j)
 }
 
@@ -12,10 +12,16 @@ for(let y = 1;;y +=2){
     if(y>10){
         break
     }
-        console.log(j)
+        console.log(y)
 
 }
+for(let y = 0;;y +=2){
+    if(y>10){
+        break
+    }
+        console.log(y)
 
+}
 // let num = prompt("Enter  a number")
 // if (num %2 == 0)
 // {
@@ -35,7 +41,7 @@ for(let y = 1;;y +=2){
 // let num1 = prompt("Enter  a number")
 // let num2 = prompt("Enter  a number")
 // let num3 = prompt("Enter  a number")
-// if(num1 > num2 && num1>num3){
+// if(num1 > num2  && num1>num3){
 //     console.log(num1+"largest number")
 // }
 // else if (num2 > num3){
@@ -76,9 +82,10 @@ for(let y = 1;;y +=2){
 // }
 // else{
 //     console.log("year is not = "+year)
-// }
+//}
 
 let marks = prompt("Enter a number")
+if (marks <= 100){
 if (marks >= 90 && marks <= 100){
     console.log(marks+"= very good");
 }
@@ -95,6 +102,10 @@ else if (marks >= 35 && marks <= 60){
 
 else if (marks >= 0 && marks <= 35){
     console.log(marks+"= failed");
+}
+}
+else{
+console.log("Marsk down to 100")
 }
 
 

@@ -43,8 +43,10 @@
 //     console.log ("Is a consonant");
 //     }
 
+//Switch case
+//common code
 
-    // let ch;
+// let ch;
     // ch = prompt("Enter charcter")
     // switch(ch)
     // {
@@ -64,23 +66,71 @@
     //     console.log("no volves") 
     //     break;
     // }
+    
+
+//     let day =0
+//     switch (new Date().getDay()) {
+//       case 0:
+//         day  = "Sunday"
+//         break;
+//       case  1:
+//         day="Monday"  
+//         break
+//       case 2:
+//         day = "Tuesday"  
+//         break
+//       case 3:
+//         day = "Wensday"
+//         break
+//       case 4:
+//         day  = "Thursday"
+//         break;
+//       case  5:
+//         day="Friday"  
+//         break
+//       case 6:
+//         day = "Tuesday"  
+//         break
+       
+//         default:
+//         console.log("Unvalid")
+//     }
+//     console.log(day)
 
 
+//   let numo =  prompt("Enter a number")
+//   switch (numo % 2) {
+//     case 0 : 
+//        console.log("even = "+numo)  
+//    case 1 :
+//       console.log("odd = "+numo);
+//   }
 
+
+//   let text = 5
+//   switch (text) {
+//     case 0 : 
+//       text = "off"  
+//       case 1:
+//         text = "on"
+//  default :
+//       text = "non value"
+//  }
+//  console.log(text)
 
 function ssd() {
     let s = prompt("Enter a String");
     if(s != ""){
-    const o = 'AEIOUaeiou'
-    let c =   ss => Array.from(ss).filter(letter => o.includes(letter));
-    let cs =   ss => Array.from(ss).filter(letter => o.includes(letter)).length;
-    console.log(c(s)); 
-    console.log(cs(s)); 
+    // const o = 'AEIOUaeiou'
+    // let c =   ss => Array.from(ss).filter(letter => o.includes(letter));
+    // let cs =   ss => Array.from(ss).filter(letter => o.includes(letter)).length;
+    // console.log(c(s)); 
+    // console.log(cs(s)); 
 
     let dict1 ={}
     let dic1 = 0
 
-        let cha = s.toUpperCase().split("");
+        let cha = s.toUpperCase().split("").toString();
         console.log(cha) 
         for(let i = 0; i <= cha.length - 1; i++) {
         let ch = cha[i];
@@ -102,24 +152,25 @@ function ssd() {
           console.log("NONVEl")
         }
         
-        //  console.log(ch,i,n)   
-        // if(nss(ch) || nss(n)){
-        //   console.log("VOVEL")
-        // }
-        // else{
-        //   console.log("NONVEl")
-        //  }
+         console.log(ch,i,n)   
+        if(nss(ch) || nss(n)){
+          console.log("VOVEL")
+        }
+        else{
+          console.log("NONVEl")
+         }
 
-        //   console.log(ch,i,n)   
-        // if(nss(ch) && nss(n)){
-        //   console.log("VOVEL")
-        // }
-        // else{
-        //   console.log("NONVEl")
-        // }
+          console.log(ch,i,n)   
+        if(nss(ch) && nss(n)){
+          console.log("VOVEL")
+        }
+        else{
+          console.log("NONVEl")
+        }
          }   
+        
   console.log("why",dict1)
-      console.log("count",dic1)
+     console.log("count",dic1)
       }
     
   else{
