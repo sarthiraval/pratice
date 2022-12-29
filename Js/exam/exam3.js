@@ -70,7 +70,6 @@
 
 function ssd() {
     let s = prompt("Enter a String");
-
     if(s != ""){
     const o = 'AEIOUaeiou'
     let c =   ss => Array.from(ss).filter(letter => o.includes(letter));
@@ -78,15 +77,51 @@ function ssd() {
     console.log(c(s)); 
     console.log(cs(s)); 
 
+    let dict1 ={}
+    let dic1 = 0
 
         let cha = s.toUpperCase().split("");
         console.log(cha) 
         for(let i = 0; i <= cha.length - 1; i++) {
-        let e = cha[i];
-        let n = cha[i + 1]      
-        if(nss(e) && nss(n)){}
-        } 
-  }
+        let ch = cha[i];
+        let n = cha[i + 1]   
+        console.log(ch,i)   
+        if(nss(ch)){
+          if(dict1[ch] != 1)
+        {
+            dict1[ch] = 1
+        }
+        else{
+            dict1[ch] = dict1[ch] + 1
+        }
+          dic1 =  dic1 + 1
+          console.log("VOVEL")
+        
+        }
+        else{
+          console.log("NONVEl")
+        }
+        
+        //  console.log(ch,i,n)   
+        // if(nss(ch) || nss(n)){
+        //   console.log("VOVEL")
+        // }
+        // else{
+        //   console.log("NONVEl")
+        //  }
+
+        //   console.log(ch,i,n)   
+        // if(nss(ch) && nss(n)){
+        //   console.log("VOVEL")
+        // }
+        // else{
+        //   console.log("NONVEl")
+        // }
+         }   
+  console.log("why",dict1)
+      console.log("count",dic1)
+      }
+    
   else{
     console.log("Please enter a string")
   }
@@ -100,11 +135,44 @@ function ssd() {
       case 'I':
       case 'O':
       case 'U':
-        console.log("Volwe value is here");
-        break
+        //bane mathi 1volves and 1 volves nto etle bane print thatu tu
+       // console.log("vowel is here")
+        return true 
+       
       default:
-        console.log("Volwe value is not here");
+      //  console.log("vowel is not here")
+        return false
     }
   }
   
 ssd();
+
+
+// and all condition must be true
+// condition 1
+// condition 2
+
+// 1 = true && 2 = true
+// 1 = false && 2 = no chek
+
+
+// or atleast one condition must be true
+// condition 1
+// condition 2
+
+// 1 = false && 2 = true
+// 1 = true && 2 = no check
+
+//not !
+
+// !(true) = false
+// !(false) = true
+
+
+// and bane condition sachi hovi joiye
+//and peli khoi biji chek nahi kare
+//and peli sachi to biji khoti no output
+
+// or peli kholi biji chek karse j
+// or ma game te 1 sachi hovi joiye
+// or ma pehli sachi biji condition chek nhi kar
