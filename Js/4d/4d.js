@@ -59,55 +59,64 @@ else{
     console.log("print pls sa value =",sa)
 }
 
-// let num1 = parseFloat(prompt("num1"))
-// let num2 = parseFloat(prompt("num2"))
-// let cals = prompt("+,/,-,*,**")
-// let res
-// if(cals == "+" )  {
-//     res = num1 + num2
-// }
-// else if(cals == "-"){
-//     res = num1 - num2
-// }
-// else if (cals == "*"){
-//     res = num1 * num2
-// }
-// else if (cals == "/"){
-//     res = num1 / num2
-// }
-// else{
-//     res = num1 ** num2
-// }
-// console.log(`${num1} ${cals} ${num2} = ${res}`);
 
-//switch
-const nu1 = parseFloat(prompt("Num").trim())
-const cal = prompt(`+,-,*,/,**`)
-const nu2 = parseFloat(prompt("Num").trim())
-let result 
-switch(cal){
-    case  "+" :
-       result = nu1 + nu2
-       console.log(`${nu1} + ${nu2} = ${result}` )
-       break
+let r_s= {sname:"fs"}
+let i_s = toString(r_s)
+console.log("Object Type of conversionto String after type of = "+ i_s);
 
-    case  "-" :
-       result = nu1 - nu2
-       console.log(`${nu1} - ${nu2} = ${result}` )
-       break
-    case  "*" :
-       result = nu1 * nu2
-       console.log(`${nu1} * ${nu2} =  ${result}` )
-       break
-    case  "/" :
-       result = nu1 / nu2
-       console.log(`${nu1} / ${nu2} = ${result}` )
-       break
-    case  "**" :
-       result = nu1 ** nu2
-       console.log(`${nu1} ** ${nu2}  = ${result}` )
-       break
-    default:
-          console.log("Invalid any ")
-          break
+
+let num1 = parseFloat(prompt("num1").trim().replace(" ",""))
+let num2 = parseFloat(prompt("num2").trim().replace(" ",""))
+let cals = prompt("+,/,-,*,**").trim()
+let res
+if(cals == "+" )  {
+    res = num1 + num2
 }
+else if(cals == "-"){
+    res = num1 - num2
+}
+else if (cals == "*"){
+    res = num1 * num2
+}
+else if (cals == "/"){
+    res = num1 / num2
+}
+else{
+    res = num1 ** num2
+}
+console.log(`${num1} ${cals} ${num2} = ${res}`);
+
+// let li = prompt("Enter a name").trim().replace(" ","")
+// console.log(li);
+
+// //switch
+// const nu1 = parseFloat(prompt("Num").trim())
+// const cal = prompt(`+,-,*,/,**`).trim()
+// const nu2 = parseFloat(prompt("Num").trim())
+// let result 
+// switch(cal){
+//     case  "+" :
+//        result = nu1 + nu2
+//        console.log(`${nu1} + ${nu2} = ${result}` )
+//        break
+
+//     case  "-" :
+//        result = nu1 - nu2
+//        console.log(`${nu1} - ${nu2} = ${result}` )
+//        break
+//     case  "*" :
+//        result = nu1 * nu2
+//        console.log(`${nu1} * ${nu2} =  ${result}` )
+//        break
+//     case  "/" :
+//        result = nu1 / nu2
+//        console.log(`${nu1} / ${nu2} = ${result}` )
+//        break
+//     case  "**" :
+//        result = nu1 ** nu2
+//        console.log(`${nu1} ** ${nu2}  = ${result}` )
+//        break
+//     default:
+//           console.log("Invalid any ")
+//           break
+// }

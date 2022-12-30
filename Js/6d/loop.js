@@ -55,7 +55,7 @@
 // The for...in statement iterates over the enumerable string properties of an object, while the for...of statement iterates over values that the iterable object defines to be iterated over.
 
 
-
+//while =
     // while — loops through a block of code as long as the condition specified evaluates to true.
     // do…while — loops through a block of code once; then the condition is evaluated. If the condition is true, the statement is repeated as long as the specified condition is true.
     // for — loops through a block of code until the counter reaches a specified number.

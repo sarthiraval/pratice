@@ -1,37 +1,37 @@
-    //global , fuction,block
-    console.log("global,fuction,block");
+//global , fuction,block
+console.log("global,fuction,block");
+{
+    var sqq = 's';
+    let ss = 'ss';
+    const sss = 'sss';
+    console.log(sqq);
+    console.log(ss);
+    console.log(sss);
+}
+function name() 
+{
     {
-        var sqq = 's';
-        let ss = 'ss';
-        const sss = 'sss';
-        console.log(sqq);
-        console.log(ss);
-        console.log(sss);
+    var a = 'Sarthi';
+    let sqq = 'Shaileshkumar';
+    const c = 'Raval';
+    console.log(a);
+    console.log(sqq);
+    console.log(c);
+    console.log(sqq);
+    // console.log(ss);
+    // console.log(sss);
     }
-    function name() 
-    {
-        {
-        var a = 'Sarthi';
-        let b = 'Shaileshkumar';
-        const c = 'Raval';
-        console.log(a);
-        console.log(b);
-        console.log(c);
-        console.log(sqq);
-        // console.log(ss);
-        // console.log(sss);
-        }
-        console.log("Outside If Statement")
-        console.log(a);
-        //console.log(b);
-        //console.log(c);
-        console.log(sqq);
-       //console.log(ss);
-        //console.log(sss);
-    }
-    name()
+    console.log("Outside block")
+    console.log(a);
+    //console.log(sqq);
+    //console.log(c);
+    console.log(sqq);
+    //console.log(ss);
+    //console.log(sss);
+}
+name()
 
-        
+    
 console.log('Arithmetics')
 console.log(8 + 4)
 console.log(8 - 4)
@@ -64,6 +64,43 @@ console.log(typeof NaN)         // number
 console.log(typeof j)         // undefined
 console.log(typeof undefined)   // undefined
 console.log(typeof null)        // object
+console.log(typeof Function) //Function<
+console.log(typeof new Date()) //Object
+
+let asaaaa = "true"
+console.log(typeof (asaaaa)); //string
+
+let asaaa = String(true)
+console.log(typeof (asaaa)); //string
+
+let arrayd = ["Sarthi","Harshit"]
+let op = typeof(arrayd)
+let opp = toString(arrayd)
+let im = typeof opp
+console.log("type of",op,im);
+
+let datetostrin = toString(new Date())
+console.log("",datetostrin);
+
+let r_s= {"sname":"fs"}
+let i_s = toString(r_s)
+console.log("Object Type of conversionto String after type of = "+ i_s);
+//String nu Array,object,boolean,date,number jo conversion thau to Type of String j thase
+
+let stringss = Number("3434")
+console.log("Numbers conversion",stringss,(typeof stringss));
+
+let strings = Number(false)
+console.log("Numbers conversion",stringss,(typeof strings));
+
+let tringss = Number(true)
+console.log("Numbers conversion",stringss,(typeof tringss));
+
+let sringss = Number([3,4,3,4])
+console.log("Numbers conversion",stringss,(typeof sringss));
+
+let strigss = Number({"3":"4","3":"4"})
+console.log("Numbers conversion",stringss,(typeof strigss));
 
 let saq = 0
 const bf =  saq+ 11
@@ -93,11 +130,11 @@ console.log("number:",typeof ze)
 const zwe =  null + NaN
 console.log("number:",typeof zwe)
 
-const zwew =  null + null
-console.log("Number:",typeof zwew)
-
 const ascz= NaN + NaN
 console.log("number",typeof ascz);
+
+const zwew =  null + null
+console.log("Number:",typeof zwew)
 
 const asz= undefined + undefined
 console.log("number",typeof asz);
@@ -105,10 +142,14 @@ console.log("number",typeof asz);
 console.log("let declaration")
 let n_s = 01;
 let Ns = 0;
-let ns = 3;
+let ns = 3333333;
 console.log(n_s)
 console.log(Ns)
 console.log(ns)
+
+console.log(ns.toFixed(2),typeof ns)
+console.log("");
+console.log("")
 
 console.log("Const declaration")
 const i_ns = 0.3;
@@ -125,6 +166,8 @@ var Ss= "s"
 console.log(s_s)
 console.log(Ss)
 console.log(ss)
+
+
 
 console.log("Examples")
 let a = 10
@@ -157,6 +200,23 @@ console.log("join thau :",e+r)
 let ag = 10
 ag=50
 console.log("reasign and change:",ag)
+
+var s$e= 10 
+s$e = 20
+console.log("reasign and change:",s$e)
+
+// const sqe= 10 
+// sqe = 20
+// console.log("reasign and change:",sqe)
+
+let d1  
+console.log(d1);
+
+var d12  
+console.log(d12);
+
+// const d123 
+// console.log(d123);
 
 let al = +'10'
 let bl = 10
@@ -219,25 +279,20 @@ let checking = car[5] = "Sarthi"
 console.log(checking)
 console.log(car)
 
-
-
-console.log("Araay Method");
- 
-
 //funcations
 console.log("Function")
 function sarthis(){
-    console.log('Sarthi Raval Shaileshkumar')
+console.log('Sarthi Raval Shaileshkumar')
 }
 sarthis();
 
 function sarthis(fname,lname,age){
-    console.log('Sarthi Raval Shaileshkumar' + ' '+fname+''+lname+''+age)
+console.log('Sarthi Raval Shaileshkumar' + ' '+fname+''+lname+''+age)
 }
 sarthis('Sarthi','raval',21)
 
 function squre(number){
-    return number * number
+return number * number
 }
 let number = squre(21)
 console.log(number)
@@ -551,6 +606,7 @@ let txt = 'In 2019, I ran 30 Days of Python. Now, in 2020 I am super exited to s
 console.log("match",txt.match(/\d+/g)) // ["2019", "30", "2020"]
 console.log("match",txt.match(/\d+/))  // ["2", "0", "1", "9", "3", "0", "2", "0", "2", "0"]
 
+// gi = one type of modifier and searching mate use thau 6
 console.log("Repeat");
 //repeat
 console.log("repeat","love".repeat(5))
@@ -578,7 +634,7 @@ let empty = null
 console.log(empty) 
 
 
-console.log("Array of Objects");
+console.log("Array of Methods");
 
 
 let arrs =[]
@@ -623,28 +679,28 @@ console.log("with lentgh  wade change",sas[sas.length - 1]= 'Jaguare')
 console.log(sas)
 let saaaas = ["jk",10,"ds","dsd","sddssds",15,"gg"]
 console.log("finding in value with Indexof",saaaas.indexOf("ds"))  // 2
-console.log("finding value with Indexof",saaaas.indexOf("jk"))  // 
+console.log("finding value with Indexof",saaaas.indexOf("jklo"))  // 
 
 //indexOf:To check if an item exist in an array. If it exists it returns the index else it returns -1.
 let sarthi = ["jk",10,"ds","dsd","sddssds",15,"gg"]
 if(sarthi.indexOf(10) == 1 ){
-    console.log("use == This is write")
+console.log("use == This is write")
 }
 else{console.log("use == This is wrong")}
 
 if(sarthi.indexOf("gg") === -1 ){
-    console.log("use === This is write")
+console.log("use === This is write")
 }
 else{console.log("use === This is wrong")}
 
 if(sarthi.indexOf("gg") == -1 ){
-    console.log("use == This is write")
+console.log("use == This is write")
 }
 else{console.log("use == This is wrong")}
 
 //Check items in a list
 if(sarthi.indexOf("ds")){
-    console.log("This is write")
+console.log("This is write")
 }
 else{console.log("This is wrong")}
 
@@ -823,13 +879,13 @@ console.log(con)
 //arguments is an Array -like object accessible inside functions that contains the values of the arguments passed to that function
 
 function Emp(name, developer, number, marks = []) {
-  this.name = name;
-  this.developer = developer;
-  this.number = number;
-  this.marks = marks;
-  this.sum = function() {
-    return this.marks.reduce((ss, s) => s + ss, 0) 
-  }
+this.name = name;
+this.developer = developer;
+this.number = number;
+this.marks = marks;
+this.sum = function() {
+return this.marks.reduce((ss, s) => s + ss, 0) 
+}
 }
 let Emp1 = new Emp("Sarthi", "React Native", 6351141350, [2,3,5]);
 console.log(Emp1)
@@ -855,7 +911,7 @@ console.log(fdb) //
 // The filter() method does not change the original array.
 let fg  = [15,14,1,5,8,9,8,5,14,10,8,10]
 function febd(age){
-    return  age <= 10
+return  age <= 10
 }
 let fga = fg.filter(febd)
 console.log(fga)
@@ -869,14 +925,14 @@ console.log(fga)
 // The find() method does not change the original array.
 let fe  = [15,14,5,8,9,8,5,14,48,8,89]
 function feb(age){
-    return  age < 10
+return  age < 10
 }
 let fea = fe.find(feb)
 console.log(fea)
 
 let fae  = [15,14,15,18,29,18,25,14,48,18,89]
 function feba(age){
-    return  age < 10
+return  age < 10
 }
 let faea = fae.find(feba)
 console.log(faea)
@@ -886,7 +942,7 @@ console.log(faea)
 //The forEach() method is not executed for empty elements.
 let fh  = [15,14,1,5,8,9,8,5,14,48,8,89]
 fh.forEach(e =>{
-    console.log(e+10)
+console.log(e+10)
 })
 
 
@@ -923,19 +979,19 @@ console.log(sq)
 let pers = [4,9,64,49,36]
 let sqd = per.map(hiklklk)
 function hiklklk(ssssd) {
-    return ssssd +10
+return ssssd +10
 }
 console.log(sqd)
 
 let persons = [
-  {firstname : "sarthi", lastname: "raval"},
-  {firstname : "moin", lastname: "rangrez"},
-  {firstname : "harshit", lastname: "kapadia"}
+{firstname : "sarthi", lastname: "raval"},
+{firstname : "moin", lastname: "rangrez"},
+{firstname : "harshit", lastname: "kapadia"}
 ];
 
 
 function getFullName(item) {
-  return [item.firstname,item.lastname].join(" ");
+return [item.firstname,item.lastname].join(" ");
 }
 
 console.log(persons.map(getFullName))
@@ -947,97 +1003,97 @@ console.log(persons.map(getFullName))
 let ars = [470,9,64,49,36]
 let aes = ars.reduce(lllll)
 function lllll(total,jp) {
-      return total - jp;
+    return total - jp;
 }
 console.log("left to right :",aes)
 
 
 let casr = [
-    {
-        "Firstname" : "Sathi",
-        "Middlename":"Shaileshkumar",
-        "Lastname" : "Raval",
-        "age" : 14,
-        "register" : new Date(),
-        "hoobies" : "Racer",
-        "phone" : {
-            "phonenumber" :{
-                 "VI":9726760701,
-                 "Airtal": 6351141350,
-                 "JIO" : 9913072322
-            }
-        },
-        "Address": [
-         {
-            "city": {
-                    "City_name": "Ahmedabad",
-                        "Area": {
-                        "Area_name": "Naranpura",
-                        "Pincode" : 380012,
-                        "Socity_name":"Surya house",
-                        "Block_Number" : 164/1958
-                     }
-                }
+{
+    "Firstname" : "Sathi",
+    "Middlename":"Shaileshkumar",
+    "Lastname" : "Raval",
+    "age" : 14,
+    "register" : new Date(),
+    "hoobies" : "Racer",
+    "phone" : {
+        "phonenumber" :{
+                "VI":9726760701,
+                "Airtal": 6351141350,
+                "JIO" : 9913072322
         }
-     ]
-    }
- ,  {
-        "Firstname" : "Janik",
-        "Middlename":"Nileshbhai",
-        "Lastname" : "Kanariya",
-        "age" : 22,
-        "register" : new Date(),
-        "hoobies" : "PhotoGraphey",
-         "phone" : {
-            "phonenumber" :{
-                 "":9726760701,
-                 "Airtal": 6351141350,
-                 "JIO" : 9913072322
-            }
-        },
-        "Address": [
-         {
-            "city": {
-                    "City_name": "Ahmedabad",
+    },
+    "Address": [
+        {
+        "city": {
+                "City_name": "Ahmedabad",
                     "Area": {
                     "Area_name": "Naranpura",
                     "Pincode" : 380012,
                     "Socity_name":"Surya house",
                     "Block_Number" : 164/1958
-                     }
-                }
-        }
-     ]
+                    }
+            }
     }
+    ]
+}
+,  {
+    "Firstname" : "Janik",
+    "Middlename":"Nileshbhai",
+    "Lastname" : "Kanariya",
+    "age" : 22,
+    "register" : new Date(),
+    "hoobies" : "PhotoGraphey",
+        "phone" : {
+        "phonenumber" :{
+                "":9726760701,
+                "Airtal": 6351141350,
+                "JIO" : 9913072322
+        }
+    },
+    "Address": [
+        {
+        "city": {
+                "City_name": "Ahmedabad",
+                "Area": {
+                "Area_name": "Naranpura",
+                "Pincode" : 380012,
+                "Socity_name":"Surya house",
+                "Block_Number" : 164/1958
+                    }
+            }
+    }
+    ]
+}
 ,
-    {
-        "Firstname" : "yash",
-        "Middlename":"Dineshbhai",
-        "Lastname" : "Rabari",
-        "age" : 22,
-        "register" : new Date(),
-        "hoobies" : "Developing",
-        "phone" : {
-            "phonenumber" :{
-                 "VI":9726760701,
-                 "Airtal": 6351141350,
-                 "JIO" : 9913072322
-            }
-        },
-        "Address": [
-         {
-            "city": {
-                    "City_name": "Ahmedabad",
-                    "Area": {
-                    "Area_name": "Naranpura",
-                    "Pincode" : 380012,
-                    "Socity_name":"Surya house",
-                    "Block_Number" : 164/1958
-                     }
-                }
+{
+    "Firstname" : "yash",
+    "Middlename":"Dineshbhai",
+    "Lastname" : "Rabari",
+    "age" : 22,
+    "register" : new Date(),
+    "hoobies" : "Developing",
+    "phone" : {
+        "phonenumber" :{
+                "VI":9726760701,
+                "Airtal": 6351141350,
+                "JIO" : 9913072322
         }
-     ]
+    },
+    "Address": [
+        {
+        "city": {
+                "City_name": "Ahmedabad",
+                "Area": {
+                "Area_name": "Naranpura",
+                "Pincode" : 380012,
+                "Socity_name":"Surya house",
+                "Block_Number" : 164/1958
+                    }
+            }
     }
+    ]
+}
 ]
 
 console.log(casr);
@@ -1045,8 +1101,8 @@ console.table(casr);
 
 //Grouping
 casr.forEach(casr => {
-  console.group(`${casr.Address}`);
-  console.groupEnd(`${casr.Address}`);
+console.group(`${casr.Address}`);
+console.groupEnd(`${casr.Address}`);
 });
 
 console.dir(casr)
@@ -1071,10 +1127,10 @@ console.warn("Bye Bye")
 //time and timeend() same hovu joiye
 console.time('abc')
 let fun = function(){
-    console.log("Bike speed is only 250")
+console.log("Bike speed is only 250")
 }
 let fun2 = function(){
-    console.log("Your speed is very slow")
+console.log("Your speed is very slow")
 }
 fun()
 fun2()
@@ -1092,7 +1148,7 @@ console.count("Raval")
 console.count("ShaileshKumar")
 
 for(let i = 0;i<5;i++){
-    console.count(i)
+console.count(i)
 }
 
 //info
@@ -1109,12 +1165,12 @@ console.log('HI');
 console.groupEnd('simple');
 
 //Grouping
-car.forEach(car => {
-  console.group(`${car.Firstname}`);
-  console.log(`This is ${car.Firstname}`);
-  console.log(`${car.Firstname} is ${car.age} years old`);
-  console.log(`${car.Firstname}  ${car.Lastname} ${car.Middlename} `);
-  console.groupEnd(`${car.Firstname}`);
+car.forEach(casr => {
+console.group(`${casr.Firstname}`);
+console.log(`This is ${casr.Firstname}`);
+console.log(`${casr.Firstname} is ${casr.age} years old`);
+console.log(`${casr.Firstname}  ${casr.Lastname} ${casr.Middlename} `);
+console.groupEnd(`${casr.Firstname}`);
 });
 console.log('new section');
 
@@ -1128,15 +1184,15 @@ console.log(ap)
 let spacing = '10px'
 let margins = "15px"
 let styles  = `padding : ${spacing};
-               margintop :${margins};
-               marginbottom :${margins};
-               background-color : Yellow;
-               color: Red;
-               font-styels: italic;
-               border: 2px solid powderblue;
-               font-size:12px`
+            margintop :${margins};
+            marginbottom :${margins};
+            background-color : Yellow;
+            color: Red;
+            font-styels: italic;
+            border: 2px solid powderblue;
+            font-size:12px`
 console.log('%cI am Racer', styles);           
-            
+        
 
 //operators
 //Assignment operators
@@ -1374,7 +1430,7 @@ const boilingPoint = 100
 const gravity =9.81
 const bodyTemp = 37 
 console.log(
-  `The boiling point of water is ${boilingPoint} oC.\nHuman body temperature is ${bodyTemp} oC.\nThe gravity of earth is ${gravity} m / s2.`
+`The boiling point of water is ${boilingPoint} oC.\nHuman body temperature is ${bodyTemp} oC.\nThe gravity of earth is ${gravity} m / s2.`
 )
 
 console.log("Logical :")
@@ -1391,7 +1447,7 @@ const checkk =  "5" < "4" && 14 < "15"      //f & t = f
 console.log(checkk)
 
 
-const checskk =  "abc" < "ae" && 13 < "15"      //f & t = 
+const checskk =  "abc" < "ae" && 13 < "15"      //f & t = t
 console.log(checskk)
 
 const checkkk =  "5" < "4" && 14 < "12"     //f & f = f
@@ -1479,24 +1535,24 @@ console.log("Post - Decrement",coun)          // -2
 console.log("ternay opertors");
 let race = true
 race 
- ?console.log("sure")
- :console.log("no sure")
+?console.log("sure")
+:console.log("no sure")
 race = false
 race 
-  ?console.log("sure")
-  :console.log("no sure")
+?console.log("sure")
+:console.log("no sure")
 
-  let races = 10 
-  races > 100
-   ?console.log("yes") 
-   :console.log("no")
+let races = 10 
+races > 100
+?console.log("yes") 
+:console.log("no")
 
-   races > 8
-     ?console.log("yes")
-     :console.log("no")
+races > 8
+    ?console.log("yes")
+    :console.log("no")
 
 
-     console.log("Date Methods");
+    console.log("Date Methods");
 console.log(Date())
 
 console.log(new Date())
@@ -1516,12 +1572,12 @@ console.log("Day",new Date().getDay()) //0-6
 console.log("IF anf else IF and If -Else Examples");
 //if
 if(2<3){
-    console.log("true")
+console.log("true")
 }
 
 let sad = true
 if (sad){
-    console.log("false")
+console.log("false")
 }
 
 
@@ -1529,50 +1585,50 @@ if (sad){
 
 if(12<3)
 {
-    console.log("true")
+console.log("true")
 }
 else{console.log("false")}
 
 let sds = false
 if (sds){
-    console.log("true")
+console.log("true")
 }
 else{console.log("false")}
 
 //if-elseif-else
 let am =10
 if(am>=12){
-    console.log(am+">=false")
+console.log(am+">=false")
 }
 else if(a>=12){
-    console.log(am+">=false")
+console.log(am+">=false")
 }
 else if(a>=12){
-    console.log(am+"==true")
+console.log(am+"==true")
 }
 else if(a!=10){
-    console.log(am+"===true")
+console.log(am+"===true")
 }
 else{
-    console.log(am)
+console.log(am)
 }
 
 
 let sa = "Red"
 if(sa==""){
-    console.log(sa+"==false")
+console.log(sa+"==false")
 }
 else if(sa=="Green"){
-    console.log(sa+"==false")
+console.log(sa+"==false")
 }
 else if(sa=="Blue"){
-    console.log(sa+"==false")
+console.log(sa+"==false")
 }
 else if(sa=="White"){
-    console.log(sa+"==false")
+console.log(sa+"==false")
 }
 else{
-    console.log("print pls sa value =",sa)
+console.log("print pls sa value =",sa)
 }
 
 // let num1 = parseFloat(prompt("num1"))

@@ -55,6 +55,29 @@
                    </ul>
                 </ul>
 
+                <li>Global scope:- </li>
+                <ul>
+                <li>global scope and all the other functions and variables are contained in this global scope.
+                </li>
+                <li>
+                Another is the Local Scope, variables declared inside the functions are considered to be of the local scope and it is futher divided into function scoped and block scoped.
+                </li>
+                </ul>
+                
+                <li>Function Scope: </li>
+                <ul>
+                    <li>When a variable is declared inside a function, it is only accessible within that function and cannot be used outside that function.
+                </li>
+                </ul>
+                <li> Block Scope: </li>
+                <ul>
+                    <li>A variable when declared inside the if or switch conditions or inside for or while loops, are accessible within that particular condition or loop.</li>
+                    <li> To be consise the variables declared inside the curly braces are called as within block scope.
+                </li>
+                
+                </li>
+                </ul> 
+                
 
 <li>introduction to Data types:- </li><ul><li>primitive</li><li>non-primitive</li></ul>
 
@@ -69,6 +92,13 @@
 </ol>
   
 
+<li>The following are JavaScript non-primitive data types: </li>
+    <ol><li>Array</li>
+    <li>Object</li>
+<li>Function</li>
+<li>Dates</li>
+</ol>
+  
     <li>
         Immutabale:-
     </li>
@@ -237,6 +267,7 @@
         <li>console.log(typeof NaN) = Number</li>
         <li>console.log(typeof 3.14) = Number  </li>
         <li>console.log(typeof Function) = Function</li>
+        <li>console.log(typeof new Date()) = <Object></Object></li>
 
     </ul>
      <br>
@@ -248,9 +279,20 @@
 
 <ol>
     <li>let </li>
+    <ul><li>reassign Again</li></ul>
     <li>const</li>
+    <ul><li>not reassign  Again</li>
+    <li>It is fixed value</li></ul>
     <li>var</li>
+    <ul><li>reassign Again</li></ul>
 </ol>
+
+<li>rules of Creting javascript :--</li>
+<ul>
+    <li>Cannot Start with Numbers</li>
+    <li>Can Start with Letter,numbers, - or $ </li>
+    <li>Are case sensitive</li>
+</ul>
 <li>let,cons and var different:-</li>
 <ul>
  <li>1.global scope decalration  kariye tayre let,cons,value access thase but cons incremenet and decremenet nhi thaya let and var nu -- ++ thase</li>
@@ -260,7 +302,7 @@
 
 </ul>
 </ul>
-<li>CamelCase :-</li>
+<li>camelCase :-</li>
 <ol><li>one word in first charchter capital and Second charcter is small</li>
     <li>one word in first charchter small and Second charcter is Capital .and  javascript follow this</li>
 </ol>
@@ -268,29 +310,6 @@
 <li>snake_case :-</li>
 <li>PascalCase :-</li>
      <br>
-<li>Global scope:- </li>
-<ul>
-<li>global scope and all the other functions and variables are contained in this global scope.
-</li>
-<li>
-Another is the Local Scope, variables declared inside the functions are considered to be of the local scope and it is futher divided into function scoped and block scoped.
-</li>
-</ul>
-
-<li>Function Scope: </li>
-<ul>
-    <li>When a variable is declared inside a function, it is only accessible within that function and cannot be used outside that function.
-</li>
-</ul>
-<li> Block Scope: </li>
-<ul>
-    <li>A variable when declared inside the if or switch conditions or inside for or while loops, are accessible within that particular condition or loop.</li>
-    <li> To be consise the variables declared inside the curly braces are called as within block scope.
-</li>
-
-</li>
-</ul> 
-
 <br>
 <li>new :-</li>
 <ul>
@@ -383,7 +402,7 @@ console.dir() recognizes the object just as an object and outputs its properties
 <li>Array of objects: It stores multiple values in a single variable</li>
 <li>Array:</li>
 <ul>
-<li>>Arrays are used to store multiple values in a single variable.</li>
+<li>Arrays are used to store multiple values in a single variable.</li>
 <li>This is compared to a variable that can store only one value.</li>
 <li>Each item in an array has a number attached to it, called a numeric index, that allows you to access it.</li>
 <li>In JavaScript, arrays start at index zero and can be manipulated with various methods.</li>
@@ -469,10 +488,11 @@ Reduce(): Performs an operation on an iterable, yielding a single-valued outcom
     </ul>
 <li>The comparison and logical operators we learned in the previous sections will be useful in here.</li>     
     
+
 <br><li> if:-</li>
     <ul><li>In JavaScript and other programming languages the key word if is to used check if a condition is true and to execute the block code.
 </li>
-</ul>
+
 <li>
     To create an if condition, we need if keyword, condition inside a parenthesis and block of code inside a curly bracket({}).
 
@@ -551,6 +571,39 @@ Linear search is a search that finds an element in the list by searching the ele
 <li>Binary search is finds the position of the searched element by finding the middle element of the array
 
 </li>
+
+<br>
+<li>Operators</li>
+<ul>
+    <li>Assignment operators</li>
+    <ul><li>=,+=,-=,*=,/=,%=,**=</li></ul>
+</ul>
+<ul>
+    <li>comparison operators</li>
+    <ul><li>== , != ,> , < , <= , =>,===</li></ul>
+</ul>
+<ul>
+    <li>Arithmetic operators</li>
+    <ul><li>+,-,*,/,%,**</li></ul>
+</ul>
+<ul>
+    <li>Logical operators</li>
+    <ul><li>&& ,|| , !</li></ul>
+</ul>
+<ul>
+    <li>Increment</li>
+    <ul><li>++ Pre-Increment  </li><li>Post-Increment ++</li></ul>
+</ul>
+<ul>
+    <li>Decrement</li>
+    <ul><li>-- Pre-Decrement</li><li>Post-Decrement --</li></ul>
+</ul>
+<ul>
+    <li>Ternery</li>
+    <ul><li>?,:</li></ul>
+</ul>
+
+
 
 <br>
 <li>JavaScript runner in browser system:-</li>
