@@ -226,10 +226,10 @@ console.log("Araay Method");
 
 //funcations
 console.log("Function")
-function sarthi(){
+function sarthis(){
     console.log('Sarthi Raval Shaileshkumar')
 }
-sarthi();
+sarthis();
 
 function sarthis(fname,lname,age){
     console.log('Sarthi Raval Shaileshkumar' + ' '+fname+''+lname+''+age)
@@ -699,7 +699,7 @@ console.log("Ero////",Object.isFrozen(burki));
 //toString:Converts array to string
 let wq = ["jk",10,"ds","dsd","sddssds",15,"gg"]
 console.log(wq)
-console.log(w.toString())
+console.log(wq.toString())
 let aw = ["jk",10,"ds","dsd","sddssds",15,"gg"]
 let bw= aw.toString()
 console.log(typeof bw)
@@ -745,27 +745,27 @@ console.log(rss) //(3) ['dad', 'sa', 'sa']
 
 
 
-let ss = ["ds","dad","mother","son","grandmother",45,54]
-console.log(ss)
+let sqsq = ["ds","dad","mother","son","grandmother",45,54]
+console.log(sqsq)
 //The pop() method removes (pops) the last element of an array.
 //The pop() method changes the original array.
 //The pop() method returns the removed element.
 
-console.log(ss.pop()) //out ending
-console.log(ss)
+console.log(sqsq.pop()) //out ending
+console.log(sqsq)
 
 //The push() method adds new items to the end of an array.
 //The push() method changes the length of the array.
 //The push() method returns the new length.
-let dx = ss.push("Kissawi");
+let dx = sqsq.push("Kissawi");
 console.log(dx) //add ending
-console.log(ss)
-console.log(ss.shift()) //remove first element
-console.log(ss)
-console.log(ss.unshift("sas"))  //add first element
-console.log(ss)
-console.log(ss.sort())
-console.log(ss.reverse())
+console.log(sqsq)
+console.log(sqsq.shift()) //remove first element
+console.log(sqsq)
+console.log(sqsq.unshift("sas"))  //add first element
+console.log(sqsq)
+console.log(sqsq.sort())
+console.log(sqsq.reverse())
 
 
 //Array of arrays
@@ -789,7 +789,7 @@ console.log(fullStack.length)  // 2
 console.log(fullStack[0])  // ["HTML", "CSS", "JS", "React", "Redux"]
 console.log(fullStack[1])
 const frontEnsd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
-document.getElementById("demo").innerHTML = frontEnsd.toString();
+console.log(frontEnsd.toString());
 
 
 
@@ -1596,35 +1596,35 @@ else{
 // }
 // console.log(`${num1} ${cals} ${num2} = ${res}`);
 
-console.log("Switch case");
-//switch
-const nu1 = parseFloat(prompt("Num").trim())
-const cal = prompt(`+,-,*,/,**`)
-const nu2 = parseFloat(prompt("Num").trim())
-let result 
-switch(cal){
-    case  "+" :
-       result = nu1 + nu2
-       console.log(`${nu1} + ${nu2} = ${result}` )
-       break
+// console.log("Switch case");
+// //switch
+// const nu1 = parseFloat(prompt("Num").trim())
+// const cal = prompt(`+,-,*,/,**`)
+// const nu2 = parseFloat(prompt("Num").trim())
+// let result 
+// switch(cal){
+//     case  "+" :
+//        result = nu1 + nu2
+//        console.log(`${nu1} + ${nu2} = ${result}` )
+//        break
 
-    case  "-" :
-       result = nu1 - nu2
-       console.log(`${nu1} - ${nu2} = ${result}` )
-       break
-    case  "*" :
-       result = nu1 * nu2
-       console.log(`${nu1} * ${nu2} =  ${result}` )
-       break
-    case  "/" :
-       result = nu1 / nu2
-       console.log(`${nu1} / ${nu2} = ${result}` )
-       break
-    case  "**" :
-       result = nu1 ** nu2
-       console.log(`${nu1} ** ${nu2}  = ${result}` )
-       break
-    default:
-          console.log("Invalid any ")
-          break
-}
+//     case  "-" :
+//        result = nu1 - nu2
+//        console.log(`${nu1} - ${nu2} = ${result}` )
+//        break
+//     case  "*" :
+//        result = nu1 * nu2
+//        console.log(`${nu1} * ${nu2} =  ${result}` )
+//        break
+//     case  "/" :
+//        result = nu1 / nu2
+//        console.log(`${nu1} / ${nu2} = ${result}` )
+//        break
+//     case  "**" :
+//        result = nu1 ** nu2
+//        console.log(`${nu1} ** ${nu2}  = ${result}` )
+//        break
+//     default:
+//           console.log("Invalid any ")
+//           break
+// }
