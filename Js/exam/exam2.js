@@ -116,13 +116,13 @@ console.dir(car)
 
 
 
-// let cars =prompt();
-// let a = car.filter(car => car.Address.City_name === cars)
-// a.map(ab => console.log(ab))
+let cars =prompt();
+let a = car.filter(car => car.Address.City_name === cars)
+a.map(ab => console.log(ab))
 
 
-let c = car.filter(car => car.Address.City_name === "ahmedabad" || car.Address.City_name === "Ahmedabad");
-c.map(ab => console.log(ab.Address))
+// let c = car.filter(car => car.Address.City_name === "ahmedabad" || car.Address.City_name === "Ahmedabad");
+// c.map(ab => console.log(ab.Address))
 
 
 //map return kar 6

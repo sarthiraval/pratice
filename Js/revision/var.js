@@ -1,10 +1,23 @@
+function changecolor (){
+    let eleme = document.body
+    eleme.classList.toggle("dark-mode")
+}
+
 //global , fuction,block
 console.log("global,fuction,block");
 {
     var sqq = 's';
     let ss = 'ss';
     const sss = 'sss';
+    var qq = 4
+    let w = 4
+    const e = 5
+
     console.log(sqq);
+   // console.log(e++);
+    console.log(qq++);
+    console.log(w+2) 
+
     console.log(ss);
     console.log(sss);
 }
@@ -17,7 +30,15 @@ function name()
     console.log(a);
     console.log(sqq);
     console.log(c);
-    console.log(sqq);
+   
+    var xs = 45
+    let ds =45
+    console.log(qq++);
+
+    console.log(xs+2)
+    console.log(ds+2)
+ 
+    //c++
     // console.log(ss);
     // console.log(sss);
     }
@@ -64,7 +85,7 @@ console.log(typeof NaN)         // number
 console.log(typeof j)         // undefined
 console.log(typeof undefined)   // undefined
 console.log(typeof null)        // object
-console.log(typeof Function) //Function<
+console.log(typeof Function) //Function
 console.log(typeof new Date()) //Object
 
 let asaaaa = "true"
@@ -77,13 +98,13 @@ let arrayd = ["Sarthi","Harshit"]
 let op = typeof(arrayd)
 let opp = toString(arrayd)
 let im = typeof opp
-console.log("type of",op,im);
+console.log("type of",op,im);//object , string
 
-let datetostrin = toString(new Date())
+let datetostrin = String(Date())
 console.log("",datetostrin);
 
 let r_s= {"sname":"fs"}
-let i_s = toString(r_s)
+let i_s = String(r_s)
 console.log("Object Type of conversionto String after type of = "+ i_s);
 //String nu Array,object,boolean,date,number jo conversion thau to Type of String j thase
 
@@ -91,16 +112,16 @@ let stringss = Number("3434")
 console.log("Numbers conversion",stringss,(typeof stringss));
 
 let strings = Number(false)
-console.log("Numbers conversion",stringss,(typeof strings));
+console.log("Numbers conversion",strings,(typeof strings));
 
 let tringss = Number(true)
-console.log("Numbers conversion",stringss,(typeof tringss));
+console.log("Numbers conversion",tringss,(typeof tringss));
 
 let sringss = Number([3,4,3,4])
-console.log("Numbers conversion",stringss,(typeof sringss));
+console.log("Numbers conversion",sringss,(typeof sringss));
 
 let strigss = Number({"3":"4","3":"4"})
-console.log("Numbers conversion",stringss,(typeof strigss));
+console.log("Numbers conversion",strigss,(typeof strigss));
 
 let saq = 0
 const bf =  saq+ 11
@@ -139,6 +160,31 @@ console.log("Number:",typeof zwew)
 const asz= undefined + undefined
 console.log("number",typeof asz);
 
+const aszq= Array + Array
+console.log("number",typeof aszq);
+
+
+const aszqqq= String + String
+console.log("number",typeof aszqqq);
+
+const aszqqqq= Number + String
+console.log("number",typeof aszqqqq);
+
+const aszqqqqq= Number + Number
+console.log("number",typeof aszqqqqq);
+
+const qaszqqqqq= 10 + 10
+console.log("number",typeof qaszqqqqq);
+
+const qqaszqqqqq= "10" + "10"
+console.log("number",typeof qqaszqqqqq);
+
+const qaszqq= Object + Number
+console.log("number",typeof qaszqq);
+
+const aszqq= Object + Object
+console.log("number",typeof aszqq);
+
 console.log("let declaration")
 let n_s = 01;
 let Ns = 0;
@@ -148,8 +194,7 @@ console.log(Ns)
 console.log(ns)
 
 console.log(ns.toFixed(2),typeof ns)
-console.log("");
-console.log("")
+
 
 console.log("Const declaration")
 const i_ns = 0.3;
@@ -215,8 +260,8 @@ console.log(d1);
 var d12  
 console.log(d12);
 
-// const d123 
-// console.log(d123);
+//const d 
+// // console.log(d123);
 
 let al = +'10'
 let bl = 10
@@ -238,7 +283,7 @@ role:'teaching',
 country:'Finland'
 }
 let userTwo = userOne
-console.log(userOne == userTwo) 
+console.log(userOne == userTwo)  //true
 
 
 
@@ -286,10 +331,10 @@ console.log('Sarthi Raval Shaileshkumar')
 }
 sarthis();
 
-function sarthis(fname,lname,age){
+function sarthiss(fname,lname,age){
 console.log('Sarthi Raval Shaileshkumar' + ' '+fname+''+lname+''+age)
 }
-sarthis('Sarthi','raval',21)
+sarthiss('Sarthi','raval',21)
 
 function squre(number){
 return number * number
@@ -446,7 +491,7 @@ let cy = "Ahmedabad"
 let js ="JS"
 let jb ='student'
 let ae= 21
-let Fm = f_n +mn+ln
+let Fm = f_n +' '+mn+' '+ln
 
 let pikn = `I am ${f_n} ${mn} ${ln} I live in ${cy} .I am ${jb} . I learn ${js}. I am ${ae} years`
 console.log("Template Literals",pikn)
@@ -496,14 +541,14 @@ console.log("lowercase",sb.toLowerCase())
 console.log("substr");
 //substr()
 let ssr = "JavaScript is Good language" 
-console.log("substr",ssr.substr(0,4))
+console.log("substr",ssr.substr(1,4))
 console.log("substr",ssr.substr(14))
 console.log("substr","substring and bhai log".substr(1,4))
 
 
 console.log("substring");
 //substring()
-console.log("substring",ssr.substring(0,4))
+console.log("substring",ssr.substring(1,4))
 console.log("substring",ssr.substring(14))
 console.log("substr","substring and bhai log".substring(1,4))
 
@@ -594,7 +639,7 @@ console.log("Search");
 //search()
 let stri = 'I love JavaScript. If you do not love JavaScript what else can you love.'
 console.log("search",stri.search('love'))          // 2
-console.log("search",stri.search(/javascript/gi))  // 7
+console.log("search",stri.search('JavaScript'))  // 7
 
 console.log("Match");
 //match()
@@ -721,7 +766,6 @@ sarthi.indexOf("gg")  == -1
 let sarthid = ["jk",10,"ds","dsd","sddssds",15,"gg"]
 console.log(sarthid.indexOf("dsd"))
 console.log(sarthid.indexOf("dd"))
-
 //lastIndexOf: It gives the position of the last item in the array. If it exist, it returns the index else it returns -1.
 let arthi = ["jk",10,"ds","dsd","sddssds",15,"gg"]
 console.log(arthi)
@@ -762,6 +806,8 @@ console.log(typeof bw)
 let aq = 12;
 let bq= aq.toString()
 console.log(typeof bq)
+
+
 //join: It is used to join the elements of the array,
 //the argument we passed in the join method will be joined
 //in the array and return as a string
@@ -792,11 +838,11 @@ console.log(rs)
 let rss = ["ds","dad","mother","son","grandmother",45,54]
 console.log(rss)
 console.log(rss.splice()) // // -> remove all items
-console.log(rss.splice(2)) //['mother', 'son', 'grandmother', 45, 54]
-console.log(rss) // 1['ds', 'dad']
+console.log(rss.splice(5)) // [45, 54]
+console.log(rss) // ['
 console.log(rss.splice(0, 1))
 console.log(rss)// 1 ['dad']
-console.log(rss.splice(2, 2, "sa", "sa"))
+console.log(rss.splice(2, 1, "sa", "sa"))
 console.log(rss) //(3) ['dad', 'sa', 'sa']
 
 
@@ -1102,6 +1148,9 @@ console.table(casr);
 //Grouping
 casr.forEach(casr => {
 console.group(`${casr.Address}`);
+console.log(`${casr.Firstname}`);
+console.log(`${casr.Middlename}`);
+console.log(`${casr.Lastname}`);
 console.groupEnd(`${casr.Address}`);
 });
 
@@ -1165,7 +1214,7 @@ console.log('HI');
 console.groupEnd('simple');
 
 //Grouping
-car.forEach(casr => {
+casr.forEach(casr => {
 console.group(`${casr.Firstname}`);
 console.log(`This is ${casr.Firstname}`);
 console.log(`${casr.Firstname} is ${casr.age} years old`);
@@ -1176,7 +1225,7 @@ console.log('new section');
 
 
 //testing
-const ap = document.querySelector("h1");     //from html tag printing elements
+const ap = document.querySelector("p");     //from html tag printing elements
 console.log(ap)
 
 //custom console log
@@ -1310,6 +1359,7 @@ console.log("<=",null <= null) //true
 console.log("<=",null <= undefined) //false
 console.log("<=",Number <= null) //false
 console.log("<=",Number <= undefined) //false
+console.log("<=",Number <= Number) //true
 console.log("<=",Number <= NaN) //false
 
 console.log("!=",3!="")       //tr
@@ -1338,12 +1388,12 @@ console.log("==","A" == "a") // false
 console.log("==","As" == "A") // false
 console.log("==",undefined == undefined) //true
 console.log("==",undefined == null) //true
-console.log("==",null == null) //false
+console.log("==",null == null) //true
 console.log("==",null == undefined) //true
 console.log("==",Number == null) //false
 console.log("==",Number == undefined) //false
 console.log("==",Number == NaN) //false
-console.log("==",Number == Number) //false
+console.log("==",Number == Number) //true
 console.log("==",NaN == NaN) //false
 console.log("==","ab" == "")    //fa
 console.log("==",1==" ")     //fa

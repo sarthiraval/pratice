@@ -1,24 +1,3 @@
-//i++
-//i+2 even number 
-// for (let i = 0;i<=10;i+2){
-//     console.log(i)
-// }
-//2,4,6,8
-
-// let i = 0
-// for (;; i++){
-//     if(i < 10){
-//         console.log(i)
-//         continue
-//     }
-//         break
-// }
-
-//i+1 odd number 
-// for (let i = 0;i<=10;i+1){
-//     console.log(i)
-// }
-//1,3,5,7
 
 // for (let i = 0;i<=10;i++){
 //     console.log(i)

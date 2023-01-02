@@ -20,8 +20,7 @@ for(let y = 0;;y +=2){
         break
     }
         console.log(y)
-
-}
+ }
 // let num = prompt("Enter  a number")
 // if (num %2 == 0)
 // {
@@ -84,28 +83,71 @@ for(let y = 0;;y +=2){
 //     console.log("year is not = "+year)
 //}
 
-let marks = prompt("Enter a number")
-if (marks <= 100){
-if (marks >= 90 && marks <= 100){
-    console.log(marks+"= very good");
-}
 
-else if (marks >= 70 && marks <= 90){
-    console.log(marks+"=  good");
-}
-else if (marks >= 60 && marks <= 70){
-    console.log(marks+"= small good");
-}
-else if (marks >= 35 && marks <= 60){
-    console.log(marks+"= no good");
-}
+let q1 = prompt("Enter  a name").trim().replaceAll(" ","")
+let q2 = prompt("Enter  a name").split(" ").join(" ")
 
-else if (marks >= 0 && marks <= 35){
-    console.log(marks+"= failed");
-}
-}
-else{
-console.log("Marsk down to 100")
-}
+console.log(q1);
+console.log(q2);
+
+let r_s= {sname:46,sanmae :46}
+console.log(r_s);
+console.log(typeof r_s);
+let is = JSON.stringify(r_s) 
+console.log(typeof is);
+console.log("Object Type of conversionto String after type of = "+ typeof is);
+
+
+let r__s= {"sname":"46","sanmae" :"46"}
+let i__s = String(r__s)
+console.log(typeof rq_s);
+console.log("Object Type of conversionto String after type of = "+ i__s);
+
+
+let q__s= ["dsa",1,"dsf","d"]
+console.log(q__s);
+let qq__s = toString(q__s)
+console.log("Object Type of conversionto String after type of = "+ q__s);
+
+
+
+let ary1 = [1,2,3]
+let ary2 =[1,2,3]
+const erging =ary1 + ary2
+console.log("number",typeof erging);
+
+let arry1 = ["df","d","df"]
+let arry2 =["ds","dds","sd"]
+const merging =arry1 + arry2
+console.log("number",typeof merging);
+
+let meing = ["df","d","df"]
+console.log("number",typeof meing);
+
+const aszq= Array + Array
+console.log("number",typeof aszq);
+
+
+const aszqqqqq= Number + Number
+console.log("number",typeof aszqqqqq);
+
+const qaszqqqqq= 10 + 10
+console.log("number",typeof qaszqqqqq);
+
+const aszqq= Object + Object
+console.log("number",typeof aszqq);
+
+const szqq= {age:21,speed:200,hight:3.5}
+console.log("number",typeof szqq);
+
+let obj1 = {age:21,speed:200,hight:3.5}
+let obj2 =  {age:21,speed:200,hight:3.5}
+const rging =obj1 + obj2
+console.log("number",typeof rging);
+
+let ry1 =  {"age":'21',"speed":"200","hight":"3.5"}
+let y2  =  {age:21,speed:"200",hight:"3.5"}
+const mering =ry1 + y2
+console.log("number",typeof mering);
 
 

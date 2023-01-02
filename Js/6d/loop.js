@@ -316,9 +316,8 @@ console.log(wq)
 
 //  Break
 
-for(let iq =0; iq <= 5; iq++){
-    //break                  //o to 5
-    
+for(let iq =0; iq <= 10; iq++){
+   // break 0to 5
     if( iq == 7){
         break
     }
@@ -327,12 +326,12 @@ for(let iq =0; iq <= 5; iq++){
 
 //  Continue
 
-for(let id =0; id <= 5; id++){
+for(let id =0; id <= 10; id++){
     if( id == 2){
         continue
     }
     console.log(id)
-    //  0 to 10  skips 7
+    //  0 to 10  skips 2
 }
 
 
