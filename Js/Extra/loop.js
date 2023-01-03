@@ -6,7 +6,6 @@ let i = 0
 for (;i <10;i +=2){
         console.log(i)
 }
-
 for(let y = 1;;y +=2){
     if(y>10){
         break

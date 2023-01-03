@@ -476,3 +476,5 @@ console.log(nums == numbers)  // false
 let nume= [1, 2, 3]
 let numbr = nume
 console.log(nume == numbr)
+
+

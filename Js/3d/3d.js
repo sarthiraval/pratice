@@ -102,7 +102,6 @@ var sk = [10, 20, 30];
 console.dir(sk)
 console.log("geek2 (dir) = ", sk);
 
-
 //error
 console.error("Bye Bye")
 

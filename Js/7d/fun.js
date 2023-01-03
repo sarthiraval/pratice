@@ -6,6 +6,7 @@ function sq(){
     console.log(sq)
  }
  sq()
+ 
  function sqd(){
     // let num1 = parseFloat(prompt("enter a number"))
     // let num2 = parseFloat(prompt("enter a number"))
@@ -323,8 +324,14 @@ console.log(uppesr(fds));
 let str = (fs,ls)=>{
     return `${fs} ${ls}`
 }
+console.log(str("sarthi","Raval"));
 
+let addq = (n1,n2)=>{
+    dqqqqq = n1+ n2 
+    return dqqqqq
 
+}
+console.log(addq(2 ,3));
 
 // function numbers(){
 //     let n1 = parseFloat(prompt("Enter a n1").replace(/\s/g,"")) 

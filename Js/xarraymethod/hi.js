@@ -5,7 +5,6 @@ console.log(arrs) //null
 let arr = new Array()
 console.log(arr) //null
 
-
 let ar = Array(8)
 console.log(ar) //[empty × 8]
 

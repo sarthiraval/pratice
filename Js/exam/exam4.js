@@ -3,7 +3,6 @@
 // /i = case sentititve
 // /m =  multiple wor ke chater find kare 6
 //space =  \s/ 
-
 let qq1 = prompt("Enter  a name") //.replace(/\s/g,"")
 let qq2 = prompt("Enter  a name") // .replace(/\s/g,"")
 let d = qq1.replace(/\s/g,"") 

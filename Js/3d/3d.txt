@@ -9,7 +9,6 @@ If the constructor function returns a non-primitive value (Object, array, etc), 
 If the constructor function returns nothing, ‘this’ is return;
 If the constructor function returns a primitive value,  it will be ignored, and ‘this’ is returned.
 jayre koi application ma login sysytem 1 st login api vade karu to te kaya time date hours and second dekhadse 
-
 console.log output  sivay :-
 dir()
 log()

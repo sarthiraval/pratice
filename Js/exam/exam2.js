@@ -106,6 +106,7 @@ let car = [
     }
 ]
 
+
 console.log(car);
 console.table(car);
 console.dir(car)

@@ -82,7 +82,6 @@ for (let i = 1; i <= 3; i++) {
 for (let k = 3; k >= 1; k--) {
     console.log(k)
 }
-
 var num = 0
 for(var u=1; u < 10; u++){
      num = num + u;

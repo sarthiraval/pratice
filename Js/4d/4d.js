@@ -9,7 +9,6 @@ if (sd){
 }
 
 //if-else 
-
 if(12<3)
 {
     console.log("true")
