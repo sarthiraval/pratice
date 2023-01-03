@@ -264,7 +264,6 @@ console.log(`The sum of 2 and 3 is 5`)              // statically writing the da
 let as = 2
 let bs = 3
 console.log(`The sum of ${as} and ${bs} is ${as + bs}`) // injecting the data dynamically
-
 let f_n  = "Sarthi"
 let ln = "Raval"
 let mn = "ShileshKumar"

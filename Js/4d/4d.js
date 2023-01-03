@@ -8,7 +8,6 @@ if (sd){
     console.log("false")
 }
 
-
 //if-else 
 
 if(12<3)

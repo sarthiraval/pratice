@@ -112,7 +112,6 @@ JavaScript can be added to a web page in three different ways:
 Inline Script
 
 Create a project folder on your desktop or in any location, name it 30DaysOfJS and create an index.html file in the project folder. Then paste the following code and open it in a browser, for example Chrome.
-
 <!DOCTYPE html>
 <html lang="en">
   <head>

@@ -1,6 +1,3 @@
-
-
-
 let arrs =[]
 console.log(arrs) //null
 

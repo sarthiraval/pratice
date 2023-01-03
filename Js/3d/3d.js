@@ -97,7 +97,6 @@ car.forEach(car => {
 
 console.dir(car)
 
-
 //dir
 var sk = [10, 20, 30];
 console.dir(sk)

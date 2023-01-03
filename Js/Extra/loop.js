@@ -2,7 +2,6 @@ let j =1
 for(;j<=11;j +=2){
     console.log(j)
 }
-
 let i = 0
 for (;i <10;i +=2){
         console.log(i)

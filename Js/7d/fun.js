@@ -6,7 +6,6 @@ function sq(){
     console.log(sq)
  }
  sq()
-
  function sqd(){
     // let num1 = parseFloat(prompt("enter a number"))
     // let num2 = parseFloat(prompt("enter a number"))

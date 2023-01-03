@@ -3,7 +3,6 @@
 //     console.log(i)
 // }
 
-
 // const fruitt = ["Banana", "Kiwi", "Dragon Fruit", "Pineapple", "Berry", "Avocado"]
 
 // for (let index = 0; index < fruitt[0].length; index++) {
