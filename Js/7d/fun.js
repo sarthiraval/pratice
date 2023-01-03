@@ -358,20 +358,29 @@ function detailss(fs="Tanvi",ls="Shah"){
 console.log(detailss());
 console.log(detailss("Siddharth","Soni"));
 
-function ewew (//bod,current = new Date().getFullYear()
-// ,
-cud,cd = new Date().getDay(),
-// cmd,cm = new Date().getMonth()
+function ewew (bod,current = new Date().getFullYear()
+// ,cud,cd = new Date().getDay(),
+//  cmd,cm = 1 + new Date().getMonth()
 ){
-    //let age = current -  bod
-    let cudate = cd - cud
-    // let cumomth = cm - cmd
-    return  cudate
-    // age ,cumomth
+  var month =[31,28,31,30,31,30,31,31,30,31,30,31]  
+    
+
+    //  cd = cd +month[cm - 1]
+    //  cm = cm - 1
+
+    //  cm = cm +12
+    //  current = current - 1
+
+     let age = current -  bod
+    //  let cudate = cd - cud
+    //  let cumomth = cm - cmd
+
+    return  age
+    // cudate ,cumomth
 }
-let ne = parseFloat(prompt("Enter a number")) 
-// let e = parseFloat(prompt("Enter a number")) 
-// let nne = parseFloat(prompt("Enter a number")) 
+let ne = parseFloat(prompt("Enter a year")) 
+// let e = parseFloat(prompt("Enter a month")) 
+// let nne = parseFloat(prompt("Enter a day")) 
 
 console.log('Age : ',ewew(ne));
 
