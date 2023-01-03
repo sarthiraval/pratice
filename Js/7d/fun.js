@@ -306,20 +306,20 @@ console.log(fd(2))
 let d = n => n+n 
 console.log(d(4));
 
-let uppesr = ae =>{
-let ress =[]
-    for (let ele of ae){
-        ress.push(ele.toUpperCase())
-    }
-    return ress
-}
+// let uppesr = ae =>{
+// let ress =[]
+//     for (let ele of ae){
+//         ress.push(ele.toUpperCase())
+//     }
+//     return ress
+// }
 //let fds = ['s','sa','sar','sart','sarth','sarthi']
-let fds = []
-let fdsd = prompt("Enter a number")
-for(let i = 0;i< fdsd;i++){
-    fds.push(prompt("Enter a String"))
-}
-console.log(uppesr(fds));
+// let fds = []
+// let fdsd = prompt("Enter a number")
+// for(let i = 0;i< fdsd;i++){
+//     fds.push(prompt("Enter a String"))
+// }
+// console.log(uppesr(fds));
 
 let str = (fs,ls)=>{
     return `${fs} ${ls}`
@@ -332,6 +332,49 @@ let addq = (n1,n2)=>{
 
 }
 console.log(addq(2 ,3));
+
+//Function with default parameters
+// function functionName(param = value) {
+//     //codes
+//   }
+  
+//   // Calling function
+//   functionName()
+//   functionName(arg)
+
+function dfs (name= 'Sarthi'){
+    let ms = `${name}`
+    return ms
+}
+console.log(dfs())
+console.log(dfs("s"));
+
+
+function detailss(fs="Tanvi",ls="Shah"){
+    let d = ' '
+    let fullname =  fs + d +ls
+    return fullname
+}
+console.log(detailss());
+console.log(detailss("Siddharth","Soni"));
+
+function ewew (//bod,current = new Date().getFullYear()
+// ,
+cud,cd = new Date().getDay(),
+// cmd,cm = new Date().getMonth()
+){
+    //let age = current -  bod
+    let cudate = cd - cud
+    // let cumomth = cm - cmd
+    return  cudate
+    // age ,cumomth
+}
+let ne = parseFloat(prompt("Enter a number")) 
+// let e = parseFloat(prompt("Enter a number")) 
+// let nne = parseFloat(prompt("Enter a number")) 
+
+console.log('Age : ',ewew(ne));
+
 
 // function numbers(){
 //     let n1 = parseFloat(prompt("Enter a n1").replace(/\s/g,"")) 
