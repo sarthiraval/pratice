@@ -248,6 +248,9 @@ console.log(car.funs());
 let copuperson = Object.assign({},car)
 console.log(copuperson);
 
+let copuperso = Object.assign({why : "why"},car)
+console.log(copuperso);
+
 //Object.keys: To get the keys or properties of an object as an array
 let keys = Object.keys(car)
 console.log(keys);
@@ -263,3 +266,11 @@ console.log(entiress);
 //hasOwnProperty: To check if a specific key or property exist in an object
 console.log(copuperson.hasOwnProperty('Firstname'));
 console.log(copuperson.hasOwnProperty('score'));
+
+//delete
+delete car.hoobies
+console.log(car);
+
+// channge
+car['age'] = 21;
+console.log(car);
