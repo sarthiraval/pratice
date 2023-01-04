@@ -2,6 +2,8 @@ function changecolor (){
     let eleme = document.body
     eleme.classList.toggle("dark-mode")
 }
+h = "sarthi"
+console.log(h)
 
 //global , fuction,block
 console.log("global,fuction,block");

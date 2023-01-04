@@ -1,26 +1,58 @@
-function age() {
-  var d1 = parseFloat(prompt("Enter a Day")) 
-  var m1 = parseFloat(prompt("Enter a Month")) 
-  var y1 = parseFloat(prompt("Enter a Year")) 
+var ne = parseFloat(prompt("Enter a year")) 
+var e = parseFloat(prompt("Enter a month")) // month(0-30)
+var nne = parseFloat(prompt("Enter a day"))//day (0-11) 
 
-  var date = new Date();
-  var d2 = date.getDate();
-  var m2 = 1 + date.getMonth();
-  var y2 = date.getFullYear();
-  var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
-  if(d1 > d2){
-  	d2 = d2 + month[m2 - 1];
-  	m2 = m2 - 1;
-  }
-  if(m1 > m2){
-  	m2 = m2 + 12;
-  	y2 = y2 - 1;
-  }
-  var d = d2 - d1;
-  var m = m2 - m1;
-  var y = y2 - y1;
-
-  console.log('Your Age is '+y+' Years '+m+' Months '+d+' Days')
+if(e != NaN && ne != undefined && nne != undefined){
+    console.log('Age : ',`Year=${ewew()} Month=${ewewewew()} Date=${ewewew(nne)}`)  
 }
-age()
+else{
+    console.log("Any field is empy");
+}
+
+function ewew (){
+  
+    let current = new Date().getFullYear()
+    console.log(current);
+    current = current -1
+    console.log(current);
+    let age = current - ne
+     console.log(age);    
+     return age
+    }
+   
+function ewewewew() {
+    if(e < 13){
+    let sda = new Date()
+    console.log(sda);
+    let cm =  sda.getMonth()
+    console.log(cm);
+    if(e > cm){
+     cm = cm + 12
+    }
+    console.log(cm);
+    let cumomth = cm - e
+    console.log(cumomth);
+    return cumomth
+}
+    else{
+        console.log("Input IS Wrong");
+    }
+
+}
+function ewewew() {
+    if(e < 32){
+    let cd = new Date().getDay()
+    console.log(cd);
+    if(nne > cd){
+        cd = cd + 31
+        console.log(cd);
+       }
+    let cudate = cd - nne
+       console.log(cudate);   
+       return cudate       
+    } 
+    else{
+        console.log("Input IS Wrong");
+    }
+}
+

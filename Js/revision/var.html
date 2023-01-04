@@ -68,10 +68,44 @@
                    </ul>
                 </ul>
 
+                <li>Scope</li>
+                <ul>
+                    <li>We declare variable to store different data types.</li> 
+                       <li>To declare a variable we use the key word var, let and const. 
+                      <li> A variable can be declared at different scope. </li>
+                    <li>
+                    Variable can be declared globally or locally scope.</li>
+                    <li>
+                     We will see both global and local scope.
+                    </li>
+                    <li> Anything declared without let, var or const is scoped at global level.</li>
+                </li></ul>
+                <li>Global object</li>
+                <ul>
+                    <li>
+                        A global object is an object that always exists in the global scope.
+                    </li>
+                    <li>Global Object is not a console in a function.</li>
+                    <ul>
+                        <li>console.log(globalThis === globalThis.globalThis); // true
+                            </li>
+                        <li> console.log(window === window.window); // true
+                        </li>
+                        <li> console.log(self === self.self); //true
+                        </li>
+                        <li> console.log(frames === frames.frames); // true</li>
+                        <li>console.log(global === global.global); // false</li>
+                    </ul>
+                    <li>The properties of the global object are automatically added to the global scope.</li>
+                </ul>
+
+                <ol><li>Global scope</li><li>LocalScope</li><ul><li>Function Scope</li><li>Block Scope</li></ul></ol>
+                <ul>
                 <li>Global scope:- </li>
                 <ul>
-                <li>global scope and all the other functions and variables are contained in this global scope.
-                </li>
+                <li>A globally declared variable can be accessed every where in the same file.</li>
+                <li> But the term global is relative.</li>
+                <li>It can be global to the file or it can be global relative to some block of codes.   </li>
                 <li>
                 Another is the Local Scope, variables declared inside the functions are considered to be of the local scope and it is futher divided into function scoped and block scoped.
                 </li>
@@ -90,7 +124,7 @@
                 
                 </li>
                 </ul> 
-                
+            </ul>
 
 <li>introduction to Data types:- </li><ul><li>primitive</li><li>non-primitive</li></ul>
 
@@ -103,7 +137,6 @@
 <li>null</li>
 <li>Symbol</li>
 </ol>
-  
 
 <li>The following are JavaScript non-primitive data types: </li>
     <ol><li>Array</li>
@@ -414,7 +447,25 @@ console.dir() recognizes the object just as an object and outputs its properties
 <li>Both log() and dir() returns the string just as a string</li>
 </li>
 <br>
+<li>Object</li>
+<li>Everything can be an object and objects do have properties and properties have values, so an object is a key value pair.</li>
+<li>The order of the key is not reserved, or there is no order. </li> 
+<li>To create an object literal, we use two curly brackets</li>
+<ul><li>Getting values from an object</li>
+  <ul><li>We can access values of object using two methods:</li>
+<ul>
+    <li>    using . followed by key name if the key-name is a one word
+    </li>
+    <li>    using square bracket and a quote</li>
+
+</ul>
+</ul>  
+</ul>
+    
 <li>Array of objects: It stores multiple values in a single variable</li>
+
+
+<br>
 <li>Array:</li>
 <ul>
 <li>Arrays are used to store multiple values in a single variable.</li>
@@ -640,6 +691,112 @@ Linear search is a search that finds an element in the list by searching the ele
     <li>console.log("Day",new Date().getDay()) //0-6</li>
     </li>
 </ol>
+
+<br>
+<li>Function :- </li>
+<ul>
+    
+    <li>A Function is a block of code that is designed to perform a task and executed when it is been called or invoked.</li>
+    <li>A function is a reusable block of code or programming statements designed to perform a certain task.</li> 
+    <li>A function is declared by a function key word followed by a name, followed by parentheses ().</li>
+    <li> A parentheses can take a parameter. </li>
+    <li>If a function take a parameter it will be called with argument. </li>
+    <li>A function can also take a default parameter.</li>
+    <li>To store a data to a function, a function has to return certain data types.</li>
+    <li>To get the value we call or invoke a function. Function makes code:</li>
+     <ul>   <li>    clean and easy to </li>
+        <li>    reusable</li>
+        <li>easy to test</li></ul>
+    <li>A function can be declared or created in couple of ways:</li>
+<ul>
+        <li>    Declaration function</li>
+            <li>Expression function</li>
+            <li>Anonymous function</li>
+           <li> Arrow function</li>
+</ul>
+<li>Function Declaration</li>
+<ul><li>   
+     Let us see how to declare a function and how to call a function.
+</li>
+    </ul>
+
+
+    <li>    Function without a parameter and return
+    </li>
+<ul><li>   
+    Function can be declared without a parameter
+</li>
+    </ul>
+
+   <li> Function returning value</li>
+<ul><li>Function can also return values, if a function does not return values the value of the function is undefined. 
+</li></ul>
+
+<li>Function with a parameter</li>
+   <ul><li>In a function we can pass different data types(number, string, boolean, object, function) as a parameter</li>
+    <li>Function with two parameters
+    </li>   
+    <li>Function with many parameters
+    </li>
+</ul>
+
+<li>Function with unlimited number of parameters
+</li>
+<ul><li>Therefore, we should know how to write a function which can take unlimited number of arguments.</li>
+    <li> The way we do it has a significant difference between a function declaration(regular function) and arrow function.</li>
+</ul>
+<li>Unlimited number of parameters in regular function
+</li>
+<ul><li>A function declaration provides a function scoped arguments array like object.</li></ul>
+
+<li>Unlimited number of parameters in arrow function</li>
+<ul><li>Arrow function does not have the function scoped arguments object
+</li>
+<li>(...args) => </li>
+  <ul><li>console.log(arguments), arguments object not found in arrow function</li>
+<li>instead we use a parameter followed by spread operator (...)</li>
+</ul> 
+</ul>
+<li>Expression Function</li>
+<ul><li>Expression functions are anonymous functions. After we create a function without a name and we assign it to a variable
+</li></ul>
+
+<li>Self Invoking Functions</li>
+<ul><li>Self invoking functions are anonymous functions which do not need to be called to return a value
+</li></ul>
+
+<li>Arrow Function
+    
+<ul>
+    <li>    Arrow function is an alternative to write a function, however function declaration and arrow function have some minor differences.
+</li>
+<li>    Arrow function uses arrow instead of the keyword function to declare a function. Let us see both function declaration and arrow function</li>
+</li>
+</ul>
+
+<li>Function with default parameters
+</li>
+<ul><li>Sometimes we pass default values to parameters, when we invoke the function if we do not pass an argument the default value will be used.
+</li>
+</ul>
+
+
+</ul>
+
+
+
+   
+<li>Return :- </li>
+<ul>
+  <li>
+      return statement may be return any type data,including varibles, array and objects
+  </li>
+  <li> 
+      A return statement ends the execution of a function, and returns control to the calling function. 
+  </li>
+
+</ul>   
+
 
 
 <br>
