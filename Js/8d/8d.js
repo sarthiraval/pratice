@@ -450,7 +450,7 @@ console.log(Object.keys(writabledata));
   
 //4.configurable = it configurable input  is true a  all of key and value is print 
  //But configurable input is a false only first key element is not a print ,and another key is print 
-let aqaq = { 
+let aqaq = {  
   ss :"f",
   ssq  :"21" ,
   helloq : function(){
