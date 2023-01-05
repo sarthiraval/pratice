@@ -10,7 +10,8 @@ w = undefined + 2
 e = NaN + 2
 t = true + 2
 r = Number + 2
-console.log(q,w,e,t,r);
+yqs = "v"+ true
+console.log(q,w,e,t,r,yqs);
 
 yq = "v"+ undefined
 wq = undefined - 2
@@ -116,6 +117,10 @@ for(let i = 0; i < 3; i++){
 
 //global , fuction,block
 console.log("global,fuction,block");
+var dsaaa = "sd"
+let dsasa = "5"
+const popo ="DS"
+console.log(dsaaa,dsasa,popo);
 {
     var sqq = 's';
     let ss = 'ss';
@@ -124,6 +129,9 @@ console.log("global,fuction,block");
     let w = 4
     const e = 5
     console.log(h)
+    console.log(e);
+
+    console.log(dsaaa,dsasa,popo);
 
     console.log(sqq);
    // console.log(e++);
@@ -135,6 +143,9 @@ console.log("global,fuction,block");
 }
 function name() 
 {
+  console.log(dsaaa,dsasa,popo);
+  //console.log(e);
+
     {
     var a = 'Sarthi';
     let sqq = 'Shaileshkumar';
@@ -147,7 +158,6 @@ function name()
     var xs = 45
     let ds =45
     console.log(qq++);
-
     console.log(xs+2)
     console.log(ds+2)
  
@@ -157,9 +167,11 @@ function name()
     }
     console.log("Outside block")
     console.log(a);
-    //console.log(sqq);
-    //console.log(c);
     console.log(sqq);
+    console.log(e); //NaN
+    console.log(xs);
+  console.log(dsaaa,dsasa,popo);
+
     //console.log(ss);
     //console.log(sss);
 }
@@ -194,6 +206,12 @@ let car =
                  "JIO" 
         ]
         ,
+        createmate : function(){
+          console.log(`My Favourite ${this.bike}. 
+          \nI pray this god ${this.god}
+        \nMy Ideal is ${this.myIdeal}`);
+        }
+        ,
     getfs : function(){
        return `${this.Firstname} ${this,this.Middlename} ${this,this.Lastname}`
     }
@@ -220,29 +238,34 @@ console.log(car['getfs']);
 console.log(car['age']);
 // console.log(car ['location']) undefind
 
-car.nationality = 'India'
+car.nationality = 'Indian'
 car.age = 54
-car.title ="All Of This"
+car.title ="React Native Developer"
 car.phone.push('BSNL')
 car.phone.push('MTNL')
+car.MyIdeal = "My Father"
 car.isMarried = false
 
 car.funs = function(){
     let thiss = this.phone
     .splice(0,this.phone.length - 1)
     .join(', ')
+    console.log(thiss);
 
   let splices = this.phone.splice(this.phone.length -1)[0]
+  console.log(splices);
   let skills = `${thiss} ${splices}`  
   let fname = this.getfs()
-  let sfs = `${fname} is a ${this.title} \nHe Live is ${this.nationality} 
-  \nHe Studies ${skills}`
+  let sfs = `${fname} is a ${this.title} \nHe is a ${this.nationality} 
+  \nI Owner of this companys ${skills}`
   return sfs
 
 }
 console.log(car.funs());
 
 // object method
+console.log( "object method");
+
 //Object.assign: To copy an object without modifying the original object
 
 let copuperson = Object.assign({},car)
@@ -250,6 +273,8 @@ console.log(copuperson);
 
 let copuperso = Object.assign({why : "why"},car)
 console.log(copuperso);
+
+
 
 //Object.keys: To get the keys or properties of an object as an array
 let keys = Object.keys(car)
@@ -262,15 +287,79 @@ console.log(values);
 //Object.entries:To get the keys and values in an array
 let entiress = Object.entries(car)
 console.log(entiress);
+let entress = Object.entries(car)[2]
+console.log(entress);
+
+const obj = { 1: 'marrc', 2: 'sort', 3: 'carry' };  
+console.log(Object.entries(obj)[2]);
+
+// key has a declaration for a number to a Sorting output
+const obj2 = { 10: 'arvind', 20: 'rahul', 7: 'Ankit'};    
+console.log(Object.entries(obj2)[2]);  
+console.log(Object.entries(obj2)[2])
 
 //hasOwnProperty: To check if a specific key or property exist in an object
 console.log(copuperson.hasOwnProperty('Firstname'));
 console.log(copuperson.hasOwnProperty('score'));
 
 //delete
-delete car.hoobies
+delete car.hoobies  
 console.log(car);
+
 
 // channge
 car['age'] = 21;
 console.log(car);
+
+
+//Object.Create :- The Object.create() static method creates a new object, using an existing object as the prototype of the newly created object
+const creates = Object.create(car)
+creates.bike = "Pulsar"
+creates.god = ["Mahadev","Ashapuri Ma","Chamunda Ma"]
+creates.createmate()
+
+console.table(car);
+
+//Object.defineProperties()
+//Object.defineProperties() method defines new or modifies existing properties directly on an object, and returning the object.
+//Syntax = Object.defineProperties(obj, props)
+// Obj: The object on which to define or modify properties.
+// Props: An object whose own enumerable properties constitute descriptors for the properties to be defined or modified.
+//value = The value associated with the property
+//Return:This method reruns an object that was passed to the function
+const op ={}
+Object.defineProperties(op,{
+  Medicines1 :{
+    value : "445",
+    value : 21,
+    writable : true,
+    writable :false
+  },
+  Medicines2:{
+    value : "45",
+    value : 21,
+    writable : true,
+    writable :false
+  }
+})
+console.log(op.Medicines1,op.Medicines2);
+
+// Object.defineProperty()
+// The Object.defineProperty() method defines a new property directly on an object and returns the object. 
+//To change the flags, we can use Object.defineProperty.
+//We cannot change it back, because define property doesn?t work on non-configurable properties.
+//Syntax = Object.defineProperty(obj, prop, descriptor)  
+
+const oop ={}
+Object.defineProperties(oop,"Medicines1",{
+    value : "445",
+    value : 21,
+    writable : true,
+    writable :false
+})
+console.log(op.Medicines1,op.Medicines2);
+
+
+//between the defineProperty() and defineProperties()
+//defineProperty() a single property on the object.
+//defineProperties()  multiple properties on the object.
