@@ -1,9 +1,9 @@
 // global
 h = "sarthi"
-console.log(h)
+console.log("Global declartion without variable =",h)
 
 h ="I love Coding"
-console.log(h);
+console.log("Global declartion without variable and changing = ",h);
 
 q = 2+3
 w = undefined + 2
@@ -11,7 +11,7 @@ e = NaN + 2
 t = true + 2
 r = Number + 2
 yqs = "v"+ true
-console.log(q,w,e,t,r,yqs);
+console.log("Global declartion without variable",q,w,e,t,r,yqs);
 
 yq = "v"+ undefined
 wq = undefined - 2
@@ -19,7 +19,7 @@ eq = NaN - 2
 tq = true - 2
 rq = Number - 2
 dq = "v" + 1
-console.log(wq,eq,tq,rq,yq,dq);
+console.log("Global declartion without variable",wq,eq,tq,rq,yq,dq);
 
 //global object
 console.log(globalThis === globalThis.globalThis); // true
@@ -277,8 +277,8 @@ console.log(copuperso);
 
 
 //Object.keys: To get the keys or properties of an object as an array
-let keys = Object.keys(car)
-console.log(keys);
+let keyss = Object.keys(car)
+console.log(keyss);
 
 //Object.values:To get values of an object as an array
 let values = Object.values(car)
@@ -351,15 +351,126 @@ console.log(op.Medicines1,op.Medicines2);
 //Syntax = Object.defineProperty(obj, prop, descriptor)  
 
 const oop ={}
-Object.defineProperties(oop,"Medicines1",{
+Object.defineProperty(oop,"Medicines3",{
     value : "445",
     value : 21,
     writable : true,
     writable :false
 })
-console.log(op.Medicines1,op.Medicines2);
+oop.Medicines3 =14
+console.log(oop.Medicines3);
 
 
 //between the defineProperty() and defineProperties()
 //defineProperty() a single property on the object.
 //defineProperties()  multiple properties on the object.
+
+
+//Freeze
+//Object.freeze() method freezes an object that prevents new properties from being added to it.
+//syntax = let fix = Object.freeze(whythis)
+let  o1 = {
+  racer : "Jonathan Rea	" ,
+  win : 118
+}
+const o2 = Object. freeze(o1)
+o2.racer="Sarthi Raval"
+o2.Win = 0
+console.log(o2.racer,o2.win);
+
+var whythis = { bestbike : "Kawasaki Ninja H2R "}
+console.log(whythis);
+whythis.bestbike= "Ninja ZX-14R ABS"
+console.log(whythis);
+let fix = Object.freeze(whythis)
+whythis.bestbike = "Pulsar"
+console.log(whythis);
+
+//Object.getOwnPropertyDescriptor = a data descriptor is a property that has a value, which may or may not be writable.
+//Syntax = bject.getOwnPropertyDescriptor(obj, prop)  
+//value = contains an actual value of a property
+//writable = writable or read - only
+//enumerable = during the enumeration using for- in loop or  Object.key() Method
+//Configurable = Specified property can be changed or not 
+
+//1.of this getOwnPropertyDescriptor
+function Studenta() 
+{
+  let sobjectation = { 
+    name  :"Sarthi" ,
+    hello : function(){
+      console.log("Hello");
+    }
+ }
+  console.log(Object.getOwnPropertyDescriptor(sobjectation,'name'));
+
+}
+Studenta()
+
+//2.of this writable
+let writabledata = { 
+  ss  :"21" ,
+  hello : function(){
+    console.log("Why");
+  },
+  sss :'45',
+  lklj :"saw"
+
+}
+console.log(Object.keys(writabledata));
+
+console.log(writabledata.ss);
+
+const descriptor1 = Object.getOwnPropertyDescriptor(writabledata, 'ss');  
+console.log(descriptor1.writable);  
+console.log(descriptor1.value);  
+
+Object.defineProperty(writabledata,'ss',{writable: true})
+writabledata['ss'] = "Sarthi";
+console.log("defineProperty true =",writabledata.ss);
+//true = String,NaN,Number,Boolean
+//false =  null
+//udefind = error
+Object.defineProperty(writabledata,'ss',{writable:false})
+writabledata['ss'] = "Harshit"
+console.log("defineProperty false = ",writabledata.ss);
+
+
+//3.Enumerable = it enumerable input  is true a  all of key is print 
+ //But enumerable input is a false only first key element is not a print  ,and another key is print 
+
+// true = String ,Number, Boolean
+// false = null, undefind NaN
+Object.defineProperty(writabledata,'sss',{enumerable:true})
+console.log(Object.keys(writabledata)); 
+Object.defineProperty(writabledata,'ss',{enumerable:false})
+console.log(Object.keys(writabledata)); 
+Object.defineProperty(writabledata,'ss',{enumerable:true})
+console.log(Object.keys(writabledata)); 
+  
+//4.configurable = it configurable input  is true a  all of key and value is print 
+ //But configurable input is a false only first key element is not a print ,and another key is print 
+let aqaq = { 
+  ss :"f",
+  ssq  :"21" ,
+  helloq : function(){
+    console.log("dwew");
+  },
+  sssq :'45',
+}
+// console.log(aqaq);
+
+Object.defineProperty(aqaq,'ssq',{configurable:true})
+Object.defineProperty(aqaq,'ss',{enumerable:false})
+console.log(Object.keys(aqaq)); 
+
+
+
+
+// getOwnPropertyDescriptors = a data descriptor is a propertys that has a value, which may or may not be writable.
+
+
+
+//between the getOwnPropertyDescriptor() and getOwnPropertyDescriptors()
+//getOwnPropertyDescriptor() a single property on the object.
+//getOwnPropertyDescriptors()  multiple properties on the object.
