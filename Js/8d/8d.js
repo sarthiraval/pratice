@@ -1,6 +1,8 @@
 // global
-h = "sarthi"
+h = 1
 console.log("Global declartion without variable =",h)
+let ec = h+2
+console.log("Global declartion without variable =",ec)
 
 h ="I love Coding"
 console.log("Global declartion without variable and changing = ",h);
@@ -11,7 +13,7 @@ e = NaN + 2
 t = true + 2
 r = Number + 2
 yqs = "v"+ true
-console.log("Global declartion without variable",q,w,e,t,r,yqs);
+console.log("Global declartion without variable =",q,w,e,t,r,yqs);
 
 yq = "v"+ undefined
 wq = undefined - 2
@@ -19,7 +21,7 @@ eq = NaN - 2
 tq = true - 2
 rq = Number - 2
 dq = "v" + 1
-console.log("Global declartion without variable",wq,eq,tq,rq,yq,dq);
+console.log("Global declartion without variable = ",wq,eq,tq,yq,dq,rq);
 
 //global object
 console.log(globalThis === globalThis.globalThis); // true
@@ -208,13 +210,24 @@ let car =
         ,
         createmate : function(){
           console.log(`My Favourite ${this.bike}. 
-          \nI pray this god ${this.god}
+          \nI pray this god ${this.god},\nI pray this god ${this.gods}
         \nMy Ideal is ${this.myIdeal}`);
         }
         ,
     getfs : function(){
        return `${this.Firstname} ${this,this.Middlename} ${this,this.Lastname}`
     }
+    ,
+        "Address": {
+         
+                    "City_name": "Ahmedabad",
+                    "Area_name": "Naranpura",
+                    "Pincode" : "380012",
+                    "Socity_name":"Surya house",
+                    "Block_Number" : "164/1958"
+ 
+    
+        }
      
 
     }
@@ -263,18 +276,50 @@ car.funs = function(){
 }
 console.log(car.funs());
 
+let du = {...car} // 1 level deep 
+// let du2 = Object.assign({},car) // 1 level deep 
+// let du3 = JSON.parse(JSON.stringify(car))  
+console.log(du.Firstname = "Janik");
+// console.log(du2.Firstname = "Janik");
+// console.log(du3.Firstname = "Janik");
+console.log(car.Firstname);
+
+
+let duq = {...car} // 1 level deep 
+let duqq = Object.assign({},car) // 1 level deep 
+
+console.log(du.Address.City_name   = "Naranpura");
+console.log(car.Address.City_name);
+console.log(duqq.Address.City_name = "Naranpura");
+console.log(car.Address.City_name);
+
+
+
 // object method
 console.log( "object method");
+//Object.Create :- The Object.create() static method creates a new object, using an existing object as the prototype of the newly created object
+Object.create(car)
+car.bike = "Pulsar"
+car.god = ["Mahadev","Ashapuri Ma","Chamunda Ma"]
+car.gods = {"Mahadev":"Ashapuri Ma"}
+
+car.createmate()
+
+console.table(car);
+console.log(car);
+
 
 //Object.assign: To copy an object without modifying the original object
-
+console.log(car);
 let copuperson = Object.assign({},car)
 console.log(copuperson);
 
 let copuperso = Object.assign({why : "why"},car)
 console.log(copuperso);
 
-
+//  Object.getOwnPropertyNames() method returns an array of all propertie found directly upon a given object.
+console.log(Object.getOwnPropertyNames(car));
+//Objetc.getOwnPropertyNames() and Object.keys() different
 
 //Object.keys: To get the keys or properties of an object as an array
 let keyss = Object.keys(car)
@@ -312,13 +357,6 @@ car['age'] = 21;
 console.log(car);
 
 
-//Object.Create :- The Object.create() static method creates a new object, using an existing object as the prototype of the newly created object
-const creates = Object.create(car)
-creates.bike = "Pulsar"
-creates.god = ["Mahadev","Ashapuri Ma","Chamunda Ma"]
-creates.createmate()
-
-console.table(car);
 
 //Object.defineProperties()
 //Object.defineProperties() method defines new or modifies existing properties directly on an object, and returning the object.
@@ -343,7 +381,8 @@ Object.defineProperties(op,{
   }
 })
 console.log(op.Medicines1,op.Medicines2);
-
+console.log(Object.keys(op));
+console.log(Object.getOwnPropertyNames(op));
 // Object.defineProperty()
 // The Object.defineProperty() method defines a new property directly on an object and returns the object. 
 //To change the flags, we can use Object.defineProperty.
@@ -430,7 +469,7 @@ writabledata['ss'] = "Sarthi";
 console.log("defineProperty true =",writabledata.ss);
 //true = String,NaN,Number,Boolean
 //false =  null
-//udefind = error
+//undefind = error
 Object.defineProperty(writabledata,'ss',{writable:false})
 writabledata['ss'] = "Harshit"
 console.log("defineProperty false = ",writabledata.ss);
@@ -441,12 +480,13 @@ console.log("defineProperty false = ",writabledata.ss);
 
 // true = String ,Number, Boolean
 // false = null, undefind NaN
-Object.defineProperty(writabledata,'sss',{enumerable:true})
+Object.defineProperty(writabledata,'sss',{enumerable:false})
 console.log(Object.keys(writabledata)); 
 Object.defineProperty(writabledata,'ss',{enumerable:false})
 console.log(Object.keys(writabledata)); 
 Object.defineProperty(writabledata,'ss',{enumerable:true})
 console.log(Object.keys(writabledata)); 
+console.table(writabledata);
   
 //4.configurable = it configurable input  is true a  all of key and value is print 
  //But configurable input is a false only first key element is not a print ,and another key is print 
@@ -460,8 +500,9 @@ let aqaq = {
 }
 // console.log(aqaq);
 
-Object.defineProperty(aqaq,'ssq',{configurable:true})
-Object.defineProperty(aqaq,'ss',{enumerable:false})
+let  opof=Object.defineProperty(aqaq,'ssq',{configurable:false})
+console.log(opof);
+Object.defineProperty(aqaq,'ssq',{enumerable:true})
 console.log(Object.keys(aqaq)); 
 
 
@@ -474,3 +515,72 @@ console.log(Object.keys(aqaq));
 //between the getOwnPropertyDescriptor() and getOwnPropertyDescriptors()
 //getOwnPropertyDescriptor() a single property on the object.
 //getOwnPropertyDescriptors()  multiple properties on the object.
+
+
+//Object.getPrototypeOf() Method
+// The Object.getPrototypeOf() method of JavaScript returns the prototype of the specified object.
+// two objects 
+let animal = {
+  eats :true,
+  eat :false
+}
+const object1 = Object.create(animal);  
+
+let acc = {
+  eats :true,
+  eat :false
+}
+const object2 = Object.create(acc);  
+
+console.log((Object.getPrototypeOf(object1) === animal));
+console.log((Object.getPrototypeOf(object2) === acc));
+console.log((Object.getPrototypeOf(object1.eats) === animal.eats));
+
+
+let rabbit = Object.create(animal);  
+console.log(Object.getPrototypeOf(rabbit) === animal); 
+
+
+// The Object.is() method of JavaScript is used to determine whether two values are the same value
+//Object.seal() = The object to be sealed is passed as an argument, and the method returns the object which has been sealed.
+let animals = {
+ 
+}
+console.log(Object.is(animal))  
+
+let accs = {
+  eats :true,
+  eat :false
+}
+
+
+console.log(Object.is(accs))
+console.log(Object.isExtensible(accs))
+console.log(Object.seal(accs));
+animals.eats = 45;  
+console.log(animals.eats);
+console.log(Object.isSealed(accs))
+
+//The Object.setPrototypeOf() method sets the prototype (i.e., the internal [[Prototype]] property) of a specified object to another object or null
+var Animal = {  
+  drive() {  
+    console.log(this.name + ' Raval');  
+  }  
+};  
+ 
+class Dog {  
+  constructor(name) {  
+  this.name = name;  
+ }  
+}  
+ 
+Object.setPrototypeOf(Dog.prototype, Animal);   
+
+let add = new Dog('Sarthi')
+add.drive()
+
+//Object.preventExtensions() only prevents the addition of new properties from ever being added to an object 
+let uu = {"p" : 3}
+  Object.preventExtensions(uu)
+console.log(Object.hasOwnProperty("p"));
+
