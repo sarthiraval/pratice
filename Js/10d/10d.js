@@ -92,11 +92,11 @@ console.log("Intersection of sets");
 let aa = [1,2,3,4,2,1,58,9,4,4,3]
 let bb =[78,3,4,5,6,1,1]
 let AA = new Set(aa)
-console.log("Intersection",AA);
+// console.log("Intersection",AA);
 let BB = new Set(bb)
-console.log("Intersection",BB);
+// console.log("Intersection",BB);
 let cc = aa.filter(no => BB.has(no))
-console.log("Intersection",cc);
+// console.log("Intersection",cc);
 let CC = new Set(cc)
 console.log(CC);
 
@@ -105,11 +105,40 @@ console.log(CC);
 //Lets find the different of set A and set B (A \ B)
 let qa = [1, 2, 3, 4, 5]
 let qb = [3, 4, 5, 6]
-
 let qA = new Set(qa)
 let qB = new Set(qb)
-
-let qc = qa.filter((num) => !qB.has(num))
+let qc = qa.filter(num => !qB.has.num)
 let qC = new Set(qc)
+console.log("Difference of sets",qC)
 
-console.log(qC)
+console.log("Map");
+let map = new Map()
+console.log(map);
+
+let Bhasha = [["1","English"],
+["2","Hindi"],["3","Gujrati"],
+["4","Sanskrit"]]
+let ds = new Map(Bhasha)
+console.log(ds);
+console.log(ds.size);
+
+//add use in map
+ds.set('5','French')
+console.log(ds);
+console.log(ds.size);
+console.log(Bhasha);
+
+//geting a value from map
+console.log(ds.get('2'));
+
+// checking key in map
+console.log(ds.has('5'));
+
+for (const country of  ds){
+    console.log(country);
+}
+
+
+for (const [country, city] of ds){
+ console.log(country, city)
+}
