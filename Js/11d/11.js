@@ -6,21 +6,25 @@ console.log("Destructing Arrays");
 let  arraydDestru = [ 1,2,3,4,5]
 let [n1,n2,n3,n4,n5] = arraydDestru
 let [skip1,,skip3,skip4,skip5] = arraydDestru
-let [,sk2,sk3,,sk5] = arraydDestru
+let [,sk2,,,sk5] = arraydDestru
 console.log("normal in out =",n1,n2,n3,n4,n5);
-console.log("skip value in out = ",skip1,skip3,skip4,skip5);
-console.log("skip value in out = ",sk2,sk3,sk5);
+console.log("skip one value in out = ",skip1,skip3,skip4,skip5);
+console.log("skip multiple value in out = ",sk2,sk5);
 
 
 let objeDestru = "Sarthi"
 let [o1,o2,o3,o4,o5,o6] = objeDestru
 console.log("normal in out = ",o1,o2,o3,o4,o5,o6);
+//in swap 
+[o1,o2,o3,o4,o5,o6] = [o3,o2,"v",o2,"l","Sarthi"]
+console.log("swap value =",o1,o2,o3,o4,o5,"",o6);
+
 
 let namegf = ["janik","Sid","Harshit","Moin"]
 let[ng1,ng2,ng3,ng4] = namegf
 console.log("normal in out =  ",ng1,ng2,ng3,ng4);
 //in swap
-[ng1,ng2,ng3,ng4] = [ng2,ng3,ng4,ng1] 
+[ng1,ng2,ng3,ng4] = [ng4,ng3,ng2,ng1] 
 console.log("Swap value = ",ng1,ng2,ng3,ng4);
 
 let floatvalut = [1.0,1.2,25.1,45.6]
@@ -36,11 +40,11 @@ console.log(done ,notdone);
 [done[0],done[1],done[2]] [notdone[0],notdone[1],notdone[3]]
 console.log(done,notdone);
 
-[done,notdone] =[notdone,done]
-console.log("Sway two arrayfull value",done,notdone);
+// [done,notdone] =[notdone,done]
+// console.log("Sway two arrayfull value",done,notdone);
 
-[done[0],done[1],done[2],notdone[0],notdone[1],notdone[3]] <=
-[notdone[0],done[1],done[2],done[0],notdone[1],notdone[3]]
+[done[0],done[1],done[2],notdone[0],notdone[1],notdone[2]] =
+[notdone[0],done[1],done[2],done[0],notdone[1],notdone[2]]
 console.log("Sway two  array one value value",done,notdone);
 
 const nswq = [undefined,"ios","mac",undefined,"ubantu"]
@@ -85,7 +89,7 @@ let objectdestru = {fs :"Sarthi",ls:"Raval"}
 let {fs,ls} = objectdestru
 console.log("normal value = ",fs,ls);
 [fs,ls]  = [ls,fs]
-console.log("Swap value = ",fs,ls);
+console.log("Swap value = ",ls,fs);
 
 //renamed object value
 console.log("renamed object value");
@@ -116,6 +120,12 @@ let subject = ["English","Maths","Gujrati","Account"]
 let mark =[90,95,97,96]
 let subjects = [...subject]
 let marks =[...mark]
+let [mm1,...rst] =mark
+console.log(mm1,rst);
+let[ss1,...rew] = subject
+
+console.log(ss1,rew);
+console.log(mm1,rst,ss1,rew);
 let allnumbering = [...subject,...mark]
 console.log(allnumbering); 
 console.log(marks);
@@ -155,4 +165,119 @@ let cal  = reactangle =>{
 // With destructuring
 console.log(cal(react));
 
- 
+let company = {
+    ownername :"Sarthi Raval",
+    companyname : "SSR",
+    office : "Ahmedabad",
+    country : "India",
+    groupofIndustries :[
+        "Texttiles","IT Industries","Network Growth","Ecommerce web-app",
+        "Car - Bike","Oil Industries"
+    ],
+    branchs:["Kuchchh","Mumbai","Kolkata","Jamu"]
+}
+console.table(company);
+console.log("Without Destructuring")
+let compnayfutureplane = plan =>{
+    let improvement = plan.groupofIndustries
+    let formate = improvement.slice(0,6).join(" ,")
+    let branch = plan.branchs
+    let branchme = branch.slice(0,-1)
+    comanyfp = `My name is a ${plan.ownername}.\nMy Compnay Name is ${plan.companyname}.\n${plan.companyname} main office in ${plan.office}.\nI am from ${plan.country}.\n${plan.companyname} has many frenchise like a,${formate}.\nI want to grow two frenchise which are ${plan.groupofIndustries[1]} & ${plan.groupofIndustries[4]}.\nMy Company Branchies are in ${branchme} & ${plan.branchs[3]} like these beautiful cities.\nMy company's future plan is to grow in ${plan.office} city.`
+    return comanyfp
+}
+console.log(compnayfutureplane(company));
+
+
+console.log("With Destructuring")
+let compnayfutureinfo = ({
+    ownername,companyname,office,country,groupofIndustries,branchs
+}) => {
+    let formate = groupofIndustries.slice(0,6).join(" ,")
+    let branchme = branchs.slice(0,-1)
+    comanyfp = `1.My name is a ${ownername}.\n2.My Compnay Name is ${companyname}.\n3.${companyname} main office in ${office}.\n4.I am from ${country}.\n5.${companyname} has many frenchise like a,${formate}.\n6.I want to grow two frenchise which are ${groupofIndustries[1]} & ${groupofIndustries[4]}.\n7.My Company Branchies are in ${branchme} & ${branchs[3]} like these beautiful cities.\n8.My company's future plan is to grow in ${office} city.`
+    return comanyfp
+}
+console.log(compnayfutureinfo(company));
+
+let circleradius = {
+    radius :2,
+    dimesonce : 4  
+}
+// Without destructuring
+let clcircler = circle=>{
+      let r =  2 / circle.dimesonce 
+      return r
+}
+
+// With destructuring
+let clcircled = ({radius}) =>{
+    let d = 2 * radius
+    return d
+}
+console.log(`radius = ${clcircler(circleradius)} , dimesonce = ${clcircled(circleradius)}`);
+
+
+console.log("Destructuring object during iteration")
+let ji =[
+{
+    fs : 'Sarthi',
+    ls : 'Raval',
+    subject :{
+        math : 45,
+        science :46,
+        economice : 49
+    }
+},
+{
+    fs : 'Sid',
+    ls : 'Soni',
+    subject :{
+        math : 14,
+        science :11,
+        economice : 10
+    }
+},
+{
+    fs : 'Janik',
+    ls : 'Kanariya',
+    subject :{
+        math : 25,
+        science :26,
+        economice : 29
+    }
+}
+]
+console.table(ji);
+
+ji.map(sd=> console.table(sd.fs,sd.subject.math + sd.subject.science+sd.subject.economice));
+
+let totalmard = []
+ji.forEach(student => {
+    totalmard.push({
+        fs : student.fs,
+        marks : Object.values(student.subject).reduce((a,b) => a + b ),
+        markas : Object.values(student.subject).reduce((x,y) => x + y),
+    })
+})
+console.table(totalmard);
+ji.map(sd=> console.log(sd.fs,sd.subject));
+
+let totalmar = []
+ji.forEach(student => {
+    totalmar.push({
+        fs : student.fs,
+        toe : student.subject.math+ student.subject.economice + student.subject.science,
+    })
+})
+console.table(totalmar);
+
+
+for (var i=0;i<ji.length; i++){
+     let toe = ji[i].subject.math+ ji[i].subject.economice + ji[i].subject.science
+     let fds =ji[i].fs 
+     let lds = ji[i].ls 
+     let pder = toe * 100 /3 
+    console.table(toe ,fds,lds,pder);
+}
+

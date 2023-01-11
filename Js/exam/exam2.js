@@ -110,7 +110,7 @@ let car = [
 console.log(car);
 console.table(car);
 console.dir(car)
-//car.map(sd=> console.log(sd.Address.City_name));
+car.map(sd=> console.log(sd.Address));
 
 //car.map(sd=> console.log(sd.Address.City_name == "Ahmedabad"));
 
