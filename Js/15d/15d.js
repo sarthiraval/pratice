@@ -19,6 +19,7 @@ class company{
     }
 }
 
+
 let comp1 = new company("Sarthi","Raval","21","India","Ahmedabad")
 let comp2 = new company("Sid","Soni","21","India","Ahmedabad")
 let comp3 = new company("Janik","Kaneriya","21","India","Ahmedabad")
