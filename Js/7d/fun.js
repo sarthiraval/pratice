@@ -2,7 +2,7 @@
 function sq(){
     //let num = parseFloat(prompt("enter a number"))
     let num = 2
-    let sq = num * num
+    let sqp = num * num
     console.log("function without parameter an return mul",sq)
  }
  sq()
@@ -285,7 +285,7 @@ details(+"10",+"20",+"30",+"40");
 const ano = function() {
     console.log("Anonymous Function","Why")
   }
-   ano()
+ano()
 
 //expression function
 //Expression functions are anonymous functions.
@@ -312,9 +312,7 @@ console.log("Expression functions are anonymous with return functions",spre);
 
 //Arrow Function
 //Arrow function is an alternative to write a function, however function declaration and arrow function have some minor differences
-let fd = f =>{
-    return f * f
-}
+let fd = f =>{ return f * f}
 console.log("Expression functions are arrow function anonymous with return functions",fd(2))
 
 let d = n => n+n 

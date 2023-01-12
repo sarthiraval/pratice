@@ -1,14 +1,18 @@
 console.log("Callback");
 let callback = (s) =>{
-    return s+=2
+    return s ** 2
 }
-console.log("callback =",callback(4));
+// console.log("callback =",callback(4));
+
+function ab (){
+  console.log(1+3);
+}
 
 function c(callback,s)
 {
-    console.log("callback =",callback(s) + s);
+    return callback(s) * s;
 }
-c(callback,4)
+console.log(c(callback,2))
 
 function weather(all,sd){
     console.log(all,sd);
