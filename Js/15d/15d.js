@@ -12,6 +12,8 @@ class company{
     this.age =  age
     this.country = country
     this.city = city
+    this.rank = 0
+    this.skills = []
     }
     getfullname(){
         let fullname = this.fs + ' ' + this.ls
@@ -28,5 +30,9 @@ console.log(comp1);
 console.log(comp2);
 console.log(comp3);
 console.log(comp4);
+
+
+console.log(comp1.skills);
+
 
 
