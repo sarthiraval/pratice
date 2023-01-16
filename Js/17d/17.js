@@ -56,38 +56,43 @@ danys.then(result =>{console.log(result)}).catch(e => console.log(e))
 // let url = "https://api.covid19api.com/summary"
 let url = "17.json"
 fetch(url)
-.then(response => response.json()) // accessing the API data as JSON
-.then(data => console.log(data))
-.catch(error => console.log(error))
+.then(response => response.json())
+.then(response =>{
+    console.log('===== async and await')
+    const fetchData = async () => {
+        try {
+          const response = await fetch(url)
+          console.log("Response use",response);
+          const countries = await response.json()
+          console.log(countries)
+        } catch (err) {
+          console.error(err)
+        }
+      }
+      fetchData()
+    
+    
+      let a = response.Countries.filter(dath => dath.TotalDeaths > 4000)
+      let abcd  = a.map(sd=> sd.Country)
+      console.log(abcd);
+ 
+
+    
+}) 
 
 
-const fetchData = async () => {
-    try {
-      const response = await fetch(url)
-      const countries = await response.json()
-      console.log(countries)
-    } catch (err) {
-      console.error(err)
-    }
-  }
-  console.log('===== async and await')
-  fetchData()
-
-
-  function outerFunction() {
+function outerFunctio() {
     let count = 0;
-    function innerFunction() {
+    function inneunction() {
         count++
         return count
     }
 
-    return innerFunction
+    return inneunction()
 }
-const innerFunc = outerFunction()
+let un = outerFunctio()
+console.log(un)
 
-console.log(innerFunc())
-console.log(innerFunc())
-console.log(innerFunc())
 
 function outerFunction() {
     let count = 0;
@@ -105,7 +110,7 @@ function outerFunction() {
         minusOne:minusOne()
     }
 }
-const innerFuncs = outerFunction()
+const innerFucs = outerFunction()
 
-console.log(innerFuncs.plusOne)
-console.log(innerFuncs.minusOne)
+console.log(innerFucs.plusOne)
+console.log(innerFucs.minusOne)

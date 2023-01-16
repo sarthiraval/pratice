@@ -153,7 +153,7 @@ let sliceuse = countriesname.map(co => co.toUpperCase().slice(0,2))
 console.log(sliceuse);
 console.log(sliceuse.slice(0,2));
 
-//let usingprompt = prompt("Enter a city")
+let usingprompt = prompt("Enter a city")
 let spliceuse = countriesname.map(co => co.toUpperCase())
 console.log(spliceuse);
 console.log(spliceuse.splice(1,2,"Mumbai".toUpperCase()))
