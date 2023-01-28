@@ -1,0 +1,250 @@
+Oops Concept:-oops concept:- object oriented programing system
+1.object
+2.class
+3.Abstration
+4.Inheritance
+5.Polymorphism
+6.Encapsulatione
+
+
+
+object:- 
+ it is real word entity which having  properties and some task this in can be performed is called by object.
+ instance of class
+ ex:-human->name ,color,height(properties)->walk(),run(),read()(task) 
+ 
+class:-
+ it is consist of many number of object.
+ it is user defined blueprint or prototype from which object are created.
+ 
+student(class)
+ ___|___________________
+|          |           |
+AbC       DEF         GHI(properties)
+|          |               |
+name      name            name
+rollno    rollno          rollno       
+  |________|________________|
+               |
+   (task)read(),write(),play()
+ 
+public class GFG {
+     
+    static String Employee_name;
+    static float Employee_salary;
+
+   }
+
+
+
+Abstration:-
+  you cannot create object in a class
+  showing only essential parts and hiding the implementation details
+  it is process of hiding the immplemetation detail or essentail details from the user.
+
+  ex:-if you download application from any playstore to get .apk file but you not get a pakages a,any functions and method which are return genrate this .apk file.
+
+abstract class in{
+   
+  abstract void add(int a,in b);
+  abstract void sum(int a,in b);
+  abstract void div(int a,in b);
+  
+ 
+ }
+  major differnet of Abstration and encapsulation:- hiding information in encapsulation  
+                                                    hiding implementation  in Abstration
+Encapsulation:-
+procces of wrapping the variables and method in a single unit in encapsulation.
+ achive Encapsulation:-
+ declare variables as private
+ define get() and set() method to access and update the variable.
+ outside varibles as not access to any another class
+
+
+
+  class A{
+             private int rollno;
+             private String name;
+             
+             public void setdata()(int a String b){}           
+             public int getRollno() {return rollno}
+              public String name() {return name}
+ 
+          }   
+
+             
+Inheritance:-
+ when one class access to the properties of the another class.
+ Constructor cannot be inherited in Java.
+ Private members do not get inherited in Java.
+
+        (superclass,base class)parent class -----> child class(sub class , dervied class)
+                        
+    class Employee{  
+
+    }  
+    class Programmer extends Employee{  
+     
+    }  
+
+ type of inheritance:-
+     1.Single inheriance:- it is a sub-class is derived from only one super class It inherits the properties and behavior of a single-parent class. Sometimes it is also known as simple inheritance.
+
+                ex:-class A{}
+                     public class B extends A{}
+                     
+    class Animal{  
+    void eat(){System.out.println("eating...");}  
+    }  
+    class Dog extends Animal{  
+    void bark(){System.out.println("barking...");}  
+    }  
+    class TestInheritance{  
+    public static void main(String args[]){  
+    Dog d=new Dog();  
+    d.bark();  
+    d.eat();  
+    }}  
+
+
+     2.multi-level Inheritance:-
+In multi-level inheritance, a class is derived from a class which is also derived from another class is called multi-level inheritance. 
+In simple words, we can say that a class that has more than one parent class is called multi-level inheritance..
+                ex:-class A{}
+                    class  B extends A{}
+                    class  C extends B{}
+                    class  D extends C{}   
+
+
+    class Animal{  
+    void eat(){System.out.println("eating...");}  
+    }  
+    class Dog extends Animal{  
+    void bark(){System.out.println("barking...");}  
+    }  
+    class BabyDog extends Dog{  
+    void weep(){System.out.println("weeping...");}  
+    }  
+    class TestInheritance2{  
+    public static void main(String args[]){  
+    BabyDog d=new BabyDog();  
+    d.weep();  
+    d.bark();  
+    d.eat();  
+    }}  
+
+  
+     3.Hierachical Inheritance:-
+If a number of classes are derived from a single base class, it is called hierarchical inheritance.
+
+                ex:-class A{}
+                    class  B extends A{}
+                    class  C extends A{}
+                    class  D extends A{} 
+
+    class Animal{  
+    void eat(){System.out.println("eating...");}  
+    }  
+    class Dog extends Animal{  
+    void bark(){System.out.println("barking...");}  
+    }  
+    class Cat extends Animal{  
+    void meow(){System.out.println("meowing...");}  
+    }  
+    class TestInheritance3{  
+    public static void main(String args[]){  
+    Cat c=new Cat();  
+    c.meow();  
+    c.eat();  
+    //c.bark();//C.T.Error  
+    }}                      
+
+
+    4.Hybride inheritance:-
+Hybrid means consist of more than one. Hybrid inheritance is the combination of two or more types of inheritance:-Single and Hierachical
+                   
+                ex:-class A{}
+                    class  B extends A{}
+                    class  C extends B{}
+                    class  D extends B{}                            
+              
+ class Vehicale{  
+    void racetrack(){System.out.println("race...");}  
+    }  
+    class BMW extends Vehicale{  
+    void race(){System.out.println("raceing...");}  
+    }  
+    class Car extends BMW{  
+    void veryfast(){System.out.println("race very fast...");}  
+    }  
+    class Bike extends BMW{  
+    void veryslow(){System.out.println("race very Slow...");}  
+    }  
+    class TestInheritance3{  
+    public static void main(String args[]){  
+     Car c =new Car();  
+     c.veryfast();  
+     c.veryslow();  
+  
+    }}            
+        
+     
+Polymorphism:-
+  it is greek word where means same object different behaviour.
+  it is performing task in a different ways.
+  task is method
+ 
+                customer
+                  |
+      friend----Person-----Student
+                  |
+                Teacher
+
+    ->method overloading-->compile time:- Same fuction in single class
+        If a class has multiple methods having same name but different in parameters, it is known as Method Overloading. 
+If we have to perform only one operation, having same name of the methods increases the readability-- alag alag of the program. 
+     
+class car{
+    public void add(int a, int b){}
+    public void add(int a, String b){}
+
+   }        
+
+    ->method overriding-->run time:-
+if child class has the same method as declared in the parent class, it is known as method overriding in Java.
+In other words, If a subclass provides the specific implementation of the method that has been declared by one of its parent class, it is known as method overriding.
+
+class car{
+public void add(){}
+}
+class Ferrari extends Car(){
+ 
+public void  add(){}
+
+}
+    The method must have the same name as in the parent class
+    The method must have the same parameter as in the parent class.
+    There must be an IS-A relationship (inheritance).
+
+
+The differences between Method Overloading and Method Overriding in Java are as follows:
+
+1.Method overloading is a compile-time polymorphism.Method overriding is a run-time polymorphism.
+
+2.It helps to increase the readability of the program.	
+  It is used to grant the specific implementation of the method which is already provided by its parent class or superclass.
+
+3.It occurs within the class.It is performed in two classes with inheritance relationships.
+
+4.Method overloading may or may not require inheritance.Method overriding always needs inheritance.
+
+5.In method overloading, methods must have the same name and different signatures.In method overriding, methods must have the same name and same signature.
+
+6.Static binding is being used for overloaded methods.	Dynamic binding is being used for overriding methods.
+
+7.Poor Performance due to compile time polymorphism.It gives better performance. The reason behind this is that the binding of overridden methods is being done at runtime.
+
+8.Private and final methods can be overloaded.Private and final methods can’t be overridden.
+
+9.Argument list should be different while doing method overloading.Argument list should be same in method overriding.

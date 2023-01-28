@@ -1,0 +1,331 @@
+Android basic Consept:-
+Activities
+Services
+Broadcast receivers
+Content providers
+
+Activities:
+ An activity is the entry point for interacting with the user.
+ It represents a single screen with a user interface.
+ one app invokes an activity the calling app invokes an acitivity in the another app in activity.
+ activity provides the window in Which the app draws its UI.
+ Generally, one activity implements one screen in an app.
+ Most apps contain multiple screen, which means the comprise multiple activites.Ex:- Email app
+ app kese bhi open kro notification ya and any social media ke through apne aap me entry ke is one tye of activites  
+
+For example, an email app might have one activity that shows a list of new emails, another activity to compose an email, and another activity for reading emails. Although the activities work together to form a cohesive user experience in the email app, each one is independent of the others. As such, a different app can start any one of these activities if the email app allows
+
+tab notification to go another activity  in one type calling a Activity.
+
+Services:-
+Service is a used to perform operations on the background such as playing music,handle network,transactions.
+It doesn't has any UI(user interface).
+The service run in the background indefinitely even if applciation is destroyed.
+
+Started services :-Started services tell the system to keep them running until their work is completed
+ a service is started component call startservice() method .
+ it is stopped by stopService() method.
+ the service can stop ifself by calling the stopSelf() method.
+
+Bound services:-Bound services run because some other app (or the system) has said that it wants to make use of the service. 
+ a service bound when another component call blindservice() method.
+ the client can unbind service by calling the unbindservice() method.
+ The service cannot stopped untill all clients ublind the service. 
+
+example:- plays an audio in the background.Audio will not be stopped even if you switch to another activity.
+          to stop the audio , you need to stop the service.  
+
+Broadcast receivers
+ Broadcast in android is the system-wide events that can occur when the device starts
+ when a message is recevied on the device it is broadcast receiver
+ when incomming call are receive it is broadcast receiver.
+ Your phone in airplane mode on it is broadcast receiver.
+ Broadcast receivers use to respond the system wide events.
+
+two type:-
+static Broadcast receivers:- these type of receivers are decalred in the manifest fie and works even if the app is closed
+Dynamic Broadcast receivers:- these type of receivers work only if the app is active or minimzed.
+
+Example of broadcast recievers:-battery_low,Call,Date_Changed
+two main major methods is use the broadcase recevier in our application are: creating the Broadcast receivers, Register Broadcast receivers 
+
+
+Content providers
+    A content provider supplies data from one application to other on request.
+    A content provider can use different way the store a data and data can be store in a database, in file or even over network.
+Data of one application is accessed in another application is called content provider.
+users can manage to store the application data like images,audio,videos,and presonal contact.
+The content provider restrict or grant permission to the user to share their data.
+
+=============================================================================
+Android manifest:-
+
+it is contains informatoin of your package and including componets of the application such as activites,services, broadcast,content provider etc.
+permissions
+api :- google ads
+
+the commonly used attributes are of the element are icon,label,theme. 
+
+You must declare all app components using the following elements:
+
+    <activity> elements for activities.
+    <service> elements for services.
+    <receiver> elements for broadcast receivers.
+    <provider> elements for content providers
+
+he following table provides links to reference documents for all valid elements in the AndroidManifest.xml file.
+
+<manifest> 	       The root element of the AndroidManifest.xml file.
+<application> 	       The declaration of the application.it is sub element of manifest.
+<activity>             Declares an activity component.it is sub element of application.
+                       attributes : label,name,theme,launchMode.
+<category> 	       Adds a category name to an intent filter.
+<intent-filter>        Specifies the types of intents that an activity, service, or broadcast receiver can respond to.
+
+
+<action> 	      Adds an action to an intent filter.
+
+<activity-alias> 	Declares an alias for an activity.
+
+
+<compatible-screens> 	Specifies each screen configuration with which the application is compatible.
+
+<data> 	                Adds a data specification to an intent filter.
+
+<grant-uri-permission> 	Specifies the subsets of app data that the parent content provider has permission to access.
+
+<instrumentation> 	Declares an Instrumentation class that enables you to monitor an application's interaction with the system.
+
+<meta-data> 	A name-value pair for an item of additional, arbitrary data that can be supplied to the parent component.
+
+<path-permission> 	Defines the path and required permissions for a specific subset of data within a content provider.
+
+<permission> Declares a security permission that can be used to limit access to specific components or features of this or other applications.
+
+<permission-group> 	Declares a name for a logical grouping of related permissions.
+
+<permission-tree> 	Declares the base name for a tree of permissions.
+
+<provider> 	      Declares a content provider component.
+
+<queries> 	Declares the set of other apps that your app intends to access. Learn more in the guide about package visibility filtering.
+
+<receiver> 	Declares a broadcast receiver component.
+
+<service> 	Declares a service component.
+
+<supports-gl-texture> 	Declares a single GL texture compression format that the app supports.
+
+<supports-screens> 
+Declares the screen sizes your app supports and enables screen compatibility mode for screens larger than what your app supports.
+
+<uses-configuration> 	Indicates specific input features the application requires.
+
+<uses-feature> 	Declares a single hardware or software feature that is used by the application.
+
+<uses-library> 	Specifies a shared library that the application must be linked against.
+
+<uses-native-library> 	
+Specifies a vendor-provided native shared library that the app must be linked against.
+
+<uses-permission> 	
+Specifies a system permission that the user must grant in order for the app to operate correctly.
+
+<uses-permission-sdk-23> 	
+Specifies that an app wants a particular permission, but only if the app is installed on a device running Android 6.0 (API level 23) or higher.
+
+<uses-sdk> 	
+Lets you express an application's compatibility with one or more versions of the Android platform, by means of an API level integer.
+
+=============================================================================
+
+Res:-
+raw/ 	 Arbitrary files to save in their raw form.
+       To open these resources with a raw InputStream, call Resources.openRawResource() with the resource ID, which is R.raw.filename.
+values/ 	 XML files that contain simple values, such as strings, integers, and colors.
+                 arrays.xml for resource arrays (typed arrays).
+    		 colors.xml for color values
+   		 dimens.xml for dimension values.
+    		 strings.xml for string values.
+   		 styles.xml for styles.
+
+xml/ 	Arbitrary XML files that can be read at runtime by calling Resources.getXML(). 
+         Various XML configuration files must be saved here, such as a searchable configuration.
+
+
+Animation Resources
+    Define pre-determined animations.
+    Tween animations are saved in res/anim/ and accessed from the R.anim class.
+    Frame animations are saved in res/drawable/ and accessed from the R.drawable class.
+Color State List Resource
+    Define a color resources that changes based on the View state.
+    Saved in res/color/ and accessed from the R.color class.
+Drawable Resources
+    Define various graphics with bitmaps or XML.
+    Saved in res/drawable/ and accessed from the R.drawable class.
+Layout Resource
+    Define the layout for your application UI.
+    Saved in res/layout/ and accessed from the R.layout class.
+Menu Resource
+    Define the contents of your application menus.
+    Saved in res/menu/ and accessed from the R.menu class.
+String Resources
+    Define strings, string arrays, and plurals (and include string formatting and styling).
+    Saved in res/values/ and accessed from the R.string, R.array, and R.plurals classes.
+Style Resource
+    Define the look and format for UI elements.
+    Saved in res/values/ and accessed from the R.style class.
+Font Resources
+    Define font families and include custom fonts in XML.
+    Saved in res/font/ and accessed from the R.font class.
+
+More Resource Types
+    Define other primitive values as static resources, including the following:
+
+    Bool
+        XML resource that carries a boolean value.
+    Color
+        XML resource that carries a color value (a hexadecimal color).
+    Dimension
+        XML resource that carries a dimension value (with a unit of measure).
+    ID
+        XML resource that provides a unique identifier for application resources and components.
+    Integer
+        XML resource that carries an integer value.
+    Integer Array
+        XML resource that provides an array of integers.
+    Typed Array
+        XML resource that provides a TypedArray (which you can use for an array of drawables).
+
+
+
+
+=============================================================================
+
+Buid gradle:-
+
+in android,gradle is used for buliding our android application projects, hence playing the role of a build system.
+
+gradle is build system,which is responsible for code compliation , testing, deployment and conversion of code the code into .dex files.
+
+any application run to help gradle.
+
+android studio comes with gradle system pre- installed , it is no need to install additional runtime software.
+
+a gradle is a not compiler and linker.it is one type of automated tool.
+
+you click run button in android studio , gradle task automatically triggers and starts buliding the project and after gradle completes its task,app starts runnig in th connected device
+
+
+Android build glossary:-
+
+Gradle and the Android Gradle plugin help you configure the following aspects of your build:
+
+Build types:-
+Build types define certain properties that Gradle uses when building and packaging your app. Build types are typically configured for different stages of your development lifecycle.
+
+Product flavors
+
+    Product flavors represent different versions of your app that you can release to users, such as free and paid versions. You can customize product flavors to use different code and resources while sharing and reusing the parts that are common to all versions of your app. Product flavors are optional, and you must create them manually. To start creating different versions of your app, learn how to configure product flavors. 
+
+Build variants
+    A build variant is a cross-product of build type and product flavor and is the configuration Gradle uses to build your app. Using build variants, you can build the debug version of your product flavors during development and signed release versions of your product flavors for distribution. Although you don't configure build variants directly, you configure the build types and product flavors that form them. Creating additional build types or product flavors also creates additional build variants. To learn how to create and manage build variants, read the Configure build variants overview. 
+
+Manifest entries
+    You can specify values for some properties of the manifest file in the build variant configuration. These build values override the existing values in the manifest file. This is useful if you want to generate multiple variants of your app with a different application name, minimum SDK version, or target SDK version. When multiple manifests are present, the manifest merger tool merges manifest settings. 
+
+Dependencies
+    The build system manages project dependencies from your local file system and from remote repositories. This means you don't have to manually search, download, and copy binary packages of your dependencies into your project directory. To find out more, see Add build dependencies. 
+
+Signing
+    The build system lets you specify signing settings in the build configuration, and it can automatically sign your app during the build process. 
+
+Code and resource shrinking
+    The build system lets you specify a different ProGuard rules file for each build variant. 
+
+Multiple APK support
+    The build system lets you automatically build different APKs that each contain only the code and resources needed for a specific screen density or Application Binary Interface (ABI). For more information see Build multiple APKs.
+
+Gradle properties files:-
+Gradle also includes two properties files, located in your root project directory, that you can use to specify settings for the Gradle build toolkit itself:
+
+
+Gradle properties files:-
+ Gradle also includes two properties files, located in your root project directory, that you can use to specify settings for the Gradle build toolkit itself:
+ 
+gradle.properties:-
+    This is where you can configure project-wide Gradle settings, such as the Gradle daemon's maximum heap size. For more information, see Build Environment.
+ 
+local.properties:-
+    Configures local environment properties for the build system, including the following:
+
+        ndk.dir - Path to the NDK. This property has been deprecated. Any downloaded versions of the NDK are installed in the ndk directory within the Android SDK directory.
+        sdk.dir - Path to the SDK.
+        cmake.dir - Path to CMake.
+        ndk.symlinkdir - In Android Studio 3.5 and higher, creates a symlink to the NDK that can be shorter than the installed NDK path.
+
+
+The Native Development Kit (NDK) is a set of tools that allows you to use C and C++ code with Android, and provides platform libraries you can use to manage native activities and access physical device components, such as sensors and touch input.
+
+The Android SDK (software development kit) is a set of development tools used to develop applications for the Android platform that has become Apple's biggest rival in the smartphone space
+
+CMake: an external build tool that works alongside Gradle to build your native library.
+
+=============================================================================
+
+differnet between sdk and jdk :-
+SDK stands for 'Software Development Kit', a developers tools that enables one to write the code with more more ease, effectiveness and efficiency. SDKs come for various languages. They provide a lot of APIs (Application Programming Interfaces) that makes the programmer's work easy.
+=============================================================================
+Intent
+implict:-
+Start the service
+Display a web page
+Display a list of contacts
+Broadcast a message
+Dial a phone call 
+
+    Intent intent=new Intent(Intent.ACTION_VIEW);  
+    intent.setData(Uri.parse("http://www.javatpoint.com"));  
+    startActivity(intent);  
+
+explict:-Launch an activity
+ Intent intent =  new Intent(MainActivity.java , SS.class);
+ startActivity(intent);
+
+
+=============================================================================
+
+Actitiy LifeCycle:-
+
+Activity luncher
+onCreate()
+onStart()
+	onRestart()
+onResume()
+
+activity Running
+
+onPause()
+onStop()
+onDestory()
+
+activity shutdown
+
+=============================================================================
+
+
+Android | Android Application File Structure:-
+build.gradle(Module: app)
+AndroidManifest.xml:
+Style
+String
+Color
+Mipmap
+layout
+drawble 
+java
+
+
+
+=============================================================================
+
